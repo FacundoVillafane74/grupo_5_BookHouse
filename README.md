@@ -17,3 +17,4 @@ Hola! Soy Celina, tengo 23 años y mi sueño es poder viajar trabajando como pro
 Me llamo Facundo, tengo 19 años, me encanta programar y seguir aprendiendo cada día más para poder mejorar, mi pasatiempo favorito es hacer streams con mis amigos, me encanta jugar a todo tipo de juego! mi objetivo es ser programador y poder vivir de esto que es lo que más amo. 
 
 **Rocio Villanueva:**
+Como estan? mi nombre es Rocio, tengo 19 años, recien entro en el mundo de la programacion y estoy muy entusiasmada de seguir en este camino. Mi actividad favorita es salir a merendar con mis amigas o mi novio, tambien ver The Office (la mejor serie del mundo).
