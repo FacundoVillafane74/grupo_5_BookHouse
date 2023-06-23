@@ -7,6 +7,7 @@ Nuestro sitio web brindará libros como producto principal, nuestra audiencia a 
 ## INTEGRANTES Y DESCRIPCIÓN
 
 **Celina Donnet:**
+Hola! Soy Celina, tengo 23 años y mi sueño es poder viajar trabajando como programadora. Me gusta mucho leer, conversar y tomar mates(mi aliado favorito).
 
 **Tomas Lobenstein:**
 
