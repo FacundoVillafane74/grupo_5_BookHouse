@@ -10,6 +10,7 @@ Nuestro sitio web brindará libros como producto principal, nuestra audiencia a 
 Hola! Soy Celina, tengo 23 años y mi sueño es poder viajar trabajando como programadora. Me gusta mucho leer, conversar y tomar mates(mi aliado favorito).
 
 **Tomas Lobenstein:**
+Me llamo Tomas Lobenstein, tengo 21 años me gusta leer desde chico y desde hace un tiempo me interesa la programación por lo que decidi adentrarme por medio de este curso.
 
 **Nicolas Perez:**
 Me llamo Nicolas,tengo 23 años, me encanta la lectura y ver series.
