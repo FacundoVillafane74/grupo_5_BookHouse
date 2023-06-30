@@ -29,3 +29,6 @@ Como estan? mi nombre es Rocio, tengo 19 años, recien entro en el mundo de la p
 - *[Studio Glass](https://studioglass.ua/en/):* En esta ocasión, lo que nos llamó la atención de este sitio web fue la idea de implementar una columna lateral, la cuál tendrá nuestras categorias, redes, y que pueda darle un detalle diferente en comparación con la demás páginas de libros. También este lateral tiene un plus que en el caso del formato celular tanto el usuario, favoritos y carrito estarán implementado en esta misma columna.
 - *[Savage Jerky](https://savagejerky.com/):* Sobre esta página nos encantó el carrito (de compras) que utilizan, por lo cuál decidimos usarlo de referencia ya que nos parece muy estético y con buena experiencia de usuario.
 - *[Chila](https://chila.ua/):* En este caso, nos encantó una funcionalidad en particular, que muestra los productos con su respectivo nombre y precio, pero al momento de pasar el cursor por encima del producto, debajo aparecen las opciones de comprar y agregar a favoritos (las cuáles no están en un comienzo), por lo que nos pareció fantástico para agregar este detalle a nuestra web.
+
+## TABLERO DE TRELLO
+*[Trello](https://trello.com/b/AyWo3v1m/sprints-bookhouse):*
