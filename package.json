@@ -1,0 +1,23 @@
+{
+  "name": "grupo_5_bookhouse",
+  "version": "1.0.0",
+  "description": "Nuestro sitio web brindará libros como producto principal, nuestra audiencia a la cuál nos enfocaremos son los lectores y los nuevos que vendrán, estas personas que aman y sienten cada libro como propio, también quienes están por comenzar su aventura en este nuevo mundo maravilloso, esto lo vamos a lograr haciendo ofertas de los libros más vendidos y con mejores valoraciones en nuestra sección destacada, lo mejor? que todo esto es en base a sus propios gustos!. También nuestra oferta será ajustada de tal manera que podrán elegir diferentes precios en base al libro, ya que lo podrán pedir tanto de manera física, como de manera virtual. Haciendo que cada libro sea accesible para cada lector!.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FacundoVillafane74/grupo_5_BookHouse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FacundoVillafane74/grupo_5_BookHouse/issues"
+  },
+  "homepage": "https://github.com/FacundoVillafane74/grupo_5_BookHouse#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
