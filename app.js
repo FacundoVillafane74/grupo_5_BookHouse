@@ -15,6 +15,7 @@ app.get('/productDetail', (req, res) => {
     const ruta = path.join(__dirname, './views/productDetail.html');
     res.sendFile(ruta);
 })
+
 app.get('/cart', (req, res) => {
     const ruta = path.join(__dirname, './views/productCart.html');
     res.sendFile(ruta);
