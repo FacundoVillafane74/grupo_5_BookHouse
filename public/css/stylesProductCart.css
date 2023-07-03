@@ -1,0 +1,18 @@
+.primer-palabra{
+    width: 700px;
+    border:50px;
+    box-sizing: border-box;
+    display: inline
+}
+.segunda-palabra{
+    width: 300px;
+    border:50px;
+    box-sizing: border-box;
+}
+.cerrar{
+    display: inline;
+    box-sizing: border-box;
+    border: 5px;
+    width: 50px;
+    height: 50px;
+}
