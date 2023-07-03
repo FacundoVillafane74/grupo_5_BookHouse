@@ -11,6 +11,11 @@ app.get('/', (req, res) => {
     res.sendFile(ruta);
 })
 
+app.get('/productDetail', (req, res) => {
+    const ruta = path.join(__dirname, './views/productDetail.html');
+    res.sendFile(ruta);
+})
+
 app.listen(3000, () => {
     console.log('servidor con el puerto 3000 funcionando');
 });
