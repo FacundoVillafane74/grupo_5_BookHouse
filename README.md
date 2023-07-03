@@ -31,4 +31,4 @@ Como estan? mi nombre es Rocio, tengo 19 años, recien entro en el mundo de la p
 - *[Chila](https://chila.ua/):* En este caso, nos encantó una funcionalidad en particular, que muestra los productos con su respectivo nombre y precio, pero al momento de pasar el cursor por encima del producto, debajo aparecen las opciones de comprar y agregar a favoritos (las cuáles no están en un comienzo), por lo que nos pareció fantástico para agregar este detalle a nuestra web.
 
 ## TABLERO DE TRELLO
-*[Trello](https://trello.com/b/AyWo3v1m/sprints-bookhouse):*
+*[Trello](https://trello.com/b/AyWo3v1m/sprints-bookhouse)*

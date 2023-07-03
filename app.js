@@ -19,7 +19,10 @@ app.get('/cart', (req, res) => {
     const ruta = path.join(__dirname, './views/productCart.html');
     res.sendFile(ruta);
 })
-
+app.get('/login', (req, res) => {
+    const ruta = path.join(__dirname, './views/login.html');
+    res.sendFile(ruta);
+})
 
 
 app.listen(3000, () => {
