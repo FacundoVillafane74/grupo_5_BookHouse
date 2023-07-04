@@ -5,14 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="/css/stylesIndex.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <img src="/images/logo-BookHouse.svg" alt=""> 
+        <nav>
+            <button class="burguer-menu"><i class="fa-solid fa-bars"></i></button>
+            <img class="logo" src="/images/logo-BookHouse.svg" alt=""> 
+            <div class="navbar-rigth">
+            <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" placeholder="Buscá tu producto">
+            </div>
+        </nav>
     </header>
 
     <main>
-        <h1>WELCOME</h1>
+        <section class="carrusel-oferts">
+
+        <article class="item-carrusel" id="ImageCarrusel-1">
+            <div class="image-carrusel" id="tarjetaCarrusel-1">
+                <img src="/images/librosOfertas.png" alt="libros en ofertas/descuento">
+            </div>
+            <div class="arrows-carrusel">
+                <a href="#ImageCarrusel-3"> <i class="fa-solid fa-chevron-left"></i> </a>
+                <a href="#ImageCarrusel-2"> <i class="fa-solid fa-chevron-right"></i> </a>
+            </div>
+        </article>
+
+        <article class="item-carrusel" id="ImageCarrusel-2">
+            <div class="image-carrusel" id="tarjetaCarrusel-2">
+                <img src="/images/librosConMasVentas.png" alt="libros con más ventas">
+            </div>
+            <div class="arrows-carrusel">
+                <a href="#ImageCarrusel-1"> <i class="fa-solid fa-chevron-left"></i> </a>
+                <a href="#ImageCarrusel-3"> <i class="fa-solid fa-chevron-right"></i> </a>
+            </div>
+        </article>
+
+        <article class="item-carrusel" id="ImageCarrusel-3">
+            <div class="image-carrusel" id="tarjetaCarrusel-3">
+                C
+            </div>
+            <div class="arrows-carrusel">
+                <a href="#ImageCarrusel-2"> <i class="fa-solid fa-chevron-left"></i> </a>
+                <a href="#ImageCarrusel-1"> <i class="fa-solid fa-chevron-right"></i> </a>
+            </div>
+        </article>
+        </section>
+
+        <section class="carrusel-products">
+
+        </section>
     </main>
 
     <footer>
