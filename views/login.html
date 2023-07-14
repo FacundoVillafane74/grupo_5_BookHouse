@@ -11,21 +11,27 @@ rel="stylesheet" />
 <body>
     <div class=login-box>
     <header>
-        <img class="logo" src="/images/logo.svg" alt="logo">
+            <img class="logo" src="/images/logo-BookHouse.svg" alt="logo">
     </header>
     <main>
-        <h4>Email</h4>
-        <div class="email">
-            <input type="email" name="" id="" placeholder="example@mail.com">
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <h4>Contraseña</h4>
-        <div class="contraseña">
-            <input type="password" name="" id="" placeholder="ingresar contraseña">
-            <i class="fa-solid fa-lock"></i>
-        </div>
-        <input type="submit" value="Iniciar Sesión">
-        <a href="">¿Olvidaste tu contraseña?</a>
+        <form action="">
+            
+            <label for="email">Email
+                <div class="email">
+                    <input type="email" name="email" id="email" placeholder="example@email.com">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </label>                
+            
+            <label for="contraseña">Contraseña
+                <div class="contraseña">
+                    <input type="password" name="contraseña" id="contraseña" placeholder="ingresar contraseña">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+            </label>
+            <input type="submit" value="Iniciar Sesión">
+            <a href="">¿Olvidaste tu contraseña?</a>
+        </form>
     </main>
     </div>
 </body>
