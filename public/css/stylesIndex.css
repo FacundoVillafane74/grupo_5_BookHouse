@@ -13,6 +13,7 @@ body {
 header {
     background-color: #84a98c;
     height: 12vh;
+    width: 100vw;
 }
 
 /* HEADER */
@@ -22,45 +23,55 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 12vh;
+    flex-wrap: nowrap;
 }
 
 .logo {
-    width: 21%;
+    width: 20%;
 }
 
 .burguer-menu {
-    width: 8%;
-    border-radius: 5px;
-    padding: 4px;
-    text-align: center;
-    padding-bottom: 2px;;
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+
+.burguer-menu i {
+    font-size: 25px;
 }
 
 .search {
-    height: 20%;
-    border-radius: 5px;
+    background-color: white;
+    border: none;
+}
+
+.search i {
+    background-color: white;
+    font-size: 18px;
 }
 
 nav input {
-    height: 20%;
-    margin-left: 0;
+    height: 30px;
+    border: none;
 }
 
 .navbar-rigth {
     display: flex;
-    align-items: end;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid black;
 }
 
 /* BODY */
 /* PRIMER CARRUSEL */
 
 .carrusel-oferts {
-    height: 28vh;
+    height: 22vh;
     overflow: hidden;
 }
 
 .item-carrusel {
-    height: 100%;
+    height: 102%;
     position: relative;
 }
 
@@ -79,8 +90,48 @@ nav input {
     padding: 15px;
 }
 
+arrows-carrusel i {
+    font-size: 20px;
+}
+
+.circlesCarrusel {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.circlesCarrusel a {
+    padding: 0 3px;
+}
+
 a i {
     color: black;
+}
+
+.info-carrusel {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-carrusel h2{
+    font-family: 'Belanosima', sans-serif;
+    text-align: left;
+    font-size: 15px;
+    margin: 5px 15px;
+    /* box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.87); */
+}
+
+.info-carrusel button {
+    width: 80px;
+    height: 30px;
+    border-radius: 12px;
+    margin-left: 60px;
 }
 
 #tarjetaCarrusel-1 {
@@ -88,7 +139,8 @@ a i {
 }
 
 #tarjetaCarrusel-1 img,
-#tarjetaCarrusel-2 img {
+#tarjetaCarrusel-2 img,
+#tarjetaCarrusel-3 img {
     width: 100%;
     height: 100%;
 }
@@ -101,6 +153,335 @@ a i {
     background-color: violet;
 }
 
-/* SEGUNDO CARRUSEL */
+/* SEGUNDO CARRUSEL Y TERCERO*/
+
+.carrusel-products{
+    width: 100vw;
+    max-width: 420px;
+    height: 54vh;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h2 {
+    font-family: 'Belanosima', sans-serif;
+    text-align: center;
+    margin: 8px;
+}
+
+.product-book {
+    width: 50.1%;
+    max-width: 211px;
+    height: 101%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.book {
+    /* background-color: rgb(6, 89, 161); */
+    width: 100%;
+    height: 40vh;
+    border: 1px solid black;
+}
+
+.book img {
+    width: 100%;
+    height: 100%;
+}
+
+.info-book {
+    background-color: #84a98c;
+    width: 100%;
+    /* height: 40px; */
+    border: 1px solid black;
+}
+
+.info-book h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.add a {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.arrows-carrusel2 {
+    position: absolute;
+    display: flex;
+    width: 130%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    padding-left: 0;
+}
+
+.arrows-carrusel2 i {
+    font-size: 25px;
+    margin: 0; 
+    padding: 0;
+}
+
+/* .arrow-book {
+    padding-right: 70px;
+} */ 
+
+.add {
+    background-color: #84a98c;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    display: none;
+    font-family: 'Belanosima', sans-serif;
+}
+
+.add i {
+    font-size: 25px;
+}
+
+.product-book:hover .add{
+    display: flex;
+}
+
+/* AUTORES */
+
+.authors {
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.author-book {
+    border-radius: 50%;
+    width: 55vw;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.author-book a img {
+    width: 90%;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.author-book h3 {
+    font-size: 12px;
+    position: absolute;
+    bottom: 18px;
+    color: black;
+    background-color: #84a98c;
+    border-radius: 5px;
+}
+
+.author-3, .author-4 {
+    display: none;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #84a98c;
+    width: 100vw;
+}
+
+.first-footer {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.div-logo {
+    width: fit-content;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.logo-footer {
+    width: 100px;
+}
+
+.redes {
+    width: 45vw;
+    height: 15vh;
+}
+
+.redes p {
+    margin: 10px 0 12px 0;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.redes a {
+    text-decoration: none;
+    color: #000;
+}
+
+.second-footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.second-footer h4 {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
+.second-footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.third-footer p {
+    margin: 5px 0 0 0;
+}
+
+@media (min-width: 480px) {
+    header {
+        height: 15vh;
+    }
+
+    nav {
+        height: 15vh;
+    }
+
+    .logo {
+        max-width: 122px;
+    }
+
+    .item-carrusel {
+        height: 100%;
+    }
+
+    .carrusel-products {
+        max-width: 620px;
+    }
+
+    .product-book {
+        width: 34%;
+        max-width: 208px;
+    }
+
+    #book1 .arrows-carrusel2 .arrow-rigth,
+    #book2 .arrows-carrusel2 .arrow-left,
+    #book3 .arrows-carrusel2 .arrow-rigth,
+    #book4 .arrows-carrusel2 .arrow-left,
+    #book5 .arrows-carrusel2 .arrow-rigth,
+    #book6 .arrows-carrusel2 .arrow-left,
+    #book7 .arrows-carrusel2 .arrow-rigth,
+    #book8 .arrows-carrusel2 .arrow-left,
+    #book9 .arrows-carrusel2 .arrow-rigth,
+    #book10 .arrows-carrusel2 .arrow-left,
+    #book11 .arrows-carrusel2 .arrow-rigth,
+    #book12 .arrows-carrusel2 .arrow-left,
+    #book13 .arrows-carrusel2 .arrow-rigth,
+    #book14 .arrows-carrusel2 .arrow-left,
+    #book15 .arrows-carrusel2 .arrow-rigth,
+    #book16 .arrows-carrusel2 .arrow-left,
+    #book17 .arrows-carrusel2 .arrow-rigth,
+    #book18 .arrows-carrusel2 .arrow-left,
+    #book19 .arrows-carrusel2 .arrow-rigth,
+    #book20 .arrows-carrusel2 .arrow-left {
+        opacity: 0;
+    }
+
+    .carrusel-oferts {
+        height: 30vh;
+    }
+
+    .author-book a img {
+        max-width: 280px;
+    }
+
+    .navbar-rigth {
+        width: 50%;
+        max-width: 320px;
+    }
+}
+
+@media (min-width: 769px) {
+    .product-book {
+        width: 21%;
+        max-width: 208px;
+    } 
+
+    .carrusel-products {
+        max-width: 1000px;
+    }
+
+    .arrows-carrusel2 {
+        width: 118%;
+    }
+
+    #book1 .arrows-carrusel2 .arrow-rigth,
+    #book2 .arrows-carrusel2 .arrow-left,
+    #book2 .arrows-carrusel2 .arrow-rigth,
+    #book3 .arrows-carrusel2 .arrow-left,
+    #book3 .arrows-carrusel2 .arrow-rigth,
+    #book4 .arrows-carrusel2 .arrow-left,
+    #book5 .arrows-carrusel2 .arrow-rigth,
+    #book6 .arrows-carrusel2 .arrow-left,
+    #book6 .arrows-carrusel2 .arrow-rigth,
+    #book7 .arrows-carrusel2 .arrow-left,
+    #book7 .arrows-carrusel2 .arrow-rigth,
+    #book8 .arrows-carrusel2 .arrow-left,
+    #book9 .arrows-carrusel2 .arrow-rigth,
+    #book10 .arrows-carrusel2 .arrow-left,
+    #book11 .arrows-carrusel2 .arrow-rigth,
+    #book12 .arrows-carrusel2 .arrow-left,
+    #book12 .arrows-carrusel2 .arrow-rigth,
+    #book13 .arrows-carrusel2 .arrow-left,
+    #book13 .arrows-carrusel2 .arrow-rigth,
+    #book14 .arrows-carrusel2 .arrow-left,
+    #book15 .arrows-carrusel2 .arrow-rigth,
+    #book16 .arrows-carrusel2 .arrow-left,
+    #book16 .arrows-carrusel2 .arrow-rigth,
+    #book17 .arrows-carrusel2 .arrow-left,
+    #book17 .arrows-carrusel2 .arrow-rigth,
+    #book18 .arrows-carrusel2 .arrow-left,
+    #book19 .arrows-carrusel2 .arrow-rigth,
+    #book20 .arrows-carrusel2 .arrow-left {
+        opacity: 0;
+    }
+
+    .authors {
+        height: 34vh;
+        max-width: 892px;
+        margin: auto;
+    }
+
+    .author-book {
+        width: 33vw;
+        max-width: 290px;
+    }
+
+    .author-3 {
+        display: flex;
+    }
+}
+
+@media (min-width: 1280px) {
+    
+}
 
 
