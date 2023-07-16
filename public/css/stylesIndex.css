@@ -13,7 +13,10 @@ body {
 header {
     background-color: #84a98c;
     height: 12vh;
-    width: 100vw;
+    min-height: 94px;
+    max-height: 100px;
+    /* width: 100vw; */
+    width: 100%;
 }
 
 /* HEADER */
@@ -23,6 +26,8 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 12vh;
+    min-height: 94px;
+    max-height: 100px;
     flex-wrap: nowrap;
 }
 
@@ -30,13 +35,13 @@ nav {
     width: 20%;
 }
 
-.burguer-menu {
+.burguer-menu, .burguer-menu-2 {
     width: 50px;
     border-radius: 8px;
     height: 50px;
 }
 
-.burguer-menu i {
+.burguer-menu i, .burguer-menu-2 i {
     font-size: 25px;
 }
 
@@ -51,6 +56,7 @@ nav {
 }
 
 nav input {
+    width: 95%;
     height: 30px;
     border: none;
 }
@@ -62,12 +68,36 @@ nav input {
     border: 1px solid black;
 }
 
+.icons-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: flex-end;
+    margin-bottom: 7px;
+    display: none;
+}
+
+.min-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    height: 100%;
+}
+
+.min-icon p {
+    margin: 0;
+}
+
 /* BODY */
 /* PRIMER CARRUSEL */
 
 .carrusel-oferts {
     height: 22vh;
     overflow: hidden;
+    min-height: 168px;
+    max-height: 177px;
 }
 
 .item-carrusel {
@@ -156,8 +186,11 @@ a i {
 /* SEGUNDO CARRUSEL Y TERCERO*/
 
 .carrusel-products{
-    width: 100vw;
-    max-width: 420px;
+    /* width: 100vw; */
+    width: 100%;
+    max-width: 395px;
+    max-height: 404px;
+    min-height: 334px;
     height: 54vh;
     margin: auto;
     overflow: hidden;
@@ -174,7 +207,7 @@ h2 {
 
 .product-book {
     width: 50.1%;
-    max-width: 211px;
+    max-width: 198px;
     height: 101%;
     display: flex;
     flex-direction: column;
@@ -187,6 +220,9 @@ h2 {
     width: 100%;
     height: 40vh;
     border: 1px solid black;
+    max-height: 287px;
+    min-height: 228px;
+    min-width: 197px;
 }
 
 .book img {
@@ -199,6 +235,7 @@ h2 {
     width: 100%;
     /* height: 40px; */
     border: 1px solid black;
+    min-width: 197px;
 }
 
 .info-book h3 {
@@ -225,6 +262,7 @@ h2 {
     justify-content: space-between;
     padding-bottom: 60px;
     padding-left: 0;
+    min-width: 257px;
 }
 
 .arrows-carrusel2 i {
@@ -246,6 +284,7 @@ h2 {
     border: 1px solid black;
     display: none;
     font-family: 'Belanosima', sans-serif;
+    min-width: 197px;
 }
 
 .add i {
@@ -259,15 +298,20 @@ h2 {
 /* AUTORES */
 
 .authors {
-    height: 60vh;
-    width: 100vw;
+    height: 65vh;
+    min-height: 417px;
+    max-height: 425px;
+    /* width: 100vw; */
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
 .author-book {
     border-radius: 50%;
-    width: 55vw;
+    /* width: 55vw; */
+    width: 55%;
+    min-width: 189px;
     margin: auto;
     position: relative;
     text-align: center;
@@ -299,30 +343,35 @@ h2 {
 
 footer {
     background-color: #84a98c;
-    width: 100vw;
+    /* width: 100vw; */
+    width: 100%;
 }
 
 .first-footer {
     display: flex;
     flex-wrap: wrap;
-
+    max-height: 90px;
 }
 
 .div-logo {
     width: fit-content;
-    height: 15vh;
+    /* height: 15vh; */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    max-height: 90px;
 }
 
 .logo-footer {
     width: 100px;
+    max-height: 90px;
 }
 
 .redes {
-    width: 45vw;
+    /* width: 45vw; */
+    width: 45%;
     height: 15vh;
+    max-height: 90px;
 }
 
 .redes p {
@@ -354,6 +403,67 @@ footer {
 
 .third-footer p {
     margin: 5px 0 0 0;
+    font-size: 12px;
+    text-align: left;
+}
+
+/* BARRA IZQUIERDA */
+
+.big-body {
+    display: flex;
+}
+
+.body-left {
+    width: 70px;
+    height: 100%;
+    background-color: #42615a;
+    position: fixed;
+    display: none;
+}
+
+.body-rigth {
+    width: 100%;
+}
+
+.burguer-menu-2 {
+    text-align: center;
+    border: none;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #42615a;
+}
+
+.redes-body-left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 190px;
+}
+
+.redes-body-left a {
+    text-decoration: none;
+    color: #000;
+    margin-top: 10px;
+}
+
+.redes-body-left a i{
+    font-size: 30px;
+}
+
+.categorys a {
+    text-decoration: none;
+    color: black;
+}
+
+.categorys h3 {
+    font-weight: 900;
+}
+
+.categorys h3, .categorys p {
+    font-size: 13px;
+    text-align: center;   
+    font-weight: 700;
 }
 
 @media (min-width: 480px) {
@@ -374,12 +484,16 @@ footer {
     }
 
     .carrusel-products {
-        max-width: 620px;
+        max-width: 580px;
     }
 
     .product-book {
         width: 34%;
-        max-width: 208px;
+        max-width: 200px;
+    }
+
+    .arrows-carrusel2 {
+        min-width: 239px;
     }
 
     #book1 .arrows-carrusel2 .arrow-rigth,
@@ -407,6 +521,8 @@ footer {
 
     .carrusel-oferts {
         height: 30vh;
+        min-height: 188px;
+        max-height: 215px;
     }
 
     .author-book a img {
@@ -420,7 +536,20 @@ footer {
 }
 
 @media (min-width: 769px) {
-    .product-book {
+    nav {
+        justify-content: space-between;
+    }
+
+    .navbar-rigth {
+        align-self: flex-end;
+        margin-bottom: 10px;
+        max-width: 350px;
+    }
+
+    .icons-info {
+        display: flex;
+    }
+    /* .product-book {
         width: 21%;
         max-width: 208px;
     } 
@@ -431,43 +560,91 @@ footer {
 
     .arrows-carrusel2 {
         width: 118%;
+    } */
+
+    .carrusel-oferts {
+        min-height: 214px;
+        max-height: 240px;
+    }
+
+    .product-book {
+        width: 32%;
+        max-width: 201px;
+    } 
+
+    .carrusel-products {
+        max-width: 800px;
+    }
+
+    .arrows-carrusel2 {
+        width: 115%;
+        min-width: 233px;
+    } 
+
+    .burguer-menu {
+        display: none;
     }
 
     #book1 .arrows-carrusel2 .arrow-rigth,
     #book2 .arrows-carrusel2 .arrow-left,
     #book2 .arrows-carrusel2 .arrow-rigth,
     #book3 .arrows-carrusel2 .arrow-left,
-    #book3 .arrows-carrusel2 .arrow-rigth,
-    #book4 .arrows-carrusel2 .arrow-left,
+    /* #book3 .arrows-carrusel2 .arrow-rigth, */
+    /* #book4 .arrows-carrusel2 .arrow-left, */
+    #book4 .arrows-carrusel2 .arrow-rigth,
+    #book5 .arrows-carrusel2 .arrow-left,
     #book5 .arrows-carrusel2 .arrow-rigth,
     #book6 .arrows-carrusel2 .arrow-left,
-    #book6 .arrows-carrusel2 .arrow-rigth,
-    #book7 .arrows-carrusel2 .arrow-left,
+    /* #book6 .arrows-carrusel2 .arrow-rigth, */
+    /* #book7 .arrows-carrusel2 .arrow-left, */
     #book7 .arrows-carrusel2 .arrow-rigth,
     #book8 .arrows-carrusel2 .arrow-left,
-    #book9 .arrows-carrusel2 .arrow-rigth,
-    #book10 .arrows-carrusel2 .arrow-left,
+    #book8 .arrows-carrusel2 .arrow-rigth,
+    #book9 .arrows-carrusel2 .arrow-left,
+    /* #book9 .arrows-carrusel2 .arrow-rigth, */
+    /* #book10 .arrows-carrusel2 .arrow-left, */
     #book11 .arrows-carrusel2 .arrow-rigth,
     #book12 .arrows-carrusel2 .arrow-left,
     #book12 .arrows-carrusel2 .arrow-rigth,
     #book13 .arrows-carrusel2 .arrow-left,
-    #book13 .arrows-carrusel2 .arrow-rigth,
-    #book14 .arrows-carrusel2 .arrow-left,
+    /* #book13 .arrows-carrusel2 .arrow-rigth, */
+    /* #book14 .arrows-carrusel2 .arrow-left, */
+    #book14 .arrows-carrusel2 .arrow-rigth,
+    #book15 .arrows-carrusel2 .arrow-left,
     #book15 .arrows-carrusel2 .arrow-rigth,
     #book16 .arrows-carrusel2 .arrow-left,
     #book16 .arrows-carrusel2 .arrow-rigth,
     #book17 .arrows-carrusel2 .arrow-left,
-    #book17 .arrows-carrusel2 .arrow-rigth,
+    /* #book17 .arrows-carrusel2 .arrow-rigth, */
     #book18 .arrows-carrusel2 .arrow-left,
+    #book18 .arrows-carrusel2 .arrow-rigth,
+    #book19 .arrows-carrusel2 .arrow-left
+    /* #book19 .arrows-carrusel2 .arrow-rigth, */
+    /* #book20 .arrows-carrusel2 .arrow-left */ {
+        opacity: 0;
+    }
+
+    #book3 .arrows-carrusel2 .arrow-rigth,
+    #book4 .arrows-carrusel2 .arrow-left,
+    #book6 .arrows-carrusel2 .arrow-rigth,
+    #book7 .arrows-carrusel2 .arrow-left,
+    #book9 .arrows-carrusel2 .arrow-rigth,
+    #book10 .arrows-carrusel2 .arrow-left,
+    #book13 .arrows-carrusel2 .arrow-rigth,
+    #book14 .arrows-carrusel2 .arrow-left,
+    #book16 .arrows-carrusel2 .arrow-rigth,
+    #book17 .arrows-carrusel2 .arrow-left,
     #book19 .arrows-carrusel2 .arrow-rigth,
     #book20 .arrows-carrusel2 .arrow-left {
-        opacity: 0;
+        opacity: 1;
     }
 
     .authors {
         height: 34vh;
         max-width: 892px;
         margin: auto;
+        min-height: 211px;
+        max-height: 225px;
     }
 
     .author-book {
@@ -475,13 +652,146 @@ footer {
         max-width: 290px;
     }
 
+    /* .author-3 {
+        display: flex;
+    } */
+
+    .body-rigth {
+        width: 100%;
+        margin-left: 70px;
+    }
+
+    .body-left {
+        display: block;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .first-footer {
+        width: 30%;
+    }
+
+    .second-footer {
+        width: 29%;
+    }
+
+    .third-footer {
+        width: 25%;
+        align-self: flex-end;
+    }
+
+}
+
+@media (min-width: 1220px) {
+    header {
+        height: 12vh;
+        min-height: 94px;  
+    }
+    nav {
+        height: 12vh;
+        min-height: 94px;
+    }
+
+    .logo {
+        margin-left: 50px;
+    }
+
+    .navbar-rigth {
+        margin-left: 135px;
+    }
+
+    .navbar-rigth input{
+        height: 40px;
+    }
+
+    .min-icon p, .min-icon i {
+        font-size: 20px;
+    }
+
+    .carrusel-oferts {
+        min-height: 230px;
+        max-height: 270px;
+    }
+
+    .product-book {
+        width: 20%;
+        max-width: 191px;
+    } 
+
+    .carrusel-products {
+        max-width: 1140px;
+    }
+
+    .arrows-carrusel2 {
+        min-width: 228px;
+    }
+
+    #book3 .arrows-carrusel2 .arrow-rigth,
+    #book4 .arrows-carrusel2 .arrow-left,
+    #book6 .arrows-carrusel2 .arrow-rigth,
+    #book7 .arrows-carrusel2 .arrow-left,
+    #book9 .arrows-carrusel2 .arrow-rigth,
+    #book10 .arrows-carrusel2 .arrow-left,
+    #book13 .arrows-carrusel2 .arrow-rigth,
+    #book14 .arrows-carrusel2 .arrow-left,
+    #book16 .arrows-carrusel2 .arrow-rigth,
+    #book17 .arrows-carrusel2 .arrow-left,
+    #book19 .arrows-carrusel2 .arrow-rigth,
+    #book20 .arrows-carrusel2 .arrow-left {
+        opacity: 0;
+    }
+
+    #book5 .arrows-carrusel2 .arrow-rigth,
+    #book6 .arrows-carrusel2 .arrow-left,
+    #book15 .arrows-carrusel2 .arrow-rigth,
+    #book16 .arrows-carrusel2 .arrow-left {
+        opacity: 1;
+    }
+
     .author-3 {
         display: flex;
     }
+
+    .redes p {
+        margin: 8px 0 10px 0;
+        font-size: 14px;
+    }
+
+    .second-footer h4{
+        font-size: 17px;
+    }
+
+    .second-footer p{
+        font-size: 15px;
+    }
+
+    .third-footer p {
+        text-align: end;
+        font-size: 15px;
+    }
 }
 
-@media (min-width: 1280px) {
-    
+@media (min-width: 1430px) {
+    .carrusel-oferts {
+        height: 40vh;
+    }
+
+    .carrusel-products {
+        max-width: 1310px;
+    }
+
+    .product-book {
+        width: 21%;
+        max-width: 220px;
+    }
+
+    .arrows-carrusel2 {
+        min-width: 261px;
+    }
 }
 
 
