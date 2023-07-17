@@ -8,6 +8,7 @@
 body {
     padding: 0;
     margin: 0;
+    background-color: #ebede3;
 }
 
 header {
@@ -86,8 +87,18 @@ nav input {
     height: 100%;
 }
 
+.min-icon a {
+    text-decoration: none;
+    color: black;
+}
+
 .min-icon p {
     margin: 0;
+}
+
+.min-icon p:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 /* BODY */
@@ -154,6 +165,7 @@ a i {
     text-align: left;
     font-size: 15px;
     margin: 5px 15px;
+    color: white;
     /* box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.87); */
 }
 
@@ -162,6 +174,12 @@ a i {
     height: 30px;
     border-radius: 12px;
     margin-left: 60px;
+    background-color: #42615a;
+    border: 1px solid #000
+}
+
+.info-carrusel button:hover {
+    background-color: #fff;
 }
 
 #tarjetaCarrusel-1 {
@@ -329,7 +347,7 @@ h2 {
 .author-book h3 {
     font-size: 12px;
     position: absolute;
-    bottom: 18px;
+    bottom: 8px;
     color: black;
     background-color: #84a98c;
     border-radius: 5px;
@@ -378,6 +396,11 @@ footer {
     margin: 10px 0 12px 0;
     font-weight: 700;
     font-size: 13px;
+}
+
+.redes p:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 .redes a {
@@ -447,6 +470,10 @@ footer {
     margin-top: 10px;
 }
 
+.redes-body-left a i:hover {
+    color: white;
+}
+
 .redes-body-left a i{
     font-size: 30px;
 }
@@ -454,6 +481,11 @@ footer {
 .categorys a {
     text-decoration: none;
     color: black;
+}
+
+.categorys a p:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 .categorys h3 {
@@ -714,7 +746,7 @@ footer {
 
     .carrusel-oferts {
         min-height: 230px;
-        max-height: 270px;
+        max-height: 400px;
     }
 
     .product-book {
