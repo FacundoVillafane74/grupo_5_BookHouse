@@ -80,4 +80,7 @@ body{
 .login-box input[type="password"]{
     height: 35px;
 }
+.iconos{
+    padding-top: 18px;
+}
 }
