@@ -26,6 +26,11 @@ app.get('/login', (req, res) => {
     res.sendFile(ruta);
 });
 
+app.get('/register', (req, res) =>{
+    const ruta = path.join(__dirname, './views/register.html');
+    res.sendFile(ruta);
+});
+
 app.listen(3000, () => {
     console.log('servidor con el puerto 3000 funcionando');
 });
