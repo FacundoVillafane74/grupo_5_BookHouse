@@ -8,7 +8,7 @@
 
 
 body{
-   background-color:#ffffff;
+    background-color: #ebede3;
     margin: 0;
     padding: 0;
     font-family: 'Belanosima', sans-serif;
@@ -24,7 +24,6 @@ header {
 
 main{
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
 
@@ -121,11 +120,13 @@ nav input {
     text-align: center;
     }
     .sinopsis{
-        width: 100%;
+        width: 90%;
+        margin: auto;
         padding: 10px;
         border: solid 5px  #84a98c;
         display: flex;
         text-align: center;
+        margin-bottom: 30px;
     }
     .button{
         align-items: center;
@@ -190,15 +191,23 @@ justify-content: center
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 40px;
    }
    .portadas{
-    width:35%;
-    margin-left: 15px;
-   
+    width: 70%;
+    margin: auto;
+    max-width: 280px;
+    border: 3px solid black;
+    /* margin-left: 15px; */
+   }
+   .portadas img {
+    width: 100%;
+    max-width: 280px;
    }
    .caja-izq{
-    width:35%;
-    margin-right: 15px;
+    width: 90%;
+    margin: auto;
+    /* margin-right: 15px; */
    }
    .caja-derecha{
     display: flex;
@@ -343,16 +352,16 @@ footer {
         display: none;
     }
     .main-all{
-        margin: auto;
-        display: block;
+        /* margin: auto;
+        display: block; */
         width: 100%;
-        margin-left: 15%;
+        /* margin-left: 15%; */
     }
     .titulos{
         width: 100%;
     }
     .button{
-        margin-left: 35%;
+        /* margin-left: 35%; */
         width: 50%;
         height: 40px;
     }
@@ -378,22 +387,24 @@ footer {
         display: none;
     }
     .main-all{
-        margin: auto;
+        /* margin: auto; */
         display: block;
         width: 100%;
-        margin-left: 10%;
+        /* margin-left: 10%; */
     }
     .titulos{
         width: 100%;
     }
     .button{
-        margin-left: 35%;
+        /* margin-left: 35%; */
         width: 50%;
+        max-width: 260px;
         height: 40px;
     }
     .sinopsis{
         width: 100%;
-        margin-left: 40px;
+        max-width: 450px;
+        /* margin-left: 40px; */
     }
 
     footer{
@@ -409,6 +420,8 @@ footer {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
+            max-width: 963px;
+            margin: auto;
            }
            
            .caja-izq{
@@ -416,13 +429,30 @@ footer {
             
            }
           .portadas{
-            width:35%;
+            width: 48%;
+            margin-top: 25px;
+            max-width: 400px;
+            height: 490px;
+            border: none;
            }
+           .portadas img {
+            min-width: 255px;
+            max-width: 400px;
+            height: 484px;
+            margin-left: 30px;
+        }
+            .titulos h2 {
+                margin-top: 0;
+            }
+
            .caja-derecha{
-            display: flex;
-            flex-wrap:wrap;
+            display: none;
+            flex-wrap: wrap;
             width: 25%;
-            border: #84a98c 2px solid;
+            height: 487px;
+            margin-top: 25px;
+            margin-right: 5px;
+            border: #84a98c 5px solid;
            }
 
          
@@ -447,12 +477,16 @@ footer {
             .button{
                 display: none;
             }
+            .titulos {
+                text-align: left;
+                margin-top: 18px;
+            }
             .sinopsis{
-                margin-left: 2px;
+                margin-bottom: 0;
             }
         
             footer {
-                margin-top: 40px;
+                margin-top: 18%;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
@@ -493,18 +527,24 @@ footer {
         .navbar-rigth input{
             height: 40px;
         }
+        .body-left {
+            width: 100px;
+        }
+        .body-rigth {
+            margin-left: 100px;
+        }
         .main-all{
             width: 100%;
             display: flex;
             flex-wrap: wrap;
            }
            .portadas{
-            width:35%;
+            width:48%;
             margin-left: 15px;
-           
+            max-width: 600px;
            }
            .caja-izq{
-            width:35%;
+            width:48%;
             margin-right: 15px;
            }
            .caja-derecha{
@@ -539,7 +579,8 @@ footer {
             font-size: 15px;
         }
         .caja-derecha{
-            display: flex;
+            display: none;
         }
+
     }
     
