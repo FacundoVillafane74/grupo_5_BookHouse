@@ -1,0 +1,106 @@
+body{
+    background-color:#42615A;
+    margin: 0;
+    padding: 0;
+    font-family: 'Belanosima', sans-serif;
+    height: 100vh;
+}
+
+.register-box{
+    width: 360px;
+    height: 480px;
+    background-color:#84A98C;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.register-box .logo{
+    width: 200px;
+    height: 190px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -100px;
+    padding-left: 10%;
+}
+
+.register-box input[type="nombre-y-apellido"]{
+    width: 100% ;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+}
+
+.register-box input[type=email]{
+    width:100% ;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;  
+}
+.register-box input[type="password"]{
+    width:100% ;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+}
+
+#notificaciones{
+    margin-bottom: 15px;
+}
+#notificaciones label{
+    font-size: 12px;
+    color: #42615a ;
+}
+
+#terminos{
+    margin-bottom: 15px;
+}
+#terminos label{
+    font-size: 12px;
+    color: #42615A;
+}
+
+.register-box input[type="submit"]{
+    width:100% ;
+    margin-bottom: 20px;
+    border: none;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.register-box a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #42615a ;
+    padding-left: 25% ;
+}
+
+.email{
+    display: flex;
+}
+.contraseña{
+    display: flex;
+}
+
+@media (min-width: 769px){
+    .register-box input[type='nombre-y-Apellido']{
+        height: 35px;
+    }
+    .register-box input[type=email]{
+        height: 35px; 
+    }
+    .register-box input[type="password"]{
+        height: 35px;
+    }
+    .iconos{
+        padding-top: 18px;
+    }
+}
