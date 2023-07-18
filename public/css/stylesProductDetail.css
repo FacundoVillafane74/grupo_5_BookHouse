@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Proza Libre', sans-serif;
+}
+
+
+
+body{
+   background-color:#ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Belanosima', sans-serif;
+}
+header {
+    background-color: #84a98c;
+    height: 12vh;
+    min-height: 94px;
+    max-height: 100px;
+    /* width: 100vw; */
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+        
+          
+    
+  
+    footer{
+        background-color: #84a98c;
+
+    }
+    
+ /* header */
+    
+ nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+    min-height: 94px;
+    max-height: 100px;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    width: 20%;
+}
+
+.burguer-menu, .burguer-menu-2 {
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+
+.burguer-menu i, .burguer-menu-2 i {
+    font-size: 25px;
+}
+
+.search {
+    background-color: white;
+    border: none;
+}
+
+.search i {
+    background-color: white;
+    font-size: 18px;
+}
+
+nav input {
+    width: 95%;
+    height: 30px;
+    border: none;
+}
+
+.navbar-rigth {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.icons-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: flex-end;
+    margin-bottom: 7px;
+    display: none;
+}
+
+.min-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    height: 100%;
+}
+
+.min-icon p {
+    margin: 0;
+}
+    /*main*/
+    .portadas{
+        align-items: center;
+        width: 28%;
+        display: flex;
+    }
+    .titulos{
+    padding: 7px;
+
+    display: block;
+    text-align: center;
+    }
+    .sinopsis{
+        width: 100%;
+        padding: 10px;
+        border: solid 5px  #84a98c;
+        display: flex;
+        text-align: center;
+    }
+    .button{
+        align-items: center;
+        border-radius: 7px;
+        width: 20%;
+        height: 30px;
+        background-color: #84a98c;
+    }
+    .titulo-compra{
+        text-align: center;
+        display: block;
+      width: 100%;
+    }
+    .botton-libro{
+        align-items: flex-start;
+        border-radius: 7px;
+        width: 20%;
+        height: 30px;    
+        margin-left: 13%;
+        margin-right: 25px;
+    }
+    .botton-agregar{
+        width: 100%;
+    text-align: center;
+        border-radius: 7px;
+        width: 30%;
+        height: 30px;
+        margin: auto;
+    }
+    .caja-libro{
+        text-align: center;
+        width: 15%;
+        height: 35%;
+        margin-top: 10px;
+        margin-left: 12px;
+        margin-right: 12px;
+        border: #42615a 2px solid;
+    }
+    .iconcarrito{
+        margin-top: 10px;
+        margin-left: 10px;
+        height: 15px;
+        width: 20px;
+    }
+  .compra{
+    display: flex;
+    flex-wrap: wrap;
+width: 100%;
+justify-content: center
+  }
+  .botton-libros{
+    width: 100%;
+    justify-content: space-around;
+  }
+   .botton-compra{
+    margin-top: 8px;
+    border-radius: 7px;
+    width: 15%;
+    height: 30px;
+   }
+   .main-all{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .portadas{
+    width:35%;
+    margin-left: 15px;
+   
+   }
+   .caja-izq{
+    width:35%;
+    margin-right: 15px;
+   }
+   .caja-derecha{
+    display: flex;
+    flex-wrap:wrap;
+    width: 25%;
+    border: #84a98c 2px solid;
+   }
+
+    .precio{
+        width: 100%;
+        text-align: center;
+    }
+  
+   
+    /* FOOTER */
+
+footer {
+    background-color: #84a98c;
+    /* width: 100vw; */
+    width: 100%;
+}
+
+.first-footer {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 90px;
+}
+
+.div-logo {
+    width: fit-content;
+    /* height: 15vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-height: 90px;
+}
+
+.logo-footer {
+    width: 100px;
+    max-height: 90px;
+}
+
+.redes {
+    /* width: 45vw; */
+    width: 45%;
+    height: 15vh;
+    max-height: 90px;
+}
+
+.redes p {
+    margin: 10px 0 12px 0;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.redes a {
+    text-decoration: none;
+    color: #000;
+}
+
+.second-footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.second-footer h4 {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
+.second-footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.third-footer p {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+    text-align: left;
+}
+/* BARRA IZQUIERDA */
+
+.big-body {
+    display: flex;
+}
+
+.body-left {
+    width: 70px;
+    height: 100%;
+    background-color: #42615a;
+    position: fixed;
+    display: none;
+}
+
+.body-rigth {
+    width: 100%;
+}
+
+.burguer-menu-2 {
+    text-align: center;
+    border: none;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #42615a;
+}
+
+.redes-body-left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 190px;
+}
+
+.redes-body-left a {
+    text-decoration: none;
+    color: #000;
+    margin-top: 10px;
+}
+
+.redes-body-left a i{
+    font-size: 30px;
+}
+
+.categorys a {
+    text-decoration: none;
+    color: black;
+}
+
+.categorys h3 {
+    font-weight: 900;
+}
+
+.categorys h3, .categorys p {
+    font-size: 13px;
+    text-align: center;   
+    font-weight: 700;
+}
+@media (max-width: 479px){
+    .caja-derecha{
+        display: none;
+    }
+    .main-all{
+        margin: auto;
+        display: block;
+        width: 100%;
+        margin-left: 15%;
+    }
+    .titulos{
+        width: 100%;
+    }
+    .button{
+        margin-left: 35%;
+        width: 50%;
+        height: 40px;
+    }
+    footer{
+        margin-top: 30px;
+    }
+    
+}
+@media (min-width: 480px) {
+    header {
+        height: 15vh;
+    }
+
+
+    nav {
+        height: 15vh;
+    }
+
+    .logo {
+        max-width: 122px;
+    }
+    .caja-derecha{
+        display: none;
+    }
+    .main-all{
+        margin: auto;
+        display: block;
+        width: 100%;
+        margin-left: 10%;
+    }
+    .titulos{
+        width: 100%;
+    }
+    .button{
+        margin-left: 35%;
+        width: 50%;
+        height: 40px;
+    }
+    .sinopsis{
+        width: 100%;
+        margin-left: 40px;
+    }
+
+    footer{
+        margin-top: 40px;
+    }
+}
+    @media(min-width:769px){
+        nav {
+            justify-content: space-between;
+        }
+       
+        .main-all{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+           }
+           
+           .caja-izq{
+            width:35%;
+            
+           }
+          .portadas{
+            width:35%;
+           }
+           .caja-derecha{
+            display: flex;
+            flex-wrap:wrap;
+            width: 25%;
+            border: #84a98c 2px solid;
+           }
+
+         
+        .icons-info {
+            display: flex;
+        }
+       
+            .icons-header{
+                display:none
+            }
+            .burguer-menu {
+                display: none;
+            }
+            .body-rigth {
+                width: 100%;
+                margin-left: 60px;
+            }
+        
+            .body-left {
+                display: block;
+            }
+            .button{
+                display: none;
+            }
+            .sinopsis{
+                margin-left: 2px;
+            }
+        
+            footer {
+                margin-top: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        
+            .first-footer {
+                width: 30%;
+            }
+        
+            .second-footer {
+                width: 29%;
+            }
+        
+            .third-footer {
+                width: 25%;
+                align-self: flex-end;
+            }
+           
+    }
+    @media(min-width:1220px){
+        header {
+            height: 12vh;
+            min-height: 94px;  
+        }
+        nav {
+            height: 12vh;
+            min-height: 94px;
+        }
+    
+        .logo {
+            margin-left: 50px;
+        }
+    
+        .navbar-rigth {
+            margin-left: 135px;
+        }
+    
+        .navbar-rigth input{
+            height: 40px;
+        }
+        .main-all{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+           }
+           .portadas{
+            width:35%;
+            margin-left: 15px;
+           
+           }
+           .caja-izq{
+            width:35%;
+            margin-right: 15px;
+           }
+           .caja-derecha{
+            display: flex;
+            flex-wrap:wrap;
+            width: 25%;
+            border: #84a98c 2px solid;
+           }
+           .button{
+            display: none;
+        }
+    
+        
+        footer{
+            margin-top: 40px;
+        }
+        .redes p {
+            margin: 8px 0 10px 0;
+            font-size: 14px;
+        }
+    
+        .second-footer h4{
+            font-size: 17px;
+        }
+    
+        .second-footer p{
+            font-size: 15px;
+        }
+    
+        .third-footer p {
+            text-align: end;
+            font-size: 15px;
+        }
+        .caja-derecha{
+            display: flex;
+        }
+    }
+    

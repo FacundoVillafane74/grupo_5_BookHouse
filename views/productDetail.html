@@ -1,40 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/stylesProductDetail.css">
-</head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
 <body>
-    <header>
-        <input text placeholder="busca tu libro o autor aqui">
-    
-    </header>
-    <main>
-        <img src="" alt="">
-<h2>Titulo del libro</h2>
-<h3>Autor</h3>
-<h4>Trama</h4>
-<h4>Edicion</h4>
-<h2>sinopsis y detelle</h2>
-<p>fasgtjnjfanjaffanjnjavfnjvfnvfavfannvafnfvavano</p>
+    <div class="big-body">
+        <div class="body-left">
+            <!-- <a href="" class="burguer-menu-2"><i class="fa-solid fa-bars"></i></a> -->
+            <div class="categorys">
+                <a href="">
+                    <h3>Categorias</h3>
+                </a>
+                <a href="#suspenso">
+                    <p>Suspenso</p>
+                    <a href="#cienciaFiccion">
+                        <p>Ciencia Ficción</p>
+                    </a>
+            </div>
 
-<h3>formato</h3>
-<button>digital</button>
-<button>fisico</button>
-<button>agregar</button>
+            <div class="redes-body-left">
+                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="body-rigth">
+            <header class="main-header">
+                <nav>
+                    <button class="burguer-menu"><i class="fa-solid fa-bars"></i></button>
+
+                    <img class="logo" src="/images/logo-BookHouse.svg" alt="">
+
+                    <div class="navbar-rigth">
+                        <input type="text" placeholder="Buscá tu producto">
+                        <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+
+                    <div class="icons-info">
+                        <div class="min-icon">
+                            <i class="fa-solid fa-user"></i>
+                            <p>Ingresar</p>
+                        </div>
+
+                        <div class="min-icon">
+                            <i class="fa-solid fa-heart"></i>
+                            <p>Favoritos</p>
+                        </div>
+
+                        <div class="min-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>Carrito</p>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            </head>
 
 
+
+            <main>
+                <div class="main-all">
+                    <div class="portadas">
+                        <img src="/images/a-song-of-ice-and-fire.jpg" alt="portada del libro">
+                    </div>
+                    <div class="caja-izq">
+                        <div class="titulos">
+                            <h2>Titulo del libro:</h2>
+                            <h3>Autor: </h3>
+                            <h4>Trama:</h4>
+                            <h4>Edicion:</h4>
+                            <button class="button">Agregar</button>
+                            <h2>sinopsis y detalle</h2>
+
+                            <p class="sinopsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                                expedita
+                                totam repudiandae enim eligendi recusandae quisquam, quibusdam saepe, aut eius ipsa modi
+                                aliquid voluptatem minima qui in debitis? Earum, non.</p>
+                        </div>
+                    </div>
+                    <div class="caja-derecha">
+                        <h2 class="titulo-compra">formato</h2>
+<div class="botton-libros">
+                        <button class="botton-libro">digital</button>
+                        <button class="botton-libro">fisico</button>
+                       </div> 
+                       <div class="compra">
+                            <button class="botton-compra">-1</button>
+                            <p class="caja-libro">3</p>
+                            <button class="botton-compra">+1</button>
+                            <div class="iconcarrito">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        </div>
+                        <h2 class="precio">2200$</h2>
+                        <button class="botton-agregar">Agregar</button>
+                    </div>
+                </div>
+        </div>
+
+    </div>
     </main>
     <footer>
-<h5>instagram</h5>
-<h5>facebook</h5>
-<h5>twitter</h5>
+        <section class="first-footer">
+            <div class="div-logo">
+                <img class="logo-footer" src="/images/logo-BookHouse.svg" alt="logo">
+            </div>
+            <div class="redes">
+                <a href="">
+                    <p>Instragram <i class="fa-brands fa-square-instagram"></i> </p>
+                </a>
+                <a href="">
+                    <p>Facebook <i class="fa-brands fa-facebook"></i> </p>
+                </a>
+                <a href="">
+                    <p>Twitter <i class="fa-brands fa-twitter"></i> </p>
+                </a>
+            </div>
+        </section>
 
-<h4>nuestros locales</h4>
-<h4>nuestras empresas</h4>
-<h4>@copyrigth</h4>
+        <!-- <section class="second-footer">
+    <h4>Nuestros locales</h4>
+    <p></p>
+</section> -->
+
+        <section class="second-footer">
+            <h4>Nuestra Empresa</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit repellendus voluptate quam
+                eligendi! Ut, rerum!</p>
+        </section>
+
+        <section class="third-footer">
+            <p><i class="fa-solid fa-copyright"></i> Copyright 2023 Book House, todos los derechos reservados.</p>
+        </section>
     </footer>
 </body>
+
 </html>
