@@ -9,29 +9,38 @@
 <body>
     <div class="register-box">
     <header>
-        <img class="logo" src="/grupo_5_BookHouse/public/images/logo-BookHouse.svg" alt="logo">
+        <img class="logo" src="/images/logo-BookHouse.svg" alt="logo">
     </header>
     <main>
-        <h4>Nombre y Apellido</h4>
-        <div class="Nombre y Apellido">
-            <input type="" name="" id="">
-            <i class="fa-solid fa-lock"></i>
+        <label for="nombre-y-apellido">Nombre y Apellido
+            <div class='nombre-y-apellido'>
+                <input type="nombre-y-apellido" name="" id="">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+        </label>
+        <label for="email">Email
+            <div class="email">
+                <input type="email" name="" id="" placeholder="example@gmail.com">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+        </label>
+        <label for="password">Contraseña
+            <div class='contraseña'>
+                <input type="password" name="" id="" placeholder="Ingresar contraseña">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+        </label>
+        <div id="notificaciones">
+            <label for="notificaciones">
+                <input type="checkbox" name="notificaciones" id="notificaciones" checked>
+                Deseo recibir notificaciones acerca de ofertas y recomendaciones
+            </label>
         </div>
-        <h4>Email</h4>
-        <div class="email">
-            <input type="email" name="" id="" placeholder="example@gmail.com">
-            <i class="fa-solid fa-lock"></i>
-        </div>
-        <h4>Contraseña</h4>
-        <div class="contraseña">
-            <input type="password" name="" id="" placeholder="Ingresar contraseña">
-            <i class="fa-solid fa-lock"></i>
-        </div>
-        <div>
-            <label><input type="checkbox">Deseo recibir notificaciones sobre ofertas y recomendaciones</label>
-        </div>
-        <div>
-            <label><input type="checkbox">Acepto los terminos y condiciones</label>
+        <div id="terminos">
+            <label for="terminos">
+                <input type="checkbox" name="terminos" id="terminos">
+                Acepto los terminos y condiciones
+            </label>
         </div>
         <input type="submit" value="Registrar">
     </main>
