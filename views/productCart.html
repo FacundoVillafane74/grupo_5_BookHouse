@@ -10,17 +10,77 @@
 </head>
 <body>
     <header>
-        <h1 class="primer-palabra"><strong>MI</strong></h1>
+        <div class="miCarrito">
+            <h2><strong>MI</strong></h1>
+        <h2><strong>CARRITO</strong></h1>
+        </div>
         <button class="cerrar">
-            <i class="fa-sharp fa-regular fa-circle-xmark fa-3x" style="width: 50px; height: 50px;"></i>
+            <i class="fa-sharp fa-regular fa-circle-xmark fa-3x""></i>
         </button>
-        <h1 class="segunda-palabra"><strong>CARRITO</strong></h1>
     </header>
     <main>
-
+        <article class="contenedor">
+            <button class="cerrar-2">
+                <i class="fa-sharp fa-regular fa-circle-xmark fa-2x""></i>
+            </button>
+            <section class="caja">
+                <div class="imagen"> <img src="/images/LaSombraDelViento.png" alt="Nombre del Libro" width="100vw"></div>
+                <ul class="texto">
+                    <li class="nombre">La Sombra del Viento</li>
+                    <li class="autor">Carlos Ruiz Zafón</li>
+                    <li class="cantidad">
+                        <button class="botoncarrito">-</button>
+                        <input type="text" class="inputCantidad">
+                        <button class="botoncarrito">+</button></li>
+                    <li class="precio">$9585.00</li>
+                </ul>
+            </section>
+            <button class="cerrar-2">
+                <i class="fa-sharp fa-regular fa-circle-xmark fa-2x""></i>
+            </button>
+            <section class="caja">
+                <div class="imagen"> <img src="/images/LaCupula.png" alt="Nombre del Libro" width="100vw"></div>
+                <ul class="texto">
+                    <li class="nombre">La Cúpula</li>
+                    <li class="autor">Stephen King</li>
+                    <li class="cantidad">
+                        <button class="botoncarrito">-</button>
+                        <input type="text" class="inputCantidad">
+                        <button class="botoncarrito">+</button></li>
+                    <li class="precio">$7600.00</li>
+                </ul>
+            </section>
+            <button class="cerrar-2">
+                <i class="fa-sharp fa-regular fa-circle-xmark fa-2x""></i>
+            </button>
+            <section class="caja">
+                <div class="imagen"> <img src="/images/LaCasaInfernal.png" alt="Nombre del Libro" width="100vw"></div>
+                <ul class="texto">
+                    <li class="nombre">La Casa Infernal</li>
+                    <li class="autor">Richard Matheson</li>
+                    <li class="cantidad">
+                        <button class="botoncarrito">-</button>
+                        <input type="text" class="inputCantidad">
+                        <button class="botoncarrito">+</button></li>
+                        <li class="precio">$7400.75</li>
+                    </ul>
+            </section>
+        </article>
     </main>
     <footer>
-
+        <div class="subtotal">
+            <h3 class="subtotalp">SUBTOTAL</h3>
+            <h3 class="subtotalPrecio">$24585.75</h3>
+        </div>
+        <div class="linea"></div>
+        <section class="tarjetas">
+            <div><img src="/images/visa.jpg" alt="visa"width="100px"></div>
+            <div><img src="/images/master-card.jpg" alt="master-card"width="100px"></div>
+            <div><img src="/images/american-express.png" alt="american-express"width="100px"></div>
+        </section>
+        <div class="botonfinal">
+            <button type="send" class="finalizarCompra">FINALIZAR COMPRA</button>
+        </div>
     </footer>
 </body>
 </html>
