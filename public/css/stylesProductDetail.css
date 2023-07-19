@@ -12,6 +12,9 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Belanosima', sans-serif;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1rf auto ;
 }
 header {
     background-color: #84a98c;
@@ -26,7 +29,7 @@ main{
     width: 100%;
     display: flex;
     align-items: center;
-
+    min-height: 100vh;
 }
         
           
@@ -34,7 +37,6 @@ main{
   
     footer{
         background-color: #84a98c;
-
     }
     
  /* header */
@@ -128,6 +130,26 @@ nav input {
         text-align: center;
         margin-bottom: 30px;
     }
+    .fav-agregar{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+    .icon-co{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 30px;
+        height: 100%;
+    }
+    .fa-regular{
+        font-size: xx-large;
+    }
+    .icon-co:hover{
+        color: red;
+    }
     .button{
         align-items: center;
         border-radius: 7px;
@@ -135,41 +157,12 @@ nav input {
         height: 30px;
         background-color: #84a98c;
     }
-    .titulo-compra{
-        text-align: center;
-        display: block;
-      width: 100%;
-    }
-    .botton-libro{
-        align-items: flex-start;
+    .button2{
+        align-items: center;
         border-radius: 7px;
-        width: 20%;
-        height: 30px;    
-        margin-left: 13%;
-        margin-right: 25px;
-    }
-    .botton-agregar{
-        width: 100%;
-    text-align: center;
-        border-radius: 7px;
-        width: 30%;
-        height: 30px;
-        margin: auto;
-    }
-    .caja-libro{
-        text-align: center;
-        width: 15%;
-        height: 35%;
-        margin-top: 10px;
-        margin-left: 12px;
-        margin-right: 12px;
-        border: #42615a 2px solid;
-    }
-    .iconcarrito{
-        margin-top: 10px;
-        margin-left: 10px;
-        height: 15px;
-        width: 20px;
+        width: 160px;
+        height: 40px;
+        background-color: #84a98c
     }
   .compra{
     display: flex;
@@ -177,16 +170,7 @@ nav input {
 width: 100%;
 justify-content: center
   }
-  .botton-libros{
-    width: 100%;
-    justify-content: space-around;
-  }
-   .botton-compra{
-    margin-top: 8px;
-    border-radius: 7px;
-    width: 15%;
-    height: 30px;
-   }
+
    .main-all{
     width: 100%;
     display: flex;
@@ -209,12 +193,7 @@ justify-content: center
     margin: auto;
     /* margin-right: 15px; */
    }
-   .caja-derecha{
-    display: flex;
-    flex-wrap:wrap;
-    width: 25%;
-    border: #84a98c 2px solid;
-   }
+  
 
     .precio{
         width: 100%;
@@ -228,6 +207,7 @@ footer {
     background-color: #84a98c;
     /* width: 100vw; */
     width: 100%;
+    
 }
 
 .first-footer {
@@ -370,6 +350,9 @@ footer {
     }
     
 }
+.fav-agregar{
+    display: none;
+}
 @media (min-width: 480px) {
     header {
         height: 15vh;
@@ -383,9 +366,7 @@ footer {
     .logo {
         max-width: 122px;
     }
-    .caja-derecha{
-        display: none;
-    }
+    
     .main-all{
         /* margin: auto; */
         display: block;
@@ -445,15 +426,7 @@ footer {
                 margin-top: 0;
             }
 
-           .caja-derecha{
-            display: none;
-            flex-wrap: wrap;
-            width: 25%;
-            height: 487px;
-            margin-top: 25px;
-            margin-right: 5px;
-            border: #84a98c 5px solid;
-           }
+           
 
          
         .icons-info {
@@ -484,8 +457,13 @@ footer {
             .sinopsis{
                 margin-bottom: 0;
             }
+            .fav-agregar{
+                display: flex;
+               
+            }
         
             footer {
+                bottom: 0;
                 margin-top: 18%;
                 display: flex;
                 flex-wrap: wrap;
@@ -547,12 +525,7 @@ footer {
             width:48%;
             margin-right: 15px;
            }
-           .caja-derecha{
-            display: flex;
-            flex-wrap:wrap;
-            width: 25%;
-            border: #84a98c 2px solid;
-           }
+           
            .button{
             display: none;
         }
