@@ -1,35 +1,22 @@
 const express = require('express');
 const path = require('path');
+const mainRouter = require('./routes/mainRouter');
+const userRouter = require('./routes/userRouter');
+const productRouter = require('./routes/productRouter');
+const cartRouter = require('./routes/cartRouter');
 
 const app = express();
 
 const pathPublic = path.join(__dirname, './public');
 app.use(express.static(pathPublic));
 
-app.get('/', (req, res) => {
-    const ruta = path.join(__dirname, './views/index.html');
-    res.sendFile(ruta);
-});
+app.use('/', mainRouter);
 
-app.get('/productDetail', (req, res) => {
-    const ruta = path.join(__dirname, './views/productDetail.html');
-    res.sendFile(ruta);
-});
+app.use('/product', productRouter);
 
-app.get('/cart', (req, res) => {
-    const ruta = path.join(__dirname, './views/productCart.html');
-    res.sendFile(ruta);
-});
+app.use('/cart', cartRouter);
 
-app.get('/login', (req, res) => {
-    const ruta = path.join(__dirname, './views/login.html');
-    res.sendFile(ruta);
-});
-
-app.get('/register', (req, res) =>{
-    const ruta = path.join(__dirname, './views/register.html');
-    res.sendFile(ruta);
-});
+app.use('/user', userRouter);
 
 app.listen(3000, () => {
     console.log('servidor con el puerto 3000 funcionando');
