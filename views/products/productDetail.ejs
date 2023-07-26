@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/stylesProductDetail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="big-body">
+        <%- include('../partials/bodyLeft.ejs') %>
+
+        <div class="body-rigth">
+            <%- include('../partials/header.ejs') %>
+
+                <main>
+                    <div class="main-all">
+
+                        <div class="portadas">
+                            <img src="/images/ElExorcista.png" alt="portada del libro">
+                        </div>
+                        <div class="caja-izq">
+                            <div class="titulos">
+                                <h2>El Exorcista</h2>
+                                <h3>William Peter Blatty</h3>
+                                <h4>Terror</h4>
+                                <h4>1971</h4>
+                                <button class="button">Agregar</button>
+
+                                <h2>sinopsis y detalle</h2>
+
+                                <p class="sinopsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                                    expedita
+                                    totam repudiandae enim eligendi recusandae quisquam, quibusdam saepe, aut eius ipsa
+                                    modi
+                                    aliquid voluptatem minima qui in debitis? Earum, non.</p>
+                            </div>
+                            <div class="fav-agregar">
+                                <div class="icon-co">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <button class="button2">Agregar</button>
+                            </div>
+                        </div>
+                        <div class="caja-derecha">
+
+                        </div>
+                    </div>
+                </main>
+
+                <%- include('../partials/footer.ejs') %>
+        </div>
+
+    </div>
+</body>
+
+</html>

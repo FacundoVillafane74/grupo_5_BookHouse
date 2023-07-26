@@ -25,6 +25,11 @@ header {
     width: 100%;
 }
 
+.min-icon a {
+    text-decoration: none;
+    color: black;
+}
+
 main{
     width: 100%;
     display: flex;
@@ -357,8 +362,10 @@ footer {
     header {
         height: 15vh;
     }
-
-
+    .navbar-rigth {
+        width: 50%;
+        max-width: 320px;
+    }
     nav {
         height: 15vh;
     }
@@ -395,6 +402,12 @@ footer {
     @media(min-width:769px){
         nav {
             justify-content: space-between;
+        }
+
+        .navbar-rigth {
+            align-self: flex-end;
+            margin-bottom: 10px;
+            max-width: 350px;
         }
        
         .main-all{
@@ -488,6 +501,9 @@ footer {
         header {
             height: 12vh;
             min-height: 94px;  
+        }
+        .min-icon p, .min-icon i {
+            font-size: 20px;
         }
         nav {
             height: 12vh;

@@ -11,51 +11,10 @@
 
 <body>
     <div class="big-body">
-        <div class="body-left">
-            <!-- <a href="" class="burguer-menu-2"><i class="fa-solid fa-bars"></i></a> -->
-            <div class="categorys">
-                <a href=""><h3>Categorias</h3></a>
-                <a href="#suspenso"><p>Suspenso</p>
-                <a href="#cienciaFiccion"><p>Ciencia Ficción</p></a>
-            </div>
-
-            <div class="redes-body-left">
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-            </div>
-        </div>
+        <%- include('../partials/bodyLeft.ejs') %>
 
         <div class="body-rigth">
-            <header class="main-header">
-                <nav>
-                    <button class="burguer-menu"><i class="fa-solid fa-bars"></i></button>
-
-                    <img class="logo" src="/images/logo-BookHouse.svg" alt="">
-
-                    <div class="navbar-rigth">
-                        <input type="text" placeholder="Buscá tu producto">
-                        <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div>
-
-                    <div class="icons-info">
-                        <div class="min-icon">
-                            <i class="fa-solid fa-user"></i>
-                            <a href=""><p>Ingresar</p>
-                        </div>
-
-                        <div class="min-icon">
-                            <i class="fa-solid fa-heart"></i>
-                            <a href=""><p>Favoritos</p></a>
-                        </div>
-
-                        <div class="min-icon">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <a href=""><p>Carrito</p></a>
-                        </div>
-                    </div>
-                </nav>
-            </header>
+            <%- include('../partials/header.ejs') %>
 
             <main>
                 <section class="carrusel-oferts">
@@ -598,39 +557,7 @@
                 </section>
             </main>
 
-            <footer>
-                <section class="first-footer">
-                    <div class="div-logo">
-                        <img class="logo-footer" src="/images/logo-BookHouse.svg" alt="logo">
-                    </div>
-                    <div class="redes">
-                        <a href="">
-                            <p>Instragram <i class="fa-brands fa-instagram"></i> </p>
-                        </a>
-                        <a href="">
-                            <p>Facebook <i class="fa-brands fa-facebook"></i> </p>
-                        </a>
-                        <a href="">
-                            <p>Twitter <i class="fa-brands fa-twitter"></i> </p>
-                        </a>
-                    </div>
-                </section>
-
-                <!-- <section class="second-footer">
-            <h4>Nuestros locales</h4>
-            <p></p>
-        </section> -->
-
-                <section class="second-footer">
-                    <h4>Nuestra Empresa</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit repellendus voluptate quam
-                        eligendi! Ut, rerum!</p>
-                </section>
-
-                <section class="third-footer">
-                    <p><i class="fa-solid fa-copyright"></i> Copyright 2023 Book House, todos los derechos reservados.</p>
-                </section>
-            </footer>
+            <%- include('../partials/footer.ejs') %>
         </div>
     </div>
 </body>

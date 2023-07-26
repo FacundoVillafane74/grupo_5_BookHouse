@@ -3,21 +3,29 @@ const path = require('path');
 const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
-const cartRouter = require('./routes/cartRouter');
+const dotenv = require('dotenv').config();
 
 const app = express();
 
 const pathPublic = path.join(__dirname, './public');
 app.use(express.static(pathPublic));
 
+app.set('view engine', 'ejs');
+
+app.set('views', [
+    path.join(__dirname, './views'),
+    path.join(__dirname, './views/partials'),
+    path.join(__dirname, './views/main'),
+    path.join(__dirname, './views/products'),
+    path.join(__dirname, './views/users')
+]);
+
 app.use('/', mainRouter);
 
 app.use('/product', productRouter);
 
-app.use('/cart', cartRouter);
-
 app.use('/user', userRouter);
 
-app.listen(3000, () => {
-    console.log('servidor con el puerto 3000 funcionando');
+app.listen(process.env.PORT || 3000, () => {
+    console.log('servidor funcionando en ' + process.env.PORT || 3000);
 });
