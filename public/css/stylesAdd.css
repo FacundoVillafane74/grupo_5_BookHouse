@@ -1,0 +1,336 @@
+body{
+    background-color:#42615A;
+    margin: 0;
+    padding: 0;
+    font-family: 'Belanosima', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+header {
+    background-color: #84a98c;
+    height: 12vh;
+    min-height: 94px;
+    max-height: 100px;
+    /* width: 100vw; */
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+    min-height: 94px;
+    max-height: 100px;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    width: 20%;
+}
+
+.burguer-menu, .burguer-menu-2 {
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+
+.burguer-menu i, .burguer-menu-2 i {
+    font-size: 25px;
+}
+
+.search {
+    background-color: white;
+    border: none;
+}
+
+.search i {
+    background-color: white;
+    font-size: 18px;
+}
+
+nav input {
+    width: 95%;
+    height: 30px;
+    border: none;
+}
+
+.navbar-rigth {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.icons-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: flex-end;
+    margin-bottom: 7px;
+    display: none;
+}
+
+.min-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    height: 100%;
+}
+
+.min-icon a {
+    text-decoration: none;
+    color: black;
+}
+
+.min-icon p {
+    margin: 0;
+}
+
+.min-icon p:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.login-box{
+    width: 320px;
+    height: 370px;
+    background-color:#84A98C;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+
+.login-box .logo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: -100px;
+    padding-left: 10%;
+}
+
+.login-box input[type=text]{
+    width:100% ;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;  
+}
+.login-box input[type="number"]{
+    width:100% ;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+}
+.login-box input[type="file"]{
+    width:100% ;
+    margin-bottom: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+#recordar{
+    margin-bottom: 15px;
+}
+#recordar label{
+    font-size: 12px;
+    color: #42615a ;
+}
+
+.login-box input[type="submit"]{
+    width:100% ;
+    margin-bottom: 20px;
+    border: none;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.login-box a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #42615a ;
+    padding-left: 25% ;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #84a98c;
+    /* width: 100vw; */
+    width: 100%;
+    margin-top: auto;
+}
+
+.first-footer {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 90px;
+}
+
+.div-logo {
+    width: fit-content;
+    /* height: 15vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-height: 90px;
+}
+
+.logo-footer {
+    width: 100px;
+    max-height: 90px;
+}
+
+.redes {
+    /* width: 45vw; */
+    width: 45%;
+    height: 15vh;
+    max-height: 90px;
+}
+
+.redes p {
+    margin: 10px 0 12px 0;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.redes p:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.redes a {
+    text-decoration: none;
+    color: #000;
+}
+
+.second-footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.second-footer h4 {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
+.second-footer p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.third-footer p {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+    text-align: left;
+}
+
+@media (min-width: 480px) {
+    header {
+        height: 15vh;
+    }
+
+    nav {
+        height: 15vh;
+    }
+
+    .navbar-rigth {
+        width: 50%;
+        max-width: 320px;
+    }
+
+    .logo {
+        max-width: 122px;
+    }
+
+    .login-box{
+        top: 47%;
+    }
+}    
+
+@media (min-width: 769px){
+    nav {
+        justify-content: space-between;
+    }
+
+    .icons-info {
+        display: flex;
+    }
+
+    .navbar-rigth {
+        align-self: flex-end;
+        margin-bottom: 10px;
+        max-width: 350px;
+    }
+
+    .burguer-menu {
+        display: none;
+    }
+
+    .login-box input[type=email]{
+    height: 35px; 
+}
+    .login-box input[type="password"]{
+    height: 35px;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.first-footer {
+    width: 30%;
+}
+
+.second-footer {
+    width: 29%;
+}
+
+.third-footer {
+    width: 25%;
+    align-self: flex-end;
+}
+}
+
+@media (min-width: 1220px) {
+    header {
+        height: 12vh;
+        min-height: 94px;  
+    }
+    nav {
+        height: 12vh;
+        min-height: 94px;
+    }
+
+    .logo {
+        margin-left: 50px;
+    }
+
+    .second-footer h4{
+        font-size: 17px;
+    }
+
+    .second-footer p{
+        font-size: 15px;
+    }
+
+    .third-footer p {
+        text-align: end;
+        font-size: 15px;
+    }
+}
