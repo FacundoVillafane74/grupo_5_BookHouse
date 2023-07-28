@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylesAdd.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+rel="stylesheet" />
+    <title>Login</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <div class=login-box>
+    <main>
+        <form action="">
+            
+            <label for="nombre">Nombre del producto
+                <div class="nombre">
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+            </label>                
+            
+            <label for="descripcion">Descripción
+                <div class="descripcion">
+                    <input type="text" name="descripcion" id="descripcion">
+                </div>
+            </label>
+            <div id="imagen">
+                <label for="imagen">Imágen
+                    <input type="file" name="imagen" id="imagen">
+                </label>
+            </div>
+            <div id="categoria">
+                <label for="categoria">Categoria
+                    <input type="text" name="categoria" id="categoria">
+                </label>
+            </div>
+            <div id="precio">
+                <label for="precio">Precio
+                    <input type="number" name="precio" id="precio">
+                </label>
+            </div>
+            <input type="submit" value="Editar">
+            
+        </form>
+    </main>
+</div>
+<%- include('../partials/footer.ejs') %>
+</body>
+</html>
