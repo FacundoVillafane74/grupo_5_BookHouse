@@ -57,7 +57,7 @@
     left: 20px;
 }
 .precio{
-    margin-top: 25px;
+    margin-top: 50px;
     font-size: 25px;
     position: relative;
     left: 20px;
@@ -137,4 +137,27 @@
     width: 25px;
     height: 25px;
 }
- 
+.Fisico{
+    box-shadow: none;
+    width: 50px;
+    background-color: #42615a;
+    position: relative;
+    left: 20px;
+}
+.Digital{
+    box-shadow: none;
+    width: 50px;
+    background-color: #42615a;
+    position: relative;
+    left: 25px;
+}
+@media (min-width: 260px) and (max-width: 400px){
+    .botonesFyD{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5px;
+    }
+    .precio{
+        margin-top: 35px;
+    }
+}
