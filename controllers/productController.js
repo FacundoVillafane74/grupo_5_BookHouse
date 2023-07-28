@@ -1,3 +1,5 @@
+
+
 let productController = {
     detail: (req, res) => {
         res.render('productDetail');

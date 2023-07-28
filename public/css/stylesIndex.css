@@ -357,6 +357,40 @@ h2 {
     display: none;
 }
 
+/* TODOS LOS LIBROS */
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.product-book-end {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 390px;
+}
+
+.product-book-end .book {
+    max-width: 198px;
+}
+
+.product-book-end .info-book {
+    max-width: 198px;
+}
+
+.product-book-end .add {
+    max-width: 198px;
+}
+
+.product-book-end:hover .add{
+    display: flex;
+}
+
 /* FOOTER */
 
 footer {
@@ -565,6 +599,16 @@ footer {
         width: 50%;
         max-width: 320px;
     }
+
+    /* TODOS LOS LIBROS */
+
+    .products {
+        max-width: 574px;
+    }
+
+    .product-book-end {
+        width: 48%;
+    }
 }
 
 @media (min-width: 769px) {
@@ -716,6 +760,15 @@ footer {
         align-self: flex-end;
     }
 
+    /* TODOS LOS LIBROS */
+
+    .products {
+        max-width: 860px;
+    }
+
+    .product-book-end {
+        width: 32%;
+    }
 }
 
 @media (min-width: 1220px) {
@@ -805,6 +858,16 @@ footer {
         text-align: end;
         font-size: 15px;
     }
+
+    /* TODOS LOS LIBROS */
+
+    .products {
+        max-width: 1450px;
+    }
+
+    .product-book-end {
+        width: 19%;
+    }
 }
 
 @media (min-width: 1430px) {
@@ -823,6 +886,12 @@ footer {
 
     .arrows-carrusel2 {
         min-width: 261px;
+    }
+
+    /* TODOS LOS LIBROS */
+
+    .products {
+        max-width: 1650px;
     }
 }
 
