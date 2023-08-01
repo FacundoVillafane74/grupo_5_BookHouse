@@ -1,11 +1,19 @@
+* {
+    box-sizing: border-box; 
+}
+
 body{
-    background-color:#42615A;
+    background-color: #ebede3;
     margin: 0;
     padding: 0;
     font-family: 'Belanosima', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+main {
+    margin-top: 20px;
 }
 
 /* HEADER */
@@ -100,11 +108,11 @@ nav input {
 
 .login-box{
     width: 320px;
-    height: 370px;
+    height: 420px;
     background-color:#84A98C;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10%;
+    margin-bottom: 10%;
     box-sizing: border-box;
     padding: 30px 30px;
 }
@@ -139,6 +147,19 @@ nav input {
     background-color: transparent;
 }
 
+.categoria {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.categoria select{
+    width: 30%;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 #recordar{
     margin-bottom: 15px;
 }
@@ -161,6 +182,74 @@ nav input {
     font-size: 12px;
     color: #42615a ;
     padding-left: 25% ;
+}
+
+/* BARRA IZQUIERDA */
+
+.big-body {
+    display: flex;
+}
+
+.body-left {
+    width: 70px;
+    height: 100%;
+    background-color: #42615a;
+    position: fixed;
+    display: none;
+}
+
+.body-rigth {
+    width: 100%;
+}
+
+.burguer-menu-2 {
+    text-align: center;
+    border: none;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #42615a;
+}
+
+.redes-body-left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 190px;
+}
+
+.redes-body-left a {
+    text-decoration: none;
+    color: #000;
+    margin-top: 10px;
+}
+
+.redes-body-left a i:hover {
+    color: white;
+}
+
+.redes-body-left a i{
+    font-size: 30px;
+}
+
+.categorys a {
+    text-decoration: none;
+    color: black;
+}
+
+.categorys a p:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.categorys h3 {
+    font-weight: 900;
+}
+
+.categorys h3, .categorys p {
+    font-size: 13px;
+    text-align: center;   
+    font-weight: 700;
 }
 
 
@@ -258,6 +347,7 @@ footer {
 
     .login-box{
         top: 47%;
+        width: 410px;
     }
 }    
 
@@ -280,31 +370,66 @@ footer {
         display: none;
     }
 
+    .login-box{
+        width: 490px;
+        height: fit-content;
+    }
+
+    .input-global {
+        margin-bottom: 5px;
+    }
+
+    .input-global input {
+        height: 25px;
+        font-size: 17px;
+    }
+
+    .input-global label {
+        font-size: 18px;
+    }
+
     .login-box input[type=email]{
-    height: 35px; 
-}
+        height: 35px; 
+    }
     .login-box input[type="password"]{
-    height: 35px;
-}
+        height: 35px;
+    }
 
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    .categoria select{
+        height: 25px;
+        font-size: 17px;
+    }
 
-.first-footer {
-    width: 30%;
-}
+    .body-rigth {
+        width: 100%;
+        margin-left: 70px;
+    }
 
-.second-footer {
-    width: 29%;
-}
+    .body-left {
+        display: block;
+    }
 
-.third-footer {
-    width: 25%;
-    align-self: flex-end;
-}
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: auto;
+        margin-left: 70px;
+        width: auto;
+    }
+
+    .first-footer {
+        width: 30%;
+    }
+
+    .second-footer {
+        width: 29%;
+    }
+
+    .third-footer {
+        width: 25%;
+        align-self: flex-end;
+    }
 }
 
 @media (min-width: 1220px) {
@@ -312,9 +437,34 @@ footer {
         height: 12vh;
         min-height: 94px;  
     }
+
+    .min-icon p, .min-icon i {
+        font-size: 20px;
+    }
+    
     nav {
         height: 12vh;
         min-height: 94px;
+    }
+
+    .login-box {
+        width: 620px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: fit-content;
+    }
+
+    .input-global {
+        margin-bottom: 20px;
+    }
+
+    .input-global input {
+        height: 25px;
+        font-size: 20px;
+    }
+
+    .input-global label {
+        font-size: 22px;
     }
 
     .logo {
