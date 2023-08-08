@@ -4,6 +4,7 @@ const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
 const dotenv = require('dotenv').config();
+const methodOverride = require('method-override');
 
 const app = express();
 
@@ -20,10 +21,12 @@ app.set('views', [
     path.join(__dirname, './views/users')
 ]);
 
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+app.use(methodOverride('_method'));
+
 app.use('/', mainRouter);
-
 app.use('/product', productRouter);
-
 app.use('/user', userRouter);
 
 app.listen(process.env.PORT || 3000, () => {
