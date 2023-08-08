@@ -38,7 +38,11 @@ nav {
 }
 
 .logo {
-    width: 20%;
+    width: 100%;
+}
+
+.logoLink {
+    max-width: 122px;
 }
 
 .burguer-menu, .burguer-menu-2 {

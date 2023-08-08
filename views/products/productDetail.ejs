@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= findProduct.name %></title>
     <link rel="stylesheet" href="/css/stylesProductDetail.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
@@ -20,14 +20,14 @@
                     <div class="main-all">
 
                         <div class="portadas">
-                            <img src="/images/ElExorcista.png" alt="portada del libro">
+                            <img src="/images/<%= findProduct.image %>" alt="portada del libro">
                         </div>
                         <div class="caja-izq">
                             <div class="titulos">
-                                <h2>El Exorcista</h2>
-                                <h3>William Peter Blatty</h3>
-                                <h4>Terror</h4>
-                                <h4>1971</h4>
+                                <h2><%= findProduct.name %></h2>
+                                <h3><%= findProduct.author %></h3>
+                                <h4><%= findProduct.category %></h4>
+                                <h4><%= findProduct.age %></h4>
                                 <button class="button">Agregar</button>
 
                                 <h2>sinopsis y detalle</h2>
@@ -42,12 +42,16 @@
                                 <div class="icon-co">
                                     <i class="fa-regular fa-heart"></i>
                                 </div>
-                                <button class="button2">Agregar</button>
+                                <a href="#"><button class="button2">Agregar</button></a>
+                                <a href="/product/<%= findProduct.id %>/edit"><button class="button2">Editar</button></a>
+                                <form action="/product/<%= findProduct.id %>/delete?_method=DELETE" method="post">
+                                    <button class="button2">Eliminar</button>
+                                </form>
                             </div>
                         </div>
-                        <div class="caja-derecha">
+                        <!-- <div class="caja-derecha">
 
-                        </div>
+                        </div> -->
                     </div>
                 </main>
 

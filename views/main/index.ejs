@@ -556,26 +556,34 @@
 
                 </section>
 
-                <h2 id="suspenso">Todos los libros SUSPENSO</h2>
-                <section class="products">
-                    
-                    <article class="product-book-end" id="book1">
-                        <div class="book">
-                            <img src="/images/LaSombraDelViento.png" alt="La Sombra Del Viento">
-                        </div>
+                <section class="productsAll" id="allProducts">
+                    <h2>TODOS LOS PRODUCTOS</h2>
+                </section>
 
-                        <div class="info-book">
-                            <h3>La Sombra Del Viento</h3>
-                            <h3>$0000</h3>
-                        </div>
+                <h2 id="suspenso">SUSPENSO</h2>
+                <section class="products">                  
+                    <% productsSuspenso.forEach(cadaProduct => { %>
+                    <article class="product-book-end">
+                        <a href="/product/<%= cadaProduct.id %>/detail" class="productLink">
+                            <div class="book">
+                                <img src="/images/<%= cadaProduct.image %>" alt="<%= cadaProduct.name %>">
+                            </div>
 
-                        <div class="add">
-                            <a>AGREGAR</a>
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
+                            <div class="info-book">
+                                <h3><%= cadaProduct.name %></h3>
+                                <h3>$<%= cadaProduct.price %></h3>
+                            </div>
+
+                            <div class="add">
+                                <a href="#">AGREGAR</a>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </a>
                     </article>
+                    <% }) %>
+                </section>
 
-                    <article class="product-book-end" id="book2">
+                    <!-- <article class="product-book-end" id="book2">
                         <div class="book">
                             <img src="/images/Perdida.png" alt="Perdida">
                         </div>
@@ -719,28 +727,31 @@
                         </div>
                     </article>
 
-                </section>
+                </section>  -->
 
-                <h2 id="cienciaFiccion">Todos los libros Ciencia Ficción</h2>
+                <h2 id="cienciaFiccion">CIENCIA FICCIÓN</h2>
                 <section class="products">
+                    <% productsFiccion.forEach(cadaProduct => { %>
+                    <article class="product-book-end">
+                        <a href="/product/<%= cadaProduct.id %>/detail" class="productLink">
+                            <div class="book">
+                                <img src="/images/<%= cadaProduct.image %>" alt="<%= cadaProduct.name %>">
+                            </div>
 
-                    <article class="product-book-end" id="book11">
-                        <div class="book">
-                            <img src="/images/ParqueJurasico.png" alt="Parque Jurásico">
-                        </div>
+                            <div class="info-book">
+                                <h3><%= cadaProduct.name %></h3>
+                                <h3>$<%= cadaProduct.price %></h3>
+                            </div>
 
-                        <div class="info-book">
-                            <h3>Parque Jurásico</h3>
-                            <h3>$0000</h3>
-                        </div>
-
-                        <div class="add">
-                            <a>AGREGAR</a>
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
+                            <div class="add">
+                                <a href="#">AGREGAR</a>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </a>
                     </article>
-
-                    <article class="product-book-end" id="book12">
+                    <% }) %>
+                </section>
+                   <!--  <article class="product-book-end" id="book12">
                         <div class="book">
                             <img src="/images/1984.png" alt="1984">
                         </div>
@@ -883,7 +894,7 @@
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </article>
-                </section>
+                </section> -->
             </main>
 
             <%- include('../partials/footer.ejs') %>
