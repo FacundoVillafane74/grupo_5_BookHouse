@@ -23,6 +23,14 @@ let model = {
         let productsFiccion = products.filter(cadaProduct => cadaProduct.category == 'ciencia-ficcion');
 
         return productsFiccion;
+    },
+
+    search: (userText) => {
+        let products = model.findAll();
+
+        let productSearch = products.filter(cadaProduct => cadaProduct.name.toLowerCase().includes(userText.toLowerCase()));
+
+        return productSearch;
     }
 };
 

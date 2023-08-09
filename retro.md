@@ -12,5 +12,10 @@
 - Hacer menos:
 - Dejar de hacer:
 
-
+## Resumen del sprint 3:
+- Comenzar a hacer: Una semana antes de finalizar el sprint decidir quien va a ser el scrum master.
+- Hacer más: Asistencia a las reuniones.
+- Continuar haciendo: Seguir con dos reuniones semanales.
+- Hacer menos:
+- Dejar de hacer:
     

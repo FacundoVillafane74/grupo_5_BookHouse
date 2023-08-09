@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/stylesIndex.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="big-body">
+        <%- include('../partials/bodyLeft.ejs') %>
+
+        <div class="body-rigth">
+            <%- include('../partials/header.ejs') %>
+
+            <main>
+                <section class="productsAll" id="allProducts">
+                    <h2>RESULTADO DE LA BUSQUEDA: <%= userText %></h2>
+                </section>
+
+                <section class="products">                  
+                    <% productSearch.forEach(cadaProduct => { %>
+                    <article class="product-book-end">
+                        <a href="/product/<%= cadaProduct.id %>/detail" class="productLink">
+                            <div class="book">
+                                <img src="/images/<%= cadaProduct.image %>" alt="<%= cadaProduct.name %>">
+                            </div>
+
+                            <div class="info-book">
+                                <h3><%= cadaProduct.name %></h3>
+                                <h3>$<%= cadaProduct.price %></h3>
+                            </div>
+
+                            <div class="add">
+                                <a href="#">AGREGAR</a>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </a>
+                    </article>
+                    <% }) %>
+                </section>
+            </main>
+            <%- include('../partials/footer.ejs') %>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -395,14 +395,21 @@ h2 {
 
 .product-book-end .book {
     max-width: 198px;
+    box-shadow: 8px 9px 11px 6px rgba(0,0,0,0.75);
 }
 
 .product-book-end .info-book {
     max-width: 198px;
+    box-shadow: 8px 17px 11px 6px rgba(0,0,0,0.75);
 }
 
+/* article:hover .info-book {
+    box-shadow: 7px 17px 11px 6px rgba(1, 231, 97, 0.75);
+} */
+
 .product-book-end .add {
-    max-width: 198px;
+    max-width: 197px;
+    box-shadow: 8px 24px 12px 6px rgba(0,0,0,0.75);
 }
 
 .product-book-end:hover .add{

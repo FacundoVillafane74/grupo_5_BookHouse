@@ -9,4 +9,8 @@ const router = express.Router();
 
 router.get('/', mainController.home);
 
+// PRODUCTOS BUSCADOS
+
+router.get('/search', mainController.search);
+
 module.exports = router;

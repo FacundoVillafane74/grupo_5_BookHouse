@@ -49,7 +49,7 @@ let productController = {
         let productUpdate = {
             id: Number(req.params.id),
             ...req.body,
-            image: req.file.filename 
+            image: req.file ? req.file.filename : req.body['old-image']
         }
 
         productsModel.update(productUpdate);
