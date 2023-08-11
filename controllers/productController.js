@@ -1,4 +1,5 @@
 const productsModel = require('../models/productsModel');
+const { validationResult } = require('express-validator');
 
 let productController = {
     detail: (req, res) => {
@@ -18,7 +19,8 @@ let productController = {
     },
 
     create: (req, res) => {
-        if(req.file){
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
         let newProduct = {
             name: req.body.name,
             description: req.body.description,
@@ -33,7 +35,7 @@ let productController = {
 
         res.redirect('/product/' + productNew.id + '/detail');
         } else {
-            res.render('productAdd');
+            res.render('productAdd', { errors: errors.mapped(), old: req.body });
         }
     },
 
