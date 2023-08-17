@@ -131,21 +131,21 @@ nav input {
 
 .login-box input[type=text]{
     width:100% ;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     border: none;
     border-bottom: 1px solid #fff;
     background-color: transparent;  
 }
 .login-box input[type="number"]{
     width:100% ;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     border: none;
     border-bottom: 1px solid #fff;
     background-color: transparent;
 }
 .login-box input[type="file"]{
     width:100% ;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     border: none;
     background-color: transparent;
 }
@@ -157,10 +157,10 @@ nav input {
 }
 
 .categoria select{
-    width: 30%;
+    width: 54%;
     height: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    /* margin-top: 10px;
+    margin-bottom: 20px; */
 }
 
 #recordar{
@@ -185,6 +185,19 @@ nav input {
     font-size: 12px;
     color: #42615a ;
     padding-left: 25% ;
+}
+
+.text-danger {
+    color: rgb(214, 17, 17);
+}
+
+.text-category {
+    margin: 0;
+    margin-top: 16px;
+}
+
+.input-global {
+    margin-top: 20px;
 }
 
 /* BARRA IZQUIERDA */
@@ -352,6 +365,10 @@ footer {
         top: 47%;
         width: 410px;
     }
+
+    .categoria select{
+        width: 40%;
+    }
 }    
 
 @media (min-width: 769px){
@@ -399,6 +416,7 @@ footer {
     }
 
     .categoria select{
+        width: 40%;
         height: 25px;
         font-size: 17px;
     }
@@ -458,7 +476,7 @@ footer {
     }
 
     .input-global {
-        margin-bottom: 20px;
+        margin-top: 30px;
     }
 
     .input-global input {
@@ -468,6 +486,12 @@ footer {
 
     .input-global label {
         font-size: 22px;
+    }
+
+    .categoria select{
+        width: 35%;
+        height: 25px;
+        font-size: 20px;
     }
 
     .logo {

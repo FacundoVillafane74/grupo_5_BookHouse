@@ -12,26 +12,46 @@
         <img class="logo" src="/images/logo-BookHouse.svg" alt="logo">
     </header>
     <main>
+        <form action="/user/register" method="post">
 
-        <div class='nombre-y-apellido'>
+        <div class='nombre-y-apellido input-register'>
             <label for="fullname">Nombre y Apellido
-                <input type="nombre-y-apellido" name="fullname" id="fullname" placeholder="Pedro Rodriguez">
+                <input type="text" name="fullname" id="fullname" placeholder="Pedro Rodriguez">
                 <i class="fa-solid fa-lock"></i>
             </label>
+            <% if (locals.errors && errors.fullname) { %>
+                <div class="text-danger"><%= errors.fullname %></div>
+            <% } %>
         </div>
 
-        <div class="email">
+        <div class="email input-register">
             <label for="email">Email
-                <input type="email" name="email" id="email" placeholder="example@gmail.com">
+                <input type="text" name="email" id="email" placeholder="example@gmail.com">
                 <i class="fa-solid fa-lock"></i>
             </label>
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger"><%= errors.email %></div>
+            <% } %>
         </div>
 
-        <div class='contraseña'>
+        <div class='contraseña input-register'>
             <label for="password">Contraseña
                 <input type="password" name="password" id="password" placeholder="Ingresar contraseña">
                 <i class="fa-solid fa-lock"></i>
             </label>
+            <% if (locals.errors && errors.password) { %>
+                <div class="text-danger"><%= errors.password %></div>
+            <% } %>
+        </div>
+
+        <div class='image-avatar'>
+            <label for="image">Imagen
+                <input type="file" name="image" id="image">
+                <i class="fa-solid fa-lock"></i>
+            </label>
+            <% if (locals.errors && errors.image) { %>
+                <div class="text-danger"><%= errors.image %></div>
+            <% } %>
         </div>
 
         <div id="notificaciones">
@@ -49,6 +69,10 @@
         </div>
 
         <input type="submit" value="Registrar">
+
+        <a href="/user/login" class="tienes-cuenta">Ya tienes cuenta? Iniciar Sesión</a>
+    </form>
+
     </main>
     </dif>
 </body>

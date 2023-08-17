@@ -38,8 +38,9 @@
                                 <div class="categoria input-global">
                                     <label for="category">Categoria</label>
                                     <select name="category" id="category">
-                                        <option value="suspenso">Suspenso</option>
-                                        <option value="ciencia-ficcion">Ciencia Ficcion</option>
+                                        <option value="">Elegí una categoría</option>
+                                        <option value="suspenso" <%= findProduct.category === 'suspenso' ? 'selected' : '' %>>Suspenso</option>
+                                        <option value="ciencia-ficcion" <%= findProduct.category === 'ciencia-ficcion' ? 'selected' : '' %>>Ciencia Ficcion</option>
                                     </select>
                                 </div>
 

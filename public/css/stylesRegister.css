@@ -8,7 +8,7 @@ body{
 
 .register-box{
     width: 360px;
-    height: 480px;
+    /* height: 480px; */
     background-color:#84A98C;
     top: 50%;
     left: 50%;
@@ -16,6 +16,7 @@ body{
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
+    padding-bottom: 20px;
 }
 
 .register-box .logo{
@@ -28,7 +29,7 @@ body{
     padding-left: 10%;
 }
 
-.register-box input[type="nombre-y-apellido"]{
+.register-box input[type="text"]{
     width: 100% ;
     margin-bottom: 20px;
     border: none;
@@ -36,7 +37,7 @@ body{
     background-color: transparent;
 }
 
-.register-box input[type=email]{
+.register-box input[type="text"]{
     width:100% ;
     margin-bottom: 20px;
     border: none;
@@ -69,11 +70,12 @@ body{
 
 .register-box input[type="submit"]{
     width:100% ;
-    margin-bottom: 20px;
     border: none;
     height: 40px;
     font-size: 18px;
     border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .register-box a{
@@ -83,18 +85,31 @@ body{
     padding-left: 25% ;
 }
 
-.email{
+/* .email{
     display: flex;
 }
 .contraseña{
     display: flex;
+} */
+
+.text-danger {
+    color: rgb(214, 17, 17);
+    font-size: 14px;
+}
+
+.image-avatar {
+    margin-bottom: 15px;
+}
+
+.input-register {
+    margin-top: 20px;
 }
 
 @media (min-width: 769px){
-    .register-box input[type='nombre-y-Apellido']{
+    .register-box input[type='text']{
         height: 35px;
     }
-    .register-box input[type=email]{
+    .register-box input[type='text']{
         height: 35px; 
     }
     .register-box input[type="password"]{

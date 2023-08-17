@@ -21,40 +21,62 @@
 
                                 <div class="nombre input-global">
                                     <label for="name">Nombre del producto</label>
-                                    <input type="text" name="name" id="name" required>
+                                    <input type="text" name="name" id="name" value="<%= locals.old && old.name ? old.name : '' %>">
+                                    <% if(locals.errors && errors.name){ %>
+                                        <p class="text-danger"><%= errors.name %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="descripcion input-global">
                                     <label for="description">Descripción</label>
-                                    <input type="text" name="description" id="description" required>
+                                    <input type="text" name="description" id="description" value="<%= locals.old && old.description ? old.description : '' %>">
+                                    <% if(locals.errors && errors.description){ %>
+                                        <p class="text-danger"><%= errors.description %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="imagen input-global">
                                     <label for="image">Imágen</label>
                                     <input type="file" name="image" id="image">
+                                    <% if(locals.errors && errors.image){ %>
+                                        <p class="text-danger"><%= errors.image %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="categoria input-global">
                                     <label for="category">Categoria</label>
                                     <select name="category" id="category">
-                                        <option value="suspenso">Suspenso</option>
-                                        <option value="ciencia-ficcion">Ciencia Ficción</option>
+                                        <option value="">Elegí una categoría</option>
+                                        <option value="suspenso" <%= locals.old && old.category === 'suspenso' ? 'selected' : '' %>>Suspenso</option>
+                                        <option value="ciencia-ficcion" <%= locals.old && old.category === 'ciencia-ficcion' ? 'selected' : '' %>>Ciencia Ficción</option>
                                     </select>
+                                    <% if(locals.errors && errors.category){ %>
+                                        <p class="text-danger text-category"><%= errors.category %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="precio input-global">
                                     <label for="author">Autor</label>
-                                    <input type="text" name="author" id="author" required>
+                                    <input type="text" name="author" id="author" value="<%= locals.old && old.author ? old.author : '' %>">
+                                    <% if(locals.errors && errors.author){ %>
+                                        <p class="text-danger"><%= errors.author %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="precio input-global">
                                     <label for="age">Año de lanzamiento</label>
-                                    <input type="number" name="age" id="age" required>
+                                    <input type="number" name="age" id="age" value="<%= locals.old && old.age ? old.age : '' %>">
+                                    <% if(locals.errors && errors.age){ %>
+                                        <p class="text-danger"><%= errors.age %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="precio input-global">
                                     <label for="price">Precio</label>
-                                    <input type="number" name="price" id="price" required>
+                                    <input type="number" name="price" id="price" value="<%= locals.old && old.price ? old.price : '' %>">
+                                    <% if(locals.errors && errors.price){ %>
+                                        <p class="text-danger"><%= errors.price %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="input-global">

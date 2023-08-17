@@ -14,24 +14,30 @@ rel="stylesheet" />
             <img class="logo" src="/images/logo-BookHouse.svg" alt="logo">
     </header>
     <main>
-        <form action="">
+        <form action="/user/login" method="post">
             
             <label for="email">Email
                 <div class="email">
-                    <input type="email" name="email" id="email" placeholder="example@email.com">
+                    <input type="text" name="email" id="email" placeholder="example@email.com">
                     <div class="iconos">
                         <i class="fa-solid fa-user"></i>
                     </div>
                 </div>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger"><%= errors.email %></div>
+                <% } %>
             </label>                
             
             <label for="contraseña">Contraseña
                 <div class="contraseña">
-                    <input type="password" name="contraseña" id="contraseña" placeholder="ingresar contraseña">
+                    <input type="password" name="password" id="password" placeholder="ingresar contraseña">
                     <div class="iconos">
                         <i class="fa-solid fa-lock"></i>
                     </div>
                 </div>
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger"><%= errors.password %></div>
+                <% } %>
             </label>
             
             <div id="recordar">
@@ -41,6 +47,7 @@ rel="stylesheet" />
             </div>
             <input type="submit" value="Iniciar Sesión">
             <a href="">¿Olvidaste tu contraseña?</a>
+            <a href="/user/register" id="tienes-cuenta">No tienes cuenta? Registrate</a>
         </form>
     </main>
     </div>

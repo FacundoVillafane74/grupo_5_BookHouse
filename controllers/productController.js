@@ -1,4 +1,5 @@
 const productsModel = require('../models/productsModel');
+const { validationResult } = require('express-validator');
 
 let productController = {
     detail: (req, res) => {
@@ -14,11 +15,13 @@ let productController = {
     },
 
     add: (req, res) => {
-        res.render('productAdd');
+        console.log(req.query);
+        res.render('productAdd', {errors: req.query});
     },
 
     create: (req, res) => {
-        if(req.file){
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
         let newProduct = {
             name: req.body.name,
             description: req.body.description,
@@ -33,7 +36,11 @@ let productController = {
 
         res.redirect('/product/' + productNew.id + '/detail');
         } else {
-            res.render('productAdd');
+            let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
+
+            let queryString = queryArray.join('');
+
+            res.redirect('/product/add?' + queryString);
         }
     },
 
@@ -46,15 +53,24 @@ let productController = {
     },
 
     update: (req, res) => {
-        let productUpdate = {
-            id: Number(req.params.id),
-            ...req.body,
-            image: req.file ? req.file.filename : req.body['old-image']
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            let productUpdate = {
+                id: Number(req.params.id),
+                ...req.body,
+                image: req.file ? req.file.filename : req.body['old-image']
+            }
+
+            productsModel.update(productUpdate);
+
+            res.redirect('/product/' + productUpdate.id + '/detail');
+        } else {
+            let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
+
+            let queryString = queryArray.join('');
+
+            res.redirect('/product/add?' + queryString);
         }
-
-        productsModel.update(productUpdate);
-
-        res.redirect('/product/' + productUpdate.id + '/detail');
     },
 
     destroy: (req, res) => {
