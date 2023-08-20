@@ -8,16 +8,7 @@ const router = express.Router();
 
 // Destino y nombre de los archivos (multer)
 
-const storage = multer.diskStorage({
-    destination: (req, file, callback) => {
-        let pathArchives = path.join(__dirname, '../public/images');
-        callback(null, pathArchives);
-    },
-    filename: (req, file, callback) => {
-        let nameOfFile = 'img-' + Date.now() + path.extname(file.originalname);
-        callback(null, nameOfFile);
-    }
-});
+const {storageProducts: storage} = require('../utils/multer');
 
 let upload = multer({storage});
 

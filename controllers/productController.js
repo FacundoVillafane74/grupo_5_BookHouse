@@ -68,21 +68,28 @@ let productController = {
     },
 
     edit: (req, res) => {
-        productId = Number(req.params.id);
+        let productId = Number(req.params.id);
 
         findProduct = productsModel.findById(productId);
 
-        res.render('productEdit', { findProduct });
+        let errors = req.query;
+
+        res.render('productEdit', {findProduct, errors});
     },
 
     update: (req, res) => {
         let errors = validationResult(req);
+
+        let productToUpdate = {
+            id: Number(req.params.id),
+            ...req.body,
+        }
+
         if (errors.isEmpty()) {
             let productUpdate = {
-                id: Number(req.params.id),
-                ...req.body,
+                ...productToUpdate,
                 image: req.file ? req.file.filename : req.body['old-image']
-            }
+            };
 
             productsModel.update(productUpdate);
 
@@ -92,7 +99,7 @@ let productController = {
 
             let queryString = queryArray.join('');
 
-            res.redirect('/product/add?' + queryString);
+            res.redirect('/product/' + productToUpdate.id + '/edit?' + queryString);
         }
     },
 
