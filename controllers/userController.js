@@ -26,7 +26,7 @@ let userController = {
     registerPost: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            res.send(req.body);
+            res.send('salio todo bien');
         } else {
             let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
 

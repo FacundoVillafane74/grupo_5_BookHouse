@@ -18,4 +18,10 @@
 - Continuar haciendo: Seguir con dos reuniones semanales.
 - Hacer menos:
 - Dejar de hacer:
-    
+
+## Resumen del sprint 4:
+- Comenzar a hacer:
+- Hacer más: Asistencia a las reuniones.
+- Continuar haciendo: Al menos hacer una reunión semanal.
+- Hacer menos:
+- Dejar de hacer:

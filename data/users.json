@@ -4,6 +4,7 @@
         "fullname": "",
         "email": "",
         "password": "",
-        "rol": ""
+        "rol": "",
+        "image": ""
     }
 ]

@@ -2,6 +2,7 @@ const express = require('express');
 const userController = require('../controllers/userController');
 const { body } = require('express-validator');
 const multer = require('multer');
+const path = require('path');
 
 const router = express.Router();
 
@@ -18,7 +19,7 @@ const storage = multer.diskStorage({
     }
 });
 
-const upload = multer({storage});
+let upload = multer({storage});
 
 // Validaciones (express-validator)
 
