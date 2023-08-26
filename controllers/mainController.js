@@ -6,6 +6,7 @@ let mainController = {
         let productsFiccion = mainModel.productsFiccion();
 
         res.render('index', {productsSuspenso, productsFiccion});
+        res.render('home', { user: req.session.body});
     },
 
     search: (req, res) => {

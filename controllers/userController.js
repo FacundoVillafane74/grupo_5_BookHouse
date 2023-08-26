@@ -1,9 +1,28 @@
 const usersModel = require('../models/usersModel');
 const { validationResult } = require('express-validator');
+const bcrypt = requiere('bcrypt');
 
 let userController = {
+    getLogin: (req, res) => {
+        const erorr = req.query.error;
+
+        res.render('login', {error: req.query});
+    },
+
     login: (req, res) => {
-        res.render('login', {errors: req.query});
+        const userInJson = userModel.findByEmail(req.body.email);
+        if(!userInJson){
+           return res.redirect('/user/login?error=el mail o la contraseña son incorrectos');
+        };
+
+        const validPw = bcrypt.compareSync(req.body.password, userInJson.password);
+
+        if (validPw) {
+            req.session.user = userInJson;
+            res.redirect('/');
+        } else {
+            res.redirect('/user/login?error=el mail o la contraseña son incorrectos');
+        }
     },
 
     loginPost: (req, res) => {
