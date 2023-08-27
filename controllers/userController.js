@@ -19,6 +19,9 @@ let userController = {
 
         if (validPw) {
             req.session.user = userInJson;
+            if (req.body.recordar != undefined){
+                res.cookie('recordar', userInJson.email, {maxAge:60000 * 60 * 24 * 7})
+            }
             res.redirect('/');
         } else {
             res.redirect('/user/login?error=el mail o la contraseña son incorrectos');
