@@ -9,8 +9,11 @@ let userController = {
         res.render('login', {error: req.query});
     },
 
-    login: (req, res) => {
-        const userInJson = userModel.findByEmail(req.body.email);
+
+    loginPost: (req, res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            const userInJson = usersModel.findByEmail(req.body.email);
         if(!userInJson){
            return res.redirect('/user/login?error=el mail o la contraseña son incorrectos');
         };
@@ -26,12 +29,6 @@ let userController = {
         } else {
             res.redirect('/user/login?error=el mail o la contraseña son incorrectos');
         }
-    },
-
-    loginPost: (req, res) => {
-        let errors = validationResult(req);
-        if(errors.isEmpty()){
-            res.send('esta todo bien')
         } else {
             let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
 
