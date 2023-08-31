@@ -32,6 +32,9 @@
             <% if (locals.errors && errors.email) { %>
                 <div class="text-danger"><%= errors.email %></div>
             <% } %>
+            <% if (locals.emailExist) { %>
+                <div class="text-danger"><%= emailExist %></div>
+            <% } %>
         </div>
 
         <div class='contraseña input-register'>

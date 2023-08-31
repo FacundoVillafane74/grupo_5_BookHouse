@@ -1,9 +1,9 @@
 const usersModel = require('../models/usersModel');
 const { validationResult } = require('express-validator');
-const bcrypt = requiere('bcrypt');
+const bcrypt = require('bcrypt');
 
 let userController = {
-    getLogin: (req, res) => {
+    login: (req, res) => {
         const erorr = req.query.error;
 
         res.render('login', {error: req.query});
@@ -39,13 +39,26 @@ let userController = {
     },
     
     register: (req, res) => {
-        res.render('register', {errors: req.query});
+        res.render('register', {errors: req.query, emailExist: req.query.emailExist});
     },
 
     registerPost: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            res.send('salio todo bien');
+            const newUser = {
+                fullname: req.body.fullname,
+                email: req.body.email,
+                password: req.body.password,
+                image: req.file.filename
+            };
+            const user = usersModel.create(newUser);
+            if(user.emailExist){
+                res.redirect('/user/register?emailExist=' + user.emailExist)
+            }
+            else {
+                res.redirect('/user/login');
+            }
+
         } else {
             let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
 
