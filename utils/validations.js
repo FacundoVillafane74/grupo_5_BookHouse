@@ -46,7 +46,7 @@ const validations = {
                 let fileExtension = path.extname(file.originalname);
                 if(!acceptedExtensions.includes(fileExtension)){
                     throw new Error('Las extensiones permitidas son ' + acceptedExtensions.join(', '));
-            } 
+            }
             } else {
                 throw new Error('Tienes que subir una imagen');
             }

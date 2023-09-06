@@ -37,16 +37,15 @@ let userController = {
             res.redirect('/user/login?' + queryString);
         }
     },
-    
     register: (req, res) => {
         res.render('register', {errors: req.query});
     },
-
     registerPost: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
             res.send('salio todo bien');
         } else {
+            console.log(req.body)
             let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
 
             let queryString = queryArray.join('');
