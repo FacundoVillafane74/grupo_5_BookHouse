@@ -1,16 +1,18 @@
 const usersModel = require('../models/usersModel');
 const { validationResult } = require('express-validator');
-const bcrypt = requiere('bcrypt');
+const bcrypt = require('bcrypt');
 
 let userController = {
-    getLogin: (req, res) => {
+    login: (req, res) => {
         const erorr = req.query.error;
 
         res.render('login', {error: req.query});
     },
 
-    login: (req, res) => {
-        const userInJson = userModel.findByEmail(req.body.email);
+    loginPost: (req, res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            const userInJson = usersModel.findByEmail(req.body.email);
         if(!userInJson){
            return res.redirect('/user/login?error=el mail o la contraseña son incorrectos');
         };
@@ -19,16 +21,13 @@ let userController = {
 
         if (validPw) {
             req.session.user = userInJson;
+            if (req.body.recordar != undefined){
+                res.cookie('recordar', userInJson.email, {maxAge:60000 * 60 * 24 * 7})
+            }
             res.redirect('/');
         } else {
             res.redirect('/user/login?error=el mail o la contraseña son incorrectos');
         }
-    },
-
-    loginPost: (req, res) => {
-        let errors = validationResult(req);
-        if(errors.isEmpty()){
-            res.send('esta todo bien')
         } else {
             let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
 
@@ -37,13 +36,28 @@ let userController = {
             res.redirect('/user/login?' + queryString);
         }
     },
+
     register: (req, res) => {
-        res.render('register', {errors: req.query});
+        res.render('register', {errors: req.query, emailExist: req.query.emailExist});
     },
+
     registerPost: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            res.send('salio todo bien');
+            const newUser = {
+                fullname: req.body.fullname,
+                email: req.body.email,
+                password: req.body.password,
+                image: req.file.filename
+            };
+            const user = usersModel.create(newUser);
+            if(user.emailExist){
+                res.redirect('/user/register?emailExist=' + user.emailExist)
+            }
+            else {
+                res.redirect('/user/login');
+            }
+
         } else {
             console.log(req.body)
             let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
