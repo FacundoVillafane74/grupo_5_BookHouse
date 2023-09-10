@@ -1,39 +1,10 @@
 [
     {
         "id": "",
-        "fullname": "",
+        "name": "",
+        "last_name": "",
         "email": "",
         "password": "",
-        "rol": "",
         "image": ""
-    },
-    {
-        "id": "cfe156fa-5388-49b0-8aed-d713a81fbb03",
-        "fullname": "Facu",
-        "email": "facu@gmail.com",
-        "password": "$2b$12$4twLxLvsWxQAMFJEa4K1fOiE9dsRdbzsL7ILZPVZUervoIQhfRCE2"
-    },
-    {
-        "id": "6be2f48e-6d99-4c31-9d9a-a72d1658b043",
-        "fullname": "Facundo Villafañeee",
-        "email": "facundazo@gmail.com",
-        "password": "$2b$12$eBIrau0Lybohi2WMGHtO8u5KcBRBeXqxQXmL1E3tOxbbFgqFAJCBO",
-        "image": "img-1694185304994.jpg"
-    },
-    {
-        "id": "2144c4c1-c59b-48b2-86c6-4abff8e68f57",
-        "name": "Facundoooo",
-        "last_name": "Villafañeeee",
-        "email": "aa@gmail.com",
-        "password": "$2b$12$6LT0gD7nE85ASKDRhp.CQu27WZRLVLcmC4C9IayPHPqw4NZS57moG",
-        "image": "img-1694186017418.jpg"
-    },
-    {
-        "id": "ec490eeb-4bff-4f10-90bb-e7b983f47d40",
-        "name": "Tati",
-        "last_name": "Nieves",
-        "email": "Tati@gmail.com",
-        "password": "$2b$12$j6ATsV820dg2GUIXsRiTKe80VWtNRwAYg0sKerGOKcZ3kaB2QPj3W",
-        "image": "img-1694199672334.jpeg"
     }
 ]
