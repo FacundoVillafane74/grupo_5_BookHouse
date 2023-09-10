@@ -12,15 +12,25 @@
         <img class="logo" src="/images/products/logo-BookHouse.svg" alt="logo">
     </header>
     <main>
-        <form action="/user/register" method="post">
+        <form action="/user/register" method="post" enctype="multipart/form-data">
 
         <div class='nombre-y-apellido input-register'>
-            <label for="fullname">Nombre y Apellido
-                <input type="text" name="fullname" id="fullname" placeholder="Pedro Rodriguez">
+            <label for="name">Nombre
+                <input type="text" name="name" id="name" placeholder="Pedro">
                 <i class="fa-solid fa-lock"></i>
             </label>
-            <% if (locals.errors && errors.fullname) { %>
-                <div class="text-danger"><%= errors.fullname %></div>
+            <% if (locals.errors && errors.name) { %>
+                <div class="text-danger"><%= errors.name %></div>
+            <% } %>
+        </div>
+
+        <div class='nombre-y-apellido input-register'>
+            <label for="last_name">Apellido
+                <input type="text" name="last_name" id="last_name" placeholder="Rodriguez">
+                <i class="fa-solid fa-lock"></i>
+            </label>
+            <% if (locals.errors && errors.last_name) { %>
+                <div class="text-danger"><%= errors.last_name %></div>
             <% } %>
         </div>
 
@@ -59,7 +69,7 @@
 
         <div id="notificaciones">
             <label for="notifications">
-                <input type="checkbox" name="notifications" id="notifications" checked>
+                <input type="checkbox" name="notifications" id="notifications">
                 Deseo recibir notificaciones acerca de ofertas y recomendaciones
             </label>
         </div>

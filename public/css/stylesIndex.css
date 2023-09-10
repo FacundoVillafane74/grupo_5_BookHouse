@@ -89,6 +89,8 @@ nav input {
     align-items: center;
     margin-right: 10px;
     height: 100%;
+    width: 18%;
+    max-width: 53px;
 }
 
 .min-icon a {
@@ -98,6 +100,7 @@ nav input {
 
 .min-icon p {
     margin: 0;
+    font-size: 14px;
 }
 
 .min-icon p:hover {
@@ -644,11 +647,14 @@ footer {
     .navbar-rigth {
         align-self: flex-end;
         margin-bottom: 10px;
-        max-width: 350px;
+        width: 35%;
+        /* max-width: 350px; */
     }
 
     .icons-info {
         display: flex;
+        width: 37%;
+        max-width: 310px;
     }
     /* .product-book {
         width: 21%;
@@ -810,6 +816,11 @@ footer {
         margin-left: 50px;
     }
 
+    .icons-info {
+        width: 390px;
+        max-width: 360px;
+    }
+
     .navbar-rigth {
         margin-left: 135px;
     }
@@ -819,7 +830,7 @@ footer {
     }
 
     .min-icon p, .min-icon i {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .carrusel-oferts {
@@ -896,6 +907,11 @@ footer {
 }
 
 @media (min-width: 1430px) {
+    .icons-info {
+        width: 390px;
+        max-width: 375px;
+    }
+    
     .carrusel-oferts {
         height: 40vh;
     }

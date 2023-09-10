@@ -10,10 +10,22 @@
         </form>
 
         <div class="icons-info">
-            <div class="min-icon">
-                <i class="fa-solid fa-user"></i>
-                <a href="/user/login"><p>Ingresar</p>
-            </div>
+        <% if(locals.userLogged) { %>
+                <div class="min-icon">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="/user/profile"><p><%= locals.userLogged.name %></p></a>
+                </div>
+
+                <div class="min-icon">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <a href="/user/logout"><p>Salir</p></a>
+                </div>
+            <% } else { %>
+                <div class="min-icon">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="/user/login"><p>Ingresar</p></a>
+                </div>
+            <% } %>
 
             <div class="min-icon">
                 <i class="fa-solid fa-heart"></i>

@@ -29,4 +29,8 @@ router.post('/login', validationFormLogin, userController.loginPost);
 router.get('/register', userController.register);
 router.post('/register', [upload.single('image'), validationFormRegister], userController.registerPost);
 
+// CERRADO DE SESIÓN DE LOS USUARIOS
+
+router.get('/logout', userController.logout);
+
 module.exports = router;

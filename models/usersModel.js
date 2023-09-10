@@ -1,11 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
+const uuid = require('uuid');
 const usersPath = path.join(__dirname, '../data/users.json');
 
 let model = {
     findAll: () => {
         const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+
         return users;
     },
 
@@ -22,7 +24,7 @@ let model = {
 
         if(emailInUse){
             return ({
-                emailExist: 'Este mail ya se encuentra en uso'
+                emailExist: 'Este email ya se encuentra en uso'
             })
         }
         

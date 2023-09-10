@@ -8,6 +8,8 @@ const dotenv = require('dotenv').config();
 const methodOverride = require('method-override');
 const session = require('express-session');
 const recordameMiddleware = require('./middlewares/recordameMiddleware');
+const cookieParser = require('cookie-parser');
+const { userLogged } = require('./middlewares/userLogged');
 
 // EJECUCIÓN DE EXPRESS
 const app = express();
@@ -28,10 +30,12 @@ app.set('views', [
 ]);
 
 app.use(session({ secret: 'b00kh0use', resave: false, saveUninitialized: true}));
+app.use(cookieParser());
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(recordameMiddleware);
+app.use(userLogged);
 
 // ROUTES
 
