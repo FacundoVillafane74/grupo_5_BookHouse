@@ -9,7 +9,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const recordameMiddleware = require('./middlewares/recordameMiddleware');
 const cookieParser = require('cookie-parser');
-const { userLogged } = require('./middlewares/userLogged');
+const { userLogged } = require('./middlewares/userLoggedMiddleware');
 
 // EJECUCIÓN DE EXPRESS
 const app = express();

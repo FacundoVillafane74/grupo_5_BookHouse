@@ -3,6 +3,7 @@ const userController = require('../controllers/userController');
 const { body } = require('express-validator');
 const multer = require('multer');
 const path = require('path');
+const { auth, guest } = require('../middlewares/userPermissionMiddleware');
 
 const router = express.Router();
 
@@ -21,13 +22,17 @@ const {validationFormLogin} = require('../utils/validations');
 
 // INICIO DE SESIÓN DE LOS USUARIOS
 
-router.get('/login', userController.login);
+router.get('/login', guest, userController.login);
 router.post('/login', validationFormLogin, userController.loginPost);
 
 // REGISTRO DE LOS USUARIOS
 
-router.get('/register', userController.register);
+router.get('/register', guest, userController.register);
 router.post('/register', [upload.single('image'), validationFormRegister], userController.registerPost);
+
+// VISTA DE LOS USUARIOS
+
+router.get('/profile', auth, userController.profile);
 
 // CERRADO DE SESIÓN DE LOS USUARIOS
 

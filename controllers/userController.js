@@ -72,6 +72,10 @@ let userController = {
         }
     },
 
+    profile: (req, res) => {
+        res.render('profile');
+    },
+
     logout: (req, res) => {
         res.clearCookie('recordar');
         req.session.destroy();

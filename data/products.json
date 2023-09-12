@@ -1,1 +1,202 @@
-[{"id":1,"name":"La Sombra Del Viento","description":"Descripción sobre La Sombra Del Viento","image":"LaSombraDelViento.png","category":"suspenso","author":"Carlos Ruiz Zafón","age":"2001","price":1000},{"id":2,"name":"Perdida","description":"Descripción sobre Perdida","image":"Perdida.png","category":"suspenso","author":"Gillian Flynn","age":"2012","price":2000},{"id":3,"name":"Misery","description":"Descripción sobre Misery","image":"Misery.png","category":"suspenso","author":"Stephen King","age":"1987","price":1500},{"id":4,"name":"La Cúpula","description":"Descripción sobre La Cúpula","image":"LaCupula.png","category":"suspenso","author":"Stephen King","age":"2009","price":1500},{"id":5,"name":"El Exorcista","description":"Descripción sobre El Exorcista","image":"ElExorcista.png","category":"suspenso","author":"William Peter Blatty","age":"1971","price":1500},{"id":6,"name":"La Casa Infernal","description":"Descripción sobre La Casa Infernal","image":"LaCasaInfernal.png","category":"suspenso","author":"Richard Matheson","age":"1971","price":1500},{"id":7,"name":"Inferno","description":"Descripción sobre Inferno","image":"Inferno.png","category":"suspenso","author":"Dan Brown","age":"2013","price":1500},{"id":8,"name":"El Resplandor","description":"Descripción sobre El Resplandor","image":"ElResplandor.png","category":"suspenso","author":"Stephen King","age":"1977","price":1500},{"id":9,"name":"Ángeles Y Demonios","description":"Descripción sobre Ángeles Y Demonios","image":"AngelesYDemonios.png","category":"suspenso","author":"Dan Brown","age":"2000","price":1500},{"id":10,"name":"Terapia","description":"Descripción sobre Terapia","image":"Terapia.png","category":"suspenso","author":"Sebastian Fitzek","age":"2018","price":1500},{"id":11,"name":"Parque Jurásico","description":"Descripción sobre Parque Jurásico","image":"ParqueJurasico.png","category":"ciencia-ficcion","author":"Michael Crichton","age":"1990","price":2500},{"id":12,"name":"1984","description":"Descripción sobre 1984","image":"1984.png","category":"ciencia-ficcion","author":"George Orwell","age":"1949","price":2500},{"id":13,"name":"Fahrenheit 451","description":"Descripción sobre Fahrenheit 451","image":"Fahrenheit-451.png","category":"ciencia-ficcion","author":"Ray Bradbury","age":"1953","price":2500},{"id":14,"name":"El Hobbit","description":"Descripción sobre El Hobbit","image":"ElHobbit.png","category":"ciencia-ficcion","author":"J. R. R. Tolkien","age":"1937","price":2500},{"id":15,"name":"Ciudad Sin Estrellas","description":"Descripción sobre Ciudad Sin Estrellas","image":"CiudadSinEstrellas.png","category":"ciencia-ficcion","author":"Montse De Paz Toldra","age":"2012","price":2500},{"id":16,"name":"La Ciudad Y La Ciudad","description":"Descripción sobre La Ciudad Y La Ciudad","image":"LaCiudadYLaCiudad.png","category":"ciencia-ficcion","author":"China Miéville","age":"2009","price":2500},{"id":17,"name":"Aniquilación","description":"Descripción sobre Aniquilación","image":"Aniquilacion.png","category":"ciencia-ficcion","autor":"Michel Houellebecq","age":"2014","price":2500},{"id":18,"name":"Rascacielos","description":"Descripción sobre Rascacielos","image":"Rascacielos.png","category":"ciencia-ficcion","author":"J. G. Ballard","age":"2003","price":2500},{"id":19,"name":"Neuromante","description":"Descripción sobre Neuromante","image":"Neuromante.png","category":"ciencia-ficcion","author":"William Gibson","age":"1984","price":2500},{"id":20,"name":"El Mundo Sumergido","description":"Descripción sobre El Mundo Sumergido","image":"ElMundoSumergido.png","category":"ciencia-ficcion","author":"J. G. Ballard","age":"1961","price":2500}]
+[
+    {
+        "id": 1,
+        "name": "La Sombra Del Viento",
+        "description": "Descripción sobre La Sombra Del Viento",
+        "image": "LaSombraDelViento.png",
+        "category": "suspenso",
+        "author": "Carlos Ruiz Zafón",
+        "age": "2001",
+        "price": 1000
+    },
+    {
+        "id": 2,
+        "name": "Perdida",
+        "description": "Descripción sobre Perdida",
+        "image": "Perdida.png",
+        "category": "suspenso",
+        "author": "Gillian Flynn",
+        "age": "2012",
+        "price": 2000
+    },
+    {
+        "id": 3,
+        "name": "Misery",
+        "description": "Descripción sobre Misery",
+        "image": "Misery.png",
+        "category": "suspenso",
+        "author": "Stephen King",
+        "age": "1987",
+        "price": 1500
+    },
+    {
+        "id": 4,
+        "name": "La Cúpula",
+        "description": "Descripción sobre La Cúpula",
+        "image": "LaCupula.png",
+        "category": "suspenso",
+        "author": "Stephen King",
+        "age": "2009",
+        "price": 1500
+    },
+    {
+        "id": 5,
+        "name": "El Exorcista",
+        "description": "Descripción sobre El Exorcista",
+        "image": "ElExorcista.png",
+        "category": "suspenso",
+        "author": "William Peter Blatty",
+        "age": "1971",
+        "price": 1500
+    },
+    {
+        "id": 6,
+        "name": "La Casa Infernal",
+        "description": "Descripción sobre La Casa Infernal",
+        "image": "LaCasaInfernal.png",
+        "category": "suspenso",
+        "author": "Richard Matheson",
+        "age": "1971",
+        "price": 1500
+    },
+    {
+        "id": 7,
+        "name": "Inferno",
+        "description": "Descripción sobre Inferno",
+        "image": "Inferno.png",
+        "category": "suspenso",
+        "author": "Dan Brown",
+        "age": "2013",
+        "price": 1500
+    },
+    {
+        "id": 8,
+        "name": "El Resplandor",
+        "description": "Descripción sobre El Resplandor",
+        "image": "ElResplandor.png",
+        "category": "suspenso",
+        "author": "Stephen King",
+        "age": "1977",
+        "price": 1500
+    },
+    {
+        "id": 9,
+        "name": "Ángeles Y Demonios",
+        "description": "Descripción sobre Ángeles Y Demonios",
+        "image": "AngelesYDemonios.png",
+        "category": "suspenso",
+        "author": "Dan Brown",
+        "age": "2000",
+        "price": 1500
+    },
+    {
+        "id": 10,
+        "name": "Terapia",
+        "description": "Descripción sobre Terapia",
+        "image": "Terapia.png",
+        "category": "suspenso",
+        "author": "Sebastian Fitzek",
+        "age": "2018",
+        "price": 1500
+    },
+    {
+        "id": 11,
+        "name": "Parque Jurásico",
+        "description": "Descripción sobre Parque Jurásico",
+        "image": "ParqueJurasico.png",
+        "category": "ciencia-ficcion",
+        "author": "Michael Crichton",
+        "age": "1990",
+        "price": 2500
+    },
+    {
+        "id": 12,
+        "name": "1984",
+        "description": "Descripción sobre 1984",
+        "image": "1984.png",
+        "category": "ciencia-ficcion",
+        "author": "George Orwell",
+        "age": "1949",
+        "price": 2500
+    },
+    {
+        "id": 13,
+        "name": "Fahrenheit 451",
+        "description": "Descripción sobre Fahrenheit 451",
+        "image": "Fahrenheit-451.png",
+        "category": "ciencia-ficcion",
+        "author": "Ray Bradbury",
+        "age": "1953",
+        "price": 2500
+    },
+    {
+        "id": 14,
+        "name": "El Hobbit",
+        "description": "Descripción sobre El Hobbit",
+        "image": "ElHobbit.png",
+        "category": "ciencia-ficcion",
+        "author": "J. R. R. Tolkien",
+        "age": "1937",
+        "price": 2500
+    },
+    {
+        "id": 15,
+        "name": "Ciudad Sin Estrellas",
+        "description": "Descripción sobre Ciudad Sin Estrellas",
+        "image": "CiudadSinEstrellas.png",
+        "category": "ciencia-ficcion",
+        "author": "Montse De Paz Toldra",
+        "age": "2012",
+        "price": 2500
+    },
+    {
+        "id": 16,
+        "name": "La Ciudad Y La Ciudad",
+        "description": "Descripción sobre La Ciudad Y La Ciudad",
+        "image": "LaCiudadYLaCiudad.png",
+        "category": "ciencia-ficcion",
+        "author": "China Miéville",
+        "age": "2009",
+        "price": 2500
+    },
+    {
+        "id": 17,
+        "name": "Aniquilación",
+        "description": "Descripción sobre Aniquilación",
+        "image": "Aniquilacion.png",
+        "category": "ciencia-ficcion",
+        "autor": "Michel Houellebecq",
+        "age": "2014",
+        "price": 2500
+    },
+    {
+        "id": 18,
+        "name": "Rascacielos",
+        "description": "Descripción sobre Rascacielos",
+        "image": "Rascacielos.png",
+        "category": "ciencia-ficcion",
+        "author": "J. G. Ballard",
+        "age": "2003",
+        "price": 2500
+    },
+    {
+        "id": 19,
+        "name": "Neuromante",
+        "description": "Descripción sobre Neuromante",
+        "image": "Neuromante.png",
+        "category": "ciencia-ficcion",
+        "author": "William Gibson",
+        "age": "1984",
+        "price": 2500
+    },
+    {
+        "id": 20,
+        "name": "El Mundo Sumergido",
+        "description": "Descripción sobre El Mundo Sumergido",
+        "image": "ElMundoSumergido.png",
+        "category": "ciencia-ficcion",
+        "author": "J. G. Ballard",
+        "age": "1961",
+        "price": 2500
+    }
+]

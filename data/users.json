@@ -6,5 +6,13 @@
         "email": "",
         "password": "",
         "image": ""
+    },
+    {
+        "id": "1672db55-8b81-4497-862a-1a4edaa20ba9",
+        "name": "Facundo",
+        "last_name": "Villafañe",
+        "email": "facu@gmail.com",
+        "password": "$2b$12$N.M2Y6rmeqTNffQkcxoWmuIyGOgYsKBl4uSCeANhRkDbfDYXYJhVa",
+        "image": "img-1694534015369.jpg"
     }
 ]
