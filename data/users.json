@@ -13,7 +13,8 @@
         "last_name": "Villafañe",
         "email": "facu@gmail.com",
         "password": "$2b$12$BUUOodJ0GhLXoNZj85sva.5pZwqQu1ZdWTFB5EPTj5GCDSZxCZAaO",
-        "image": "img-1694567218994.jpg"
+        "image": "img-1694567218994.jpg",
+        "category": "admin"
     },
     {
         "id": "1672db55-8b81-4497-862a-1a4edaa20ba9",
@@ -22,5 +23,23 @@
         "email": "facu@gmail.com",
         "password": "$2b$12$N.M2Y6rmeqTNffQkcxoWmuIyGOgYsKBl4uSCeANhRkDbfDYXYJhVa",
         "image": "img-1694534015369.jpg"
+    },
+    {
+        "id": "1882b4c8-1219-43d0-851d-99ce62b1bbe1",
+        "name": "Nacho",
+        "last_name": "Garcia",
+        "email": "nacho@gmail.com",
+        "password": "$2b$12$NAzY/g2ipZUa5vbWYNRd2eLs2PUdRGEcTtXLmoaxa6wcS/YsQ38nW",
+        "image": "img-1694568136247.jpg",
+        "category": "admin"
+    },
+    {
+        "id": "b7541e9d-3319-4eb4-be3e-7cac4f06bbab",
+        "name": "Dani",
+        "last_name": "Rojas",
+        "email": "Dani@gmail.com",
+        "password": "$2b$12$AGJXBcXWoN9.kz9UOqF1huMJZpoGSzuLNCDFfMRG7SoMmeK1RrvL6",
+        "category": "default",
+        "image": "img-1694572427478.jpg"
     }
 ]

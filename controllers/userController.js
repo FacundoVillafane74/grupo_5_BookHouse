@@ -63,6 +63,7 @@ let userController = {
             last_name: req.body.last_name,
             email: req.body.email,
             password: req.body.password,
+            category: 'default'
         };
         if(errors.isEmpty()){
             let newUser = {
