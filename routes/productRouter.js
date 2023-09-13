@@ -3,6 +3,7 @@ const productController = require('../controllers/productController');
 const path = require('path');
 const multer = require('multer');
 const { body } = require('express-validator');
+const { auth, guest } = require('../middlewares/userPermissionMiddleware');
 
 const router = express.Router();
 
@@ -30,16 +31,16 @@ router.get('/cart', productController.cart);
 
 // AGREGAR PRODUCTOS
 
-router.get('/add', productController.add);
-router.post('/add', [upload.single('image'), validationFormAdd], productController.create);
+router.get('/add', auth, productController.add);
+router.post('/add', [upload.single('image'), validationFormAdd, auth], productController.create);
 
 // EDITAR PRODUCTOS
 
-router.get('/:id/edit', productController.edit);
-router.put('/:id/edit', [upload.single('image'), validationFormEdit], productController.update);
+router.get('/:id/edit', auth, productController.edit);
+router.put('/:id/edit', [upload.single('image'), validationFormEdit, auth], productController.update);
 
 // ELIMINAR PRODUCTOS
 
-router.delete('/:id/delete', productController.destroy);
+router.delete('/:id/delete', auth, productController.destroy);
 
 module.exports = router;

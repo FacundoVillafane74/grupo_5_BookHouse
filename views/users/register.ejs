@@ -16,7 +16,7 @@
 
         <div class='nombre-y-apellido input-register'>
             <label for="name">Nombre
-                <input type="text" name="name" id="name" placeholder="Pedro">
+                <input type="text" name="name" id="name" placeholder="Pedro" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>">
                 <i class="fa-solid fa-lock"></i>
             </label>
             <% if (locals.errors && errors.name) { %>
@@ -26,7 +26,7 @@
 
         <div class='nombre-y-apellido input-register'>
             <label for="last_name">Apellido
-                <input type="text" name="last_name" id="last_name" placeholder="Rodriguez">
+                <input type="text" name="last_name" id="last_name" placeholder="Rodriguez" value="<%= locals.oldData && oldData.last_name ? oldData.last_name : '' %>">
                 <i class="fa-solid fa-lock"></i>
             </label>
             <% if (locals.errors && errors.last_name) { %>
@@ -36,7 +36,7 @@
 
         <div class="email input-register">
             <label for="email">Email
-                <input type="text" name="email" id="email" placeholder="example@gmail.com">
+                <input type="text" name="email" id="email" placeholder="example@gmail.com" value="<%= locals.oldData && oldData.email ? oldData.email : '' %>">
                 <i class="fa-solid fa-lock"></i>
             </label>
             <% if (locals.errors && errors.email) { %>

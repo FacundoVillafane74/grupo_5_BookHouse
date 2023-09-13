@@ -38,19 +38,37 @@ let userController = {
     },
 
     register: (req, res) => {
-        res.render('register', {errors: req.query, emailExist: req.query.emailExist});
+        let errors = {};
+        let oldData = {};
+
+        for (const field in req.query) {
+            if (Object.hasOwnProperty.call(req.query, field)) {
+                const element = req.query[field];
+                if(field.includes('prev')){
+                    let newField = field.replace('prev', '');
+                    oldData[newField] = element;
+                } else {
+                    errors[field] = element;
+                }
+            }
+        }
+        
+        res.render('register', {errors, oldData, emailExist: req.query.emailExist});
     },
 
     registerPost: (req, res) => {
         let errors = validationResult(req);
+        const userToCreate = {
+            name: req.body.name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            password: req.body.password,
+        };
         if(errors.isEmpty()){
-            const newUser = {
-                name: req.body.name,
-                last_name: req.body.last_name,
-                email: req.body.email,
-                password: req.body.password,
+            let newUser = {
+                ...userToCreate,
                 image: req.file.filename
-            };
+            }
 
             const user = usersModel.create(newUser);
 
@@ -62,13 +80,17 @@ let userController = {
             }
 
         } else {
-            console.log(req.body);
-            console.log(req.file);
+            let prevDataQuery = '';
+
+            for (let field in userToCreate) {
+                prevDataQuery += `&${'prev' + field}=${userToCreate[field]}`
+            }
+
             let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
 
             let queryString = queryArray.join('');
 
-            res.redirect('/user/register?' + queryString);
+            res.redirect('/user/register?' + queryString + prevDataQuery);
         }
     },
 
