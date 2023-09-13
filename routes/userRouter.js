@@ -23,12 +23,12 @@ const {validationFormLogin} = require('../utils/validations');
 // INICIO DE SESIÓN DE LOS USUARIOS
 
 router.get('/login', guest, userController.login);
-router.post('/login', [validationFormLogin, guest], userController.loginPost);
+router.post('/login', validationFormLogin, userController.loginPost);
 
 // REGISTRO DE LOS USUARIOS
 
 router.get('/register', guest, userController.register);
-router.post('/register', [upload.single('image'), validationFormRegister, guest], userController.registerPost);
+router.post('/register', [upload.single('image'), validationFormRegister], userController.registerPost);
 
 // VISTA DE LOS USUARIOS
 
