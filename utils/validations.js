@@ -34,7 +34,8 @@ const validations = {
     ],
 
     validationFormRegister: [
-        body('fullname').notEmpty().withMessage('Debes completar el campo de nombre'),
+        body('name').notEmpty().withMessage('Debes completar el campo de nombre'),
+        body('last_name').notEmpty().withMessage('Debes completar el campo de apellido'),
         body('email').notEmpty().withMessage('Debes completar el campo con tu email').bail()
         .isEmail().withMessage('Debes poner un formato de email válido'),
         body('password').notEmpty().withMessage('Debes completar el campo con tu contraseña').bail()

@@ -22,17 +22,26 @@
                                 <div class="nombre input-global">
                                     <label for="name">Nombre del producto</label>
                                     <input type="text" name="name" id="name" value="<%= findProduct.name %>">
+                                    <% if (locals.errors && errors.name) { %>
+                                        <p class="text-danger"><%= errors.name %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="descripcion input-global">
                                     <label for="description">Descripción</label>
                                     <input type="text" name="description" id="description" value="<%= findProduct.description %>">
+                                    <% if (locals.errors && errors.description) { %>
+                                        <p class="text-danger"><%= errors.description %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="imagen input-global">
                                     <label for="image">Imágen</label>
                                     <input type="file" name="image" id="image">
                                     <input type="hidden" name="old-image" id="" value="<%= findProduct.image %>">
+                                    <% if (locals.errors && errors.image) { %>
+                                        <p class="text-danger"><%= errors.image %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="categoria input-global">
@@ -42,21 +51,33 @@
                                         <option value="suspenso" <%= findProduct.category === 'suspenso' ? 'selected' : '' %>>Suspenso</option>
                                         <option value="ciencia-ficcion" <%= findProduct.category === 'ciencia-ficcion' ? 'selected' : '' %>>Ciencia Ficcion</option>
                                     </select>
+                                    <% if (locals.errors && errors.category) { %>
+                                        <p class="text-danger"><%= errors.category %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="precio input-global">
                                     <label for="author">Autor</label>
                                     <input type="text" name="author" id="author" value="<%= findProduct.author %>">
+                                    <% if (locals.errors && errors.author) { %>
+                                        <p class="text-danger"><%= errors.author %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="precio input-global">
                                     <label for="age">Año de lanzamiento</label>
                                     <input type="number" name="age" id="age" value="<%= findProduct.age %>">
+                                    <% if (locals.errors && errors.age) { %>
+                                        <p class="text-danger"><%= errors.age %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="precio input-global">
                                     <label for="price">Precio</label>
                                     <input type="number" name="price" id="price" value="<%= findProduct.price %>">
+                                    <% if (locals.errors && errors.price) { %>
+                                        <p class="text-danger"><%= errors.price %></p>
+                                    <% } %>
                                 </div>
 
                                 <div class="input-global">

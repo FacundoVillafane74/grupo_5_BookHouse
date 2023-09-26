@@ -25,3 +25,10 @@
 - Continuar haciendo: Al menos hacer una reunión semanal.
 - Hacer menos:
 - Dejar de hacer:
+
+## Resumen del sprint 5:
+- Comenzar a hacer: 
+- Hacer más: 
+- Continuar haciendo: Seguir comunicandonos sobre que hace cada integrante.
+- Hacer menos:
+- Dejar de hacer:

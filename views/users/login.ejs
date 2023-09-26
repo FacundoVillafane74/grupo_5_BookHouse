@@ -11,11 +11,13 @@ rel="stylesheet" />
 <body>
     <div class=login-box>
     <header>
-            <img class="logo" src="/images/logo-BookHouse.svg" alt="logo">
+            <img class="logo" src="/images/products/logo-BookHouse.svg" alt="logo">
     </header>
     <main>
         <form action="/user/login" method="post">
-            
+            <% if (locals.error) { %>
+                <div class="text-danger"><%= locals.error %></div>
+            <% } %>
             <label for="email">Email
                 <div class="email">
                     <input type="text" name="email" id="email" placeholder="example@email.com">
