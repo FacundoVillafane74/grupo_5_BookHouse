@@ -53,7 +53,7 @@ module.exports = (sequelize, dataTypes) => {
         });
 
         User.belongsToMany(models.Product, {
-            as: "favorites",
+            as: "favorites-user",
             through: "favorites",
             foreignKey: "user_id",
             otherKey: "product_id",
@@ -61,7 +61,7 @@ module.exports = (sequelize, dataTypes) => {
         });
 
         User.belongsToMany(models.Cart, {
-            as: "cart",
+            as: "cart-user",
             through: "cart",
             foreignKey: "user_id",
             otherKey: "product_id",

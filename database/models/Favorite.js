@@ -34,7 +34,7 @@ module.exports = (sequelize, dataTypes) => {
 
     let Favorite = sequelize.define(alias, cols, config);
 
-    Favorite.associate = (models) =>{
+    Favorite.associate = (models) => {
         Favorite.belongsTo(models.User, {
             as: "user",
             foreignKey: "user_id"
