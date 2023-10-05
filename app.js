@@ -1,13 +1,16 @@
 // REQUIRES
 const express = require('express');
 const path = require('path');
-const mainRouter = require('./routes/mainRouter');
+/* const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
-const productRouter = require('./routes/productRouter');
+const productRouter = require('./routes/productRouter'); */
+const mainRouterDB = require('./routes/mainRouterDB');
+/* const userRouterDB = require('./routes/userRouterDB');   // Ir descomentando a medida que se hagan las rutas y controllers
+const productRouterDB = require('./routes/productRouterDB'); */ // Ir descomentando a medida que se hagan las rutas y controllers
 const dotenv = require('dotenv').config();
 const methodOverride = require('method-override');
 const session = require('express-session');
-const recordameMiddleware = require('./middlewares/recordameMiddleware');
+/* const recordameMiddleware = require('./middlewares/recordameMiddleware'); */  //Comentado por error con bcrypt al usar base de datos
 const cookieParser = require('cookie-parser');
 const { userLogged } = require('./middlewares/userLoggedMiddleware');
 
@@ -34,14 +37,17 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(methodOverride('_method'));
-app.use(recordameMiddleware);
+/* app.use(recordameMiddleware); */         //Comentado por error con bcrypt al usar base de datos
 app.use(userLogged);
 
 // ROUTES
 
-app.use('/', mainRouter);
+/* app.use('/', mainRouter);
 app.use('/product', productRouter);
-app.use('/user', userRouter);
+app.use('/user', userRouter); */
+app.use('/', mainRouterDB);
+/* app.use('/product', productRouterDB);      // Ir descomentando a medida que se hagan las rutas y controllers
+app.use('/user', userRouterDB); */          // Ir descomentando a medida que se hagan las rutas y controllers
 
 // LEVANTANDO SERVIDOR
 
