@@ -45,10 +45,10 @@
 
                                 <div class="categoria input-global">
                                     <label for="category">Categoria</label>
-                                    <select name="category" id="category">
+                                    <select name="category_id" id="category">
                                         <option value="">Elegí una categoría</option>
-                                        <option value="suspenso" <%= locals.oldData && oldData.category === 'suspenso' ? 'selected' : '' %>>Suspenso</option>
-                                        <option value="ciencia-ficcion" <%= locals.oldData && oldData.category === 'ciencia-ficcion' ? 'selected' : '' %>>Ciencia Ficción</option>
+                                        <option value="1" <%= locals.oldData && oldData.category_id === 'suspenso' ? 'selected' : '' %>>Suspenso</option>
+                                        <option value="2" <%= locals.oldData && oldData.category_id === 'ciencia-ficcion' ? 'selected' : '' %>>Ciencia Ficción</option>
                                     </select>
                                     <% if(locals.errors && errors.category){ %>
                                         <p class="text-danger text-category"><%= errors.category %></p>

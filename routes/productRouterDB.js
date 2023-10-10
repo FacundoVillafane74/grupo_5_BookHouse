@@ -30,7 +30,7 @@ router.get('/:id/detail', productControllerDB.detail);
 router.get('/cart', productControllerDB.cart);
 
 // AGREGAR PRODUCTOS
-
+//admin no anda con al leer category
 router.get('/add', admin, productControllerDB.add);
 router.post('/add', [upload.single('image'), validationFormAdd, admin], productControllerDB.create);
 

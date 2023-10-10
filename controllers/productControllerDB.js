@@ -1,9 +1,11 @@
-// Faltan importar los modelos
+const { Product } = require('../database/models');
 
 module.exports = {
     detail: async (req, res) => {
         try {
-            
+            const findProduct = await Product.findByPk(req.params.id);
+
+            res.render('productDetail', { findProduct });
         } catch (error) {
             res.send(error);
         }
@@ -11,7 +13,7 @@ module.exports = {
 
     cart: async (req, res) => {
         try {
-            
+            res.render('productCart');
         } catch (error) {
             res.send(error);
         }
@@ -38,7 +40,39 @@ module.exports = {
 
     create: async (req, res) => {
         try {
+            /* let errors = validationResult(req); */
             
+            let productToCreate = {
+                name: req.body.name,
+                description: req.body.description,
+                category_id: req.body.category_id,
+                author: req.body.author,
+                age: req.body.age,
+                price: req.body.price
+            };
+
+            /* if (errors.isEmpty()) { */
+                let newProduct = {
+                    ...productToCreate,
+                    image: req.file.filename
+                }
+
+                const productNew = await Product.create(newProduct);
+
+                res.redirect('/product/' + productNew.id + '/detail');
+            /* } else {
+                let prevDataQuery = '';
+
+                for (let field in productToCreate) {
+                    prevDataQuery += `&${'prev' + field}=${productToCreate[field]}`
+                }
+
+                let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
+
+                let queryString = queryArray.join('');
+
+                res.redirect('/product/add?' + queryString + prevDataQuery);
+            } */
         } catch (error) {
             res.send(error);
         }
@@ -46,7 +80,11 @@ module.exports = {
 
     edit: async (req, res) => {
         try {
-            
+            const findProduct = await Product.findByPk(req.params.id);
+
+            let errors = req.query;
+
+            res.render('productEdit', {findProduct, errors});
         } catch (error) {
             res.send(error);
         }
@@ -54,7 +92,38 @@ module.exports = {
 
     update: async (req, res) => {
         try {
-            
+            /* let errors = validationResult(req); */
+
+            let productToUpdate = {
+                id: Number(req.params.id),
+                name: req.body.name,
+                description: req.body.description,
+                category_id: req.body.category_id,
+                author: req.body.author,
+                age: req.body.age,
+                price: req.body.price
+            }
+
+            /* if (errors.isEmpty()) { */
+                let productUpdate = {
+                    ...productToUpdate,
+                    image: req.file ? req.file.filename : req.body['old-image']
+                };
+
+                const productsModel = await Product.update(productUpdate, {
+                    where: {
+                        id: req.params.id
+                    }
+                });
+
+                res.redirect('/product/' + productUpdate.id + '/detail');
+            /* } else {
+                let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
+
+                let queryString = queryArray.join('');
+
+                res.redirect('/product/' + productToUpdate.id + '/edit?' + queryString);
+            } */
         } catch (error) {
             res.send(error);
         }
@@ -62,7 +131,13 @@ module.exports = {
 
     destroy: async (req, res) => {
         try {
-            
+            Product.destroy({
+                where: {
+                    id: req.params.id
+                }
+            });
+
+            res.redirect('/');
         } catch (error) {
             res.send(error);
         }

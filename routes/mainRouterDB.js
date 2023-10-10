@@ -11,6 +11,6 @@ router.get('/', mainControllerDB.home);
 
 // PRODUCTOS BUSCADOS
 
-/* router.get('/search', mainControllerDB.search); */
+router.get('/search', mainControllerDB.search);
 
 module.exports = router;

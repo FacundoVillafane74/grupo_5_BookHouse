@@ -1,13 +1,22 @@
-let usersModel = require('../models/usersModel');
+let { User } = require('../database/models');
 
-let middleware = (req, res, next) => {
-    if(req.cookies.recordar != undefined && req.session.user == undefined) {
-        let userCookie = usersModel.findByEmail(req.cookies.recordar);
-        if(userCookie) {
-            req.session.user = userCookie
-        }
-    }
-    next();
+let middleware = async (req, res, next) => {
+    try {
+        if(req.cookies.recordar != undefined && req.session.user == undefined) {
+            let userCookie = await User.findOne({
+                where: {
+                    email: req.cookies.recordar,
+                },
+                raw: true
+            });
+            if(userCookie) {
+                req.session.user = userCookie;
+            };
+        };
+        next();      
+    } catch (error) {
+        res.send(error);
+    };
 };
 
 module.exports = middleware;

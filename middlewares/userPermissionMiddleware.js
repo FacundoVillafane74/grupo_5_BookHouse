@@ -16,7 +16,7 @@ let middlewares = {
     },
 
     admin: (req, res, next) => {
-        if(req.session.user.category === 'admin') {
+        if(req.session.user.rol_id == 1) {
             next();
         } else {
             res.redirect('/user/login');
