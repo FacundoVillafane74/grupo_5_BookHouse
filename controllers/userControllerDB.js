@@ -1,4 +1,5 @@
 const { User } = require('../database/models');
+const { validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 
 module.exports = {
@@ -8,15 +9,15 @@ module.exports = {
 
     loginPost: async (req, res) => {
         try {
-            /* let errors = validationResult(req);
-            if(errors.isEmpty()){ */
+            let errors = validationResult(req);
+            if(errors.isEmpty()){
                 const userInDB = await User.findOne({
                     where: {
                         email: req.body.email
                     },
                     raw: true,
                 });
-                /* console.log(userInDB);  */
+                console.log(userInDB); 
             if(!userInDB){
                return res.redirect('/user/login?error=El email o la contraseña son incorrectos');
             };
@@ -24,23 +25,23 @@ module.exports = {
             const validPw = bcrypt.compareSync(req.body.password, userInDB.password);
     
             if (validPw) {
-                /* delete userInDB.password */
+                /* delete userInDB.password */ //DUDA
                 req.session.user = userInDB;
                 if (req.body.recordar != undefined){
                     res.cookie('recordar', userInDB.email, {maxAge: 60000 * 60 * 24 * 7})
                 }
-                /* console.log(req.session.user); */
+                console.log(req.session.user);
                 res.redirect('/');
             } else {
                 res.redirect('/user/login?error=El email o la contraseña son incorrectos');
             }
-            /* } else {
+            } else {
                 let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
     
                 let queryString = queryArray.join('');
     
                 res.redirect('/user/login?' + queryString);
-            }  */
+            } 
         } catch (error) {
             res.send(error);
         }
@@ -67,7 +68,7 @@ module.exports = {
 
     registerPost: async (req, res) => {
         try {
-            /* let errors = validationResult(req); */
+            let errors = validationResult(req);
             const userToCreate = {
                 name: req.body.name,
                 last_name: req.body.last_name,
@@ -75,13 +76,18 @@ module.exports = {
                 password: bcrypt.hashSync(req.body.password, 12),
                 rol_id: 2
             };
-            /* if(errors.isEmpty()){ */
+            if(errors.isEmpty()){
                 let newUser = {
                     ...userToCreate,
                     image: req.file.filename
                 }
 
-                const user = await User.create(newUser);
+                /* const usersInDB = await User.findAll({
+                    raw: true,
+                }); */
+
+                const user = await User.create(newUser, {raw: true});
+                /* console.log(usersInDB); */
 
                 if(user.emailExist){
                     res.redirect('/user/register?emailExist=' + user.emailExist)
@@ -90,7 +96,16 @@ module.exports = {
                     res.redirect('/user/login');
                 }
 
-            /* } else {
+                /* if(usersInDB.forEach(user => {
+                    user.dataValues.email == user.email
+                })){
+                    res.redirect('/user/register?emailExist=' + user.emailExist)
+                }
+                else {
+                    res.redirect('/user/login');
+                }  */
+
+            } else {
                 let prevDataQuery = '';
 
                 for (let field in userToCreate) {
@@ -102,7 +117,7 @@ module.exports = {
                 let queryString = queryArray.join('');
 
                 res.redirect('/user/register?' + queryString + prevDataQuery);
-            } */
+            }
         } catch (error) {
             res.send(error);
         }

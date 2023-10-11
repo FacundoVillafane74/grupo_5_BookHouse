@@ -1,4 +1,5 @@
 const { Product } = require('../database/models');
+const { validationResult } = require('express-validator');
 
 module.exports = {
     detail: async (req, res) => {
@@ -40,7 +41,7 @@ module.exports = {
 
     create: async (req, res) => {
         try {
-            /* let errors = validationResult(req); */
+            let errors = validationResult(req);
             
             let productToCreate = {
                 name: req.body.name,
@@ -51,7 +52,7 @@ module.exports = {
                 price: req.body.price
             };
 
-            /* if (errors.isEmpty()) { */
+            if (errors.isEmpty()) {
                 let newProduct = {
                     ...productToCreate,
                     image: req.file.filename
@@ -60,7 +61,7 @@ module.exports = {
                 const productNew = await Product.create(newProduct);
 
                 res.redirect('/product/' + productNew.id + '/detail');
-            /* } else {
+            } else {
                 let prevDataQuery = '';
 
                 for (let field in productToCreate) {
@@ -72,7 +73,7 @@ module.exports = {
                 let queryString = queryArray.join('');
 
                 res.redirect('/product/add?' + queryString + prevDataQuery);
-            } */
+            }
         } catch (error) {
             res.send(error);
         }
@@ -92,7 +93,7 @@ module.exports = {
 
     update: async (req, res) => {
         try {
-            /* let errors = validationResult(req); */
+            let errors = validationResult(req);
 
             let productToUpdate = {
                 id: Number(req.params.id),
@@ -104,7 +105,7 @@ module.exports = {
                 price: req.body.price
             }
 
-            /* if (errors.isEmpty()) { */
+            if (errors.isEmpty()) {
                 let productUpdate = {
                     ...productToUpdate,
                     image: req.file ? req.file.filename : req.body['old-image']
@@ -117,13 +118,13 @@ module.exports = {
                 });
 
                 res.redirect('/product/' + productUpdate.id + '/detail');
-            /* } else {
+            } else {
                 let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
 
                 let queryString = queryArray.join('');
 
                 res.redirect('/product/' + productToUpdate.id + '/edit?' + queryString);
-            } */
+            }
         } catch (error) {
             res.send(error);
         }
