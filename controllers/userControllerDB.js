@@ -17,7 +17,6 @@ module.exports = {
                     },
                     raw: true,
                 });
-                console.log(userInDB); 
             if(!userInDB){
                return res.redirect('/user/login?error=El email o la contraseña son incorrectos');
             };
@@ -30,7 +29,6 @@ module.exports = {
                 if (req.body.recordar != undefined){
                     res.cookie('recordar', userInDB.email, {maxAge: 60000 * 60 * 24 * 7})
                 }
-                console.log(req.session.user);
                 res.redirect('/');
             } else {
                 res.redirect('/user/login?error=El email o la contraseña son incorrectos');
@@ -82,29 +80,23 @@ module.exports = {
                     image: req.file.filename
                 }
 
-                /* const usersInDB = await User.findAll({
+                const usersInDB = await User.findAll({
                     raw: true,
-                }); */
+                });
+                
+                let emailExisted = '';
 
-                const user = await User.create(newUser, {raw: true});
-                /* console.log(usersInDB); */
+                usersInDB.forEach(user => {
+                    if(user.email == req.body.email) {
+                        emailExisted = user.email
+                }})
 
-                if(user.emailExist){
-                    res.redirect('/user/register?emailExist=' + user.emailExist)
-                }
-                else {
+                if(emailExisted == req.body.email){
+                    return res.redirect('/user/register?emailExist=' + 'El mail ya existe')
+                } else {
+                    await User.create(newUser, {raw: true});
                     res.redirect('/user/login');
                 }
-
-                /* if(usersInDB.forEach(user => {
-                    user.dataValues.email == user.email
-                })){
-                    res.redirect('/user/register?emailExist=' + user.emailExist)
-                }
-                else {
-                    res.redirect('/user/login');
-                }  */
-
             } else {
                 let prevDataQuery = '';
 
@@ -113,7 +105,7 @@ module.exports = {
                 }
 
                 let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
-
+                
                 let queryString = queryArray.join('');
 
                 res.redirect('/user/register?' + queryString + prevDataQuery);
