@@ -17,7 +17,7 @@
         <div class='nombre-y-apellido input-register'>
             <label for="name">Nombre
                 <input type="text" name="name" id="name" placeholder="Pedro" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>">
-                <i class="fa-solid fa-lock"></i>
+                <div class="text-danger"></div>
             </label>
             <% if (locals.errors && errors.name) { %>
                 <div class="text-danger"><%= errors.name %></div>
@@ -27,7 +27,7 @@
         <div class='nombre-y-apellido input-register'>
             <label for="last_name">Apellido
                 <input type="text" name="last_name" id="last_name" placeholder="Rodriguez" value="<%= locals.oldData && oldData.last_name ? oldData.last_name : '' %>">
-                <i class="fa-solid fa-lock"></i>
+                <div class="text-danger"></div>
             </label>
             <% if (locals.errors && errors.last_name) { %>
                 <div class="text-danger"><%= errors.last_name %></div>
@@ -37,7 +37,8 @@
         <div class="email input-register">
             <label for="email">Email
                 <input type="text" name="email" id="email" placeholder="example@gmail.com" value="<%= locals.oldData && oldData.email ? oldData.email : '' %>">
-                <i class="fa-solid fa-lock"></i>
+                <!-- <i class="fa-solid fa-lock"></i> -->
+                <div class="text-danger"></div>
             </label>
             <% if (locals.errors && errors.email) { %>
                 <div class="text-danger"><%= errors.email %></div>
@@ -50,7 +51,7 @@
         <div class='contraseña input-register'>
             <label for="password">Contraseña
                 <input type="password" name="password" id="password" placeholder="Ingresar contraseña">
-                <i class="fa-solid fa-lock"></i>
+                <div class="text-danger"></div>
             </label>
             <% if (locals.errors && errors.password) { %>
                 <div class="text-danger"><%= errors.password %></div>
@@ -60,7 +61,7 @@
         <div class='image-avatar'>
             <label for="image">Imagen
                 <input type="file" name="image" id="image">
-                <i class="fa-solid fa-lock"></i>
+                <div class="text-danger"></div>
             </label>
             <% if (locals.errors && errors.image) { %>
                 <div class="text-danger"><%= errors.image %></div>
@@ -87,6 +88,7 @@
     </form>
 
     </main>
-    </dif>
+    </div>
+    <script src="/js/registerValidation.js"></script>
 </body>
 </html>
