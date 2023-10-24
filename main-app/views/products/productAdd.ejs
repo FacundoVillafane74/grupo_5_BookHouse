@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylesForms.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="big-body">
+        <%- include('../partials/bodyLeft.ejs') %>
+
+            <div class="body-rigth">
+                <%- include('../partials/header.ejs') %>
+                    <div class='login-box'>
+                        <main>
+                            <form action="/product/add" method="post" enctype="multipart/form-data" id="importantForm">
+
+                                <div class="nombre input-global">
+                                    <label for="name">Nombre del producto</label>
+                                    <input type="text" name="name" id="name" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>">
+                                    <p class="text-danger"></p>
+                                    <% if(locals.errors && errors.name){ %>
+                                        <p class="text-danger"><%= errors.name %></p>
+                                    <% } %>
+                                </div>
+
+                                <div class="descripcion input-global">
+                                    <label for="description">Descripción</label>
+                                    <input type="text" name="description" id="description" value="<%= locals.oldData && oldData.description ? oldData.description : '' %>">
+                                    <p class="text-danger"></p>
+                                    <% if(locals.errors && errors.description){ %>
+                                        <p class="text-danger"><%= errors.description %></p>
+                                    <% } %>
+                                </div>
+
+                                <div class="imagen input-global">
+                                    <label for="image">Imágen</label>
+                                    <input type="file" name="image" id="image">
+                                    <p class="text-danger"></p>
+                                    <% if(locals.errors && errors.image){ %>
+                                        <p class="text-danger"><%= errors.image %></p>
+                                    <% } %>
+                                </div>
+
+                                <div class="categoria input-global">
+                                    <label for="category">Categoria</label>
+                                    <select name="category_id" id="category">
+                                        <option value="">Elegí una categoría</option>
+                                        <option value="1" <%= locals.oldData && oldData.category_id == '1' ? 'selected' : '' %>>Suspenso</option>
+                                        <option value="2" <%= locals.oldData && oldData.category_id == '2' ? 'selected' : '' %>>Ciencia Ficción</option>
+                                    </select>
+                                    <% if(locals.errors && errors.category_id){ %>
+                                        <p class="text-danger text-category"><%= errors.category_id %></p>
+                                    <% } %>
+                                </div>
+
+                                <div class="precio input-global">
+                                    <label for="author">Autor</label>
+                                    <input type="text" name="author" id="author" value="<%= locals.oldData && oldData.author ? oldData.author : '' %>">
+                                    <p class="text-danger"></p>
+                                    <% if(locals.errors && errors.author){ %>
+                                        <p class="text-danger"><%= errors.author %></p>
+                                    <% } %>
+                                </div>
+
+                                <div class="precio input-global">
+                                    <label for="age">Año de lanzamiento</label>
+                                    <input type="number" name="age" id="age" value="<%= locals.oldData && oldData.age ? oldData.age : '' %>">
+                                    <p class="text-danger"></p>
+                                    <% if(locals.errors && errors.age){ %>
+                                        <p class="text-danger"><%= errors.age %></p>
+                                    <% } %>
+                                </div>
+
+                                <div class="precio input-global">
+                                    <label for="price">Precio</label>
+                                    <input type="number" name="price" id="price" value="<%= locals.oldData && oldData.price ? oldData.price : '' %>">
+                                    <p class="text-danger"></p>
+                                    <% if(locals.errors && errors.price){ %>
+                                        <p class="text-danger"><%= errors.price %></p>
+                                    <% } %>
+                                </div>
+
+                                <div class="input-global">
+                                    <input type="submit" value="Agregar">
+                                </div>
+
+                            </form>
+                        </main>
+                    </div>
+            </div>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+    <script src="/js/productsValidation.js"></script>
+</body>
+
+</html>
