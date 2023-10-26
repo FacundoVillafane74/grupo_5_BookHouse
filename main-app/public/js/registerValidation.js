@@ -32,6 +32,13 @@ window.addEventListener('load', () => {
             }
         });
 
+        let validaremail = /^\w+([.-_+]?\w+)@\w+([.-]?\w+)(.\w{2,10})+$/;
+        if (validaremail.test(email.value)) {
+            email.nextElementSibling.innerText = '';
+        } else {
+            email.nextElementSibling.innerText = 'Deberá ser un formato de e-mail válido';
+        }
+
         password.addEventListener('input', () => {
             if(password.value.length <= 3) {
                 e.preventDefault();
