@@ -6,7 +6,8 @@ const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter'); */
 const mainRouterDB = require('./routes/mainRouterDB');
 const userRouterDB = require('./routes/userRouterDB');   
-const productRouterDB = require('./routes/productRouterDB');  
+const productRouterDB = require('./routes/productRouterDB');
+const productAPIController = require('./routes/APIs/productAPIRouter');
 const dotenv = require('dotenv').config();
 const methodOverride = require('method-override');
 const session = require('express-session');
@@ -46,8 +47,9 @@ app.use(userLogged);
 app.use('/product', productRouter);
 app.use('/user', userRouter); */
 app.use('/', mainRouterDB);
-app.use('/product', productRouterDB);      // Ir descomentando a medida que se hagan las rutas y controllers
-app.use('/user', userRouterDB);           // Ir descomentando a medida que se hagan las rutas y controllers
+app.use('/product', productRouterDB);     
+app.use('/product/api', productAPIController);
+app.use('/user', userRouterDB);           
 
 // LEVANTANDO SERVIDOR
 

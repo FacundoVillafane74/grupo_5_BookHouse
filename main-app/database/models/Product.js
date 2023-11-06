@@ -41,7 +41,12 @@ module.exports = (sequelize, dataTypes) => {
         category_id: {
             type: dataTypes.INTEGER,
             allowNull: false
-        }
+        },
+
+        detail: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
     };
 
     let config = {

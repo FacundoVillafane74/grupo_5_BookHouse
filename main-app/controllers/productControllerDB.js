@@ -49,7 +49,8 @@ module.exports = {
                 category_id: req.body.category_id,
                 author: req.body.author,
                 age: req.body.age,
-                price: req.body.price
+                price: req.body.price,
+                detail: ''
             };
 
             if (errors.isEmpty()) {
