@@ -42,11 +42,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-
-        detail: {
-            type: dataTypes.STRING(100),
-            allowNull: false
-        },
     };
 
     let config = {

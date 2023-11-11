@@ -5,6 +5,19 @@ module.exports = {
         try {
             const products = await Product.findAll();
 
+            let productsAPI = products.map(product => {
+                return {
+                    id: product.id,
+                    name: product.name,
+                    description: product.description,
+                    category: product.category_id,
+                    age: product.age,
+                    price: product.price,
+                    image: 'http://localhost:3001/images/products/' + product.image,
+                    detail: '/product/api/' + product.id + '/detail'
+                }
+            });
+
             const productsSuspenso = await Product.findAll({
                 where: {
                     category_id: 1
@@ -17,15 +30,19 @@ module.exports = {
                 }
             }); 
 
-            products.map(product => product.category_id == 1 ? product.category_id = 'Suspenso' : product.category_id = 'Ciencia Ficcion');
+            productsAPI.map(product => product.category == 1 ? product.category = 'Suspenso' : product.category = 'Ciencia Ficcion');
 
             let respuesta = {
                 count: products.length,
-                countByCategory: {
-                    suspenso: productsSuspenso.length,
-                    cienciaFiccion: productsFiccion.length
-                },
-                products: products 
+                countByCategory: [
+                    {
+                        suspenso: productsSuspenso.length
+                    },
+                    {
+                        cienciaFiccion: productsFiccion.length
+                    }
+                ],
+                products: productsAPI
             }
 
             res.status(200).json(respuesta);
@@ -47,7 +64,7 @@ module.exports = {
                     age: findProduct.age,
                     price: findProduct.price,
                 },
-                url: findProduct.image
+                url: 'http://localhost:3001/images/products/' + findProduct.image
             }
 
             res.status(200).json(respuesta);

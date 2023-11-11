@@ -8,6 +8,7 @@ const mainRouterDB = require('./routes/mainRouterDB');
 const userRouterDB = require('./routes/userRouterDB');   
 const productRouterDB = require('./routes/productRouterDB');
 const productAPIController = require('./routes/APIs/productAPIRouter');
+const userAPIController = require('./routes/APIs/userAPIRouter');
 const dotenv = require('dotenv').config();
 const methodOverride = require('method-override');
 const session = require('express-session');
@@ -49,7 +50,8 @@ app.use('/user', userRouter); */
 app.use('/', mainRouterDB);
 app.use('/product', productRouterDB);     
 app.use('/product/api', productAPIController);
-app.use('/user', userRouterDB);           
+app.use('/user', userRouterDB); 
+app.use('/user/api', userAPIController);           
 
 // LEVANTANDO SERVIDOR
 
