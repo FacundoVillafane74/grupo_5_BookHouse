@@ -66,7 +66,16 @@ const validations = {
         .isEmail().withMessage('Debes poner un formato de email válido'),
         body('password').notEmpty().withMessage('Debes completar el campo con tu contraseña').bail()
         .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
-    ]
+    ],
+
+    validationFormEditUser: [
+        body('name').notEmpty().withMessage('Debes completar el campo de nombre').bail()
+        .isLength({min:2}).withMessage('El nombre debe tener al menos 2 caracteres'),
+        body('last_name').notEmpty().withMessage('Debes completar el campo de apellido').bail()
+        .isLength({min:2}).withMessage('El apellido debe tener al menos 2 caracteres'),
+        body('email').notEmpty().withMessage('Debes completar el campo con tu email').bail()
+        .isEmail().withMessage('Debes poner un formato de email válido')
+    ],
 };
 
 module.exports = validations;

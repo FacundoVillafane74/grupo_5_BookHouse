@@ -13,7 +13,7 @@
         <% if(locals.userLogged) { %>
                 <div class="min-icon">
                     <i class="fa-solid fa-user"></i>
-                    <a href="/user/profile"><p><%= locals.userLogged.name %></p></a>
+                    <a href="/user/<%= locals.userLogged.id %>/profile"><p><%= locals.userLogged.name %></p></a>
                 </div>
 
                 <div class="min-icon">
