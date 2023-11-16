@@ -419,6 +419,11 @@ h2 {
     display: flex;
 }
 
+.button-fav {
+    background-color: #84a98c;
+    border: none;
+}
+
 /* FOOTER */
 
 footer {

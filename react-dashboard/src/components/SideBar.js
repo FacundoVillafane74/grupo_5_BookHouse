@@ -1,7 +1,11 @@
 import React from 'react';
 import logo from '../img/logo-BookHouse.svg';
 import ContentWrapper from './ContentWrapper';
+import LastView from './LastView';
+import Totals from './Totals';
+import Chart from './Chart';
 import {Link, Route, Routes} from 'react-router-dom';
+import CategoryInDb from './CategoryInDb';
 
 function SideBar(){
     return(
@@ -34,24 +38,31 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                <Link className="nav-link" to="/GenresInDb">
+                <Link className="nav-link" to="/Totals">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Totales</span>
                     </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
+                    <Link className="nav-link" to="/LastView">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <span>Última Información</span></Link>
+                </li>
+
+                {/*<!-- Nav Item - Charts -->*/}
+                <li className="nav-item">
+                    <Link className="nav-link" to="/CategoryInDb">
+                        <i className="fas fa-fw fa-chart-area"></i>
+                        <span>Categorias</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/ContentRowMovies">
+                <Link className="nav-link" to="/Chart">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Productos</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -60,7 +71,11 @@ function SideBar(){
             {/*<!-- End of Sidebar -->*/}
 
             <Routes>
-                <Route path="/" element={<ContentWrapper />}/>                    
+                <Route path="/" element={<ContentWrapper />}/>    
+                <Route path="/Totals" element={<Totals />}/>     
+                <Route path="/LastView" element={<LastView />}/>
+                <Route path="/Chart" element={<Chart />}/>   
+                <Route path="/CategoryInDb" element={<CategoryInDb />}/>             
                 {/* <Route component={NotFound} /> */}
             </Routes>
             {/*<!-- End Microdesafio 2 -->*/}

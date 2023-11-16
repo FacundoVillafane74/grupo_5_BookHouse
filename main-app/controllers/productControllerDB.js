@@ -20,6 +20,14 @@ module.exports = {
         }
     },
 
+    favorites: async (req, res) => {
+        try {
+            res.render('productFavorite');
+        } catch (error) {
+            res.send(error);
+        }
+    },
+
     add: (req, res) => {
         let errors = {};
         let oldData = {};

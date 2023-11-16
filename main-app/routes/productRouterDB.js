@@ -29,6 +29,10 @@ router.get('/:id/detail', productControllerDB.detail);
 
 router.get('/cart', productControllerDB.cart);
 
+// PRODUCTOS FAVORITOS
+
+router.get('/favorites', productControllerDB.favorites);
+
 // AGREGAR PRODUCTOS
 //admin no anda con al leer category
 router.get('/add', admin, productControllerDB.add);

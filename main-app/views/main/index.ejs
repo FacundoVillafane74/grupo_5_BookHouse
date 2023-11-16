@@ -576,7 +576,8 @@
 
                             <div class="add">
                                 <a href="#">AGREGAR</a>
-                                <i class="fa-regular fa-heart"></i>
+                                <button class="button-fav"><i class="fa-regular fa-heart"></i></button>
+                                <p hidden><%= cadaProduct.id %></p>
                             </div>
                         </a>
                     </article>
@@ -745,7 +746,8 @@
 
                             <div class="add">
                                 <a href="#">AGREGAR</a>
-                                <i class="fa-regular fa-heart"></i>
+                                <button class="button-fav"><i class="fa-regular fa-heart"></i></button>
+                                <p hidden><%= cadaProduct.id %></p>
                             </div>
                         </a>
                     </article>
@@ -900,6 +902,7 @@
             <%- include('../partials/footer.ejs') %>
         </div>
     </div>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
