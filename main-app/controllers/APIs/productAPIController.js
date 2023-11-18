@@ -1,4 +1,4 @@
-const { Product } = require('../../database/models');
+const { Product, Order } = require('../../database/models');
 
 module.exports = {
     list: async (req, res) => {
@@ -57,12 +57,14 @@ module.exports = {
 
             let respuesta = {
                 product: {
+                    id: req.params.id,
                     name: findProduct.name,
                     description: findProduct.description,
                     category_id: findProduct.category_id == 1 ? findProduct.category_id = 'Suspenso' : findProduct.category_id = 'Ciencia Ficcion',
                     author: findProduct.author,
                     age: findProduct.age,
                     price: findProduct.price,
+                    image: findProduct.image
                 },
                 url: 'http://localhost:3001/images/products/' + findProduct.image
             }
@@ -71,5 +73,20 @@ module.exports = {
         } catch (error) {
             res.send(error);
         }
+    },
+
+    checkout: async (req, res) => {
+        // return res.send({ ...req.body, userId: req.session.userLogged.id });
+        try {
+        let order = await Order.create(
+          { ...req.body, userId: req.session.user.id },
+          {
+            include: Order.OrderItems,
+          }
+        );
+        res.json({ ok: true, status: 200, order: order });
+      } catch (error) {
+        res.json(error);
     }
-}
+    }
+};

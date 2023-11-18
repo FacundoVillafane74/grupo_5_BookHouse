@@ -25,8 +25,12 @@
                             <%= userFind.last_name.toUpperCase() %>
                         </h3>
 
-                        <form action="" class="form-buttons">
+                        <form action="/product/favorites" class="form-buttons">
                             <button class="fav button-user">Favoritos</button>
+                        </form>
+
+                        <form action="/user/orders" class="form-buttons">
+                            <button class="fav button-user">Compras</button>
                         </form>
 
                         <form action="/user/<%= userFind.id %>/edit" class="form-buttons">
@@ -41,6 +45,7 @@
                     <%- include('../partials/footer.ejs') %>
             </div>
     </div>
+    <%- include('../partials/scripts.ejs') %>
 </body>
 
 </html>

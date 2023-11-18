@@ -1,4 +1,4 @@
-const { Product } = require('../database/models');
+const { Product, Order } = require('../database/models');
 const { validationResult } = require('express-validator');
 
 module.exports = {
@@ -19,6 +19,18 @@ module.exports = {
             res.send(error);
         }
     },
+
+    order: async (req, res) => {
+        try {
+            let order = await Order.findByPk(req.params.id, {
+                include: Order.OrderItems,
+            });
+            /* res.send(order.orderItems); */
+            return res.render("order", { order });
+        } catch (error) {
+            res.send(error)
+        }
+      },
 
     favorites: async (req, res) => {
         try {

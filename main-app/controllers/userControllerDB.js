@@ -1,4 +1,4 @@
-const { User } = require('../database/models');
+const { User, Order } = require('../database/models');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 
@@ -124,6 +124,13 @@ module.exports = {
             res.send(error);
         }
     },
+
+    orders: async (req, res) => {
+        let orders = await Order.findAll({
+          where: {userId: req.session.user.id}
+        });
+        return res.render('orderList', {orders});
+      },
 
     editUser: async (req, res) => {
         try {

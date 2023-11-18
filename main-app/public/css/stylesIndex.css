@@ -111,6 +111,37 @@ nav input {
 /* BODY */
 /* PRIMER CARRUSEL */
 
+.agregar_carrito {
+    border: none;
+    background-color: #84a98c;
+}
+
+.cart-number {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    background-color: red;
+}
+
+.badge {
+    color: white;
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.agregar_carrito:hover {
+    background-color: #42615a;
+    border: solid black 1px;
+}
+
 .carrusel-oferts {
     height: 22vh;
     overflow: hidden;
@@ -302,6 +333,11 @@ h2 {
 /* .arrow-book {
     padding-right: 70px;
 } */ 
+
+.card {
+    margin-bottom: 100px;
+    background-color: #84a98c;
+}
 
 .add {
     background-color: #84a98c;

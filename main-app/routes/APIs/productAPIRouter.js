@@ -11,4 +11,8 @@ router.get('/', productAPIController.list);
 
 router.get('/:id/detail', productAPIController.detail);
 
+// CHEKCOUT DE LA COMPRA
+
+router.post('/checkout', productAPIController.checkout);
+
 module.exports = router;

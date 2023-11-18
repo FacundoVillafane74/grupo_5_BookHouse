@@ -35,6 +35,10 @@ router.post('/register', [upload.single('image'), validationFormRegister], userC
 
 router.get('/:id/profile', auth, userControllerDB.profile);
 
+// VISTA DE LAS ORDERS
+
+router.get('/orders', auth, userControllerDB.orders);
+
 // VISTA DE EDICIÓN DE USUARIOS
 
 router.get('/:id/edit', auth, userControllerDB.editUser);

@@ -24,6 +24,10 @@ body {
     align-items: center;
 }
 
+.form-buttons button:hover {
+    background-color: white;
+}
+
 .button-user {
     width: 10%;
     border: 2px solid black;

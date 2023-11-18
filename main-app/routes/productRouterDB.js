@@ -29,6 +29,10 @@ router.get('/:id/detail', productControllerDB.detail);
 
 router.get('/cart', productControllerDB.cart);
 
+// HISTORIAL DE COMPRAS
+
+router.get('/order/:id', auth, productControllerDB.order);
+
 // PRODUCTOS FAVORITOS
 
 router.get('/favorites', productControllerDB.favorites);

@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
         
         
     })
-    setTimeout(function(){
+    /* setTimeout(function(){
         buttonsFav.forEach(button => {
         if(localStorage.getItem('favorites').includes(button.nextElementSibling.innerText)) {
                 button.innerHTML = '<i class="fa-solid fa-heart"></i>'
@@ -42,5 +42,5 @@ window.addEventListener('load', () => {
                 button.innerHTML = '<i class="fa-regular fa-heart"></i>'
             }
         })
-    }, 1000);
+    }, 1000); */
 });
