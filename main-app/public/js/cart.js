@@ -13,6 +13,27 @@ function calcularTotal(products) {
     return products.reduce((acum, product) => (acum += Number(product.price) * Number(product.quantity)), 0 );
 };
 
+function removeItem(index) {
+  let carrito = JSON.parse(localStorage.getItem('carrito'));
+  carrito.splice(index, 1);
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  location.reload();
+};
+
+function sumQuantity(index) {
+  let carrito = JSON.parse(localStorage.getItem('carrito'));
+  carrito[index].quantity++
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  location.reload();
+};
+
+function resQuantity(index) {
+  let carrito = JSON.parse(localStorage.getItem('carrito'));
+  carrito[index].quantity--
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  location.reload();
+};
+
 let cartRows = document.querySelector('.cartRows');
 let totalAmount = document.querySelector('.totalAmount');
 
@@ -34,10 +55,11 @@ let fetchProducts = async (item, index) => {
                     <li class="nombre">${product.name}</li>
                     <li class="autor">${product.author}</li>
                     <li class="cantidad">
-                        <button class="botoncarrito">-</button>
-                        <span class="inputCantidad">${item.quantity}</span>
-                        <button class="botoncarrito">+</button>
-                        <li class="botonesFyD">
+                        <button class="botoncarrito margin-top" onclick=resQuantity(${index})>-</button>
+                        <span class="inputCantidad margin-top">${item.quantity}</span>
+                        <button class="botoncarrito margin-top" onclick=sumQuantity(${index})>+</button>
+                        <button class='btn btn-danger btn-sm' onclick=removeItem(${index})><i class="fa-solid fa-trash"></i></button>
+                    <li class="botonesFyD">
                     <button class="Fisico">Fisico</button>
                     <button class="Digital">Digital</button></li></li>
                     <li class="precio">$${parseFloat(product.price * item.quantity, 2).toFixed(2)}</li>

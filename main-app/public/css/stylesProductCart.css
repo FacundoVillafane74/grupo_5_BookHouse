@@ -15,6 +15,10 @@
     font-size: 35px;
 }
 
+.margin-top{
+    margin-top: 10px;
+}
+
 .cerrar{
     border:none;
     /* box-shadow: none; */
