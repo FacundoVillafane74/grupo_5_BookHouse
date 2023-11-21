@@ -161,6 +161,20 @@ nav input {
     margin: 0;
     font-size: 14px;
 }
+
+.buttons-admin {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.buttons-admin button {
+    margin-left: 23px;
+}
+
+.buttons-admin button:hover {
+    background-color: #42615a;
+}
     /*main*/
     .portadas{
         align-items: center;
@@ -188,6 +202,19 @@ nav input {
         align-items: center;
         margin-top: 10%;
         margin-left: 5%;
+    }
+    .fav-agregar button {
+        margin-right: 23px;
+    }
+    .fav-agregar h4 {
+        font-size: 20px;
+        margin-left: 17px;
+    }
+    .fav-agregar div {
+        margin-left: 20px;
+    }
+    .fav-agregar button:hover {
+        background-color: #42615a;
     }
     .icon-co{
         display: flex;

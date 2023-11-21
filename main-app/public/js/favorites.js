@@ -21,7 +21,7 @@ window.onload = () => {
             article.setAttribute("class", "product-book-end");
             
             const a = document.createElement("a");
-            a.setAttribute("href", `/product/api/${book.id}/detail`);
+            a.setAttribute("href", `/product/${book.id}/detail`);
             a.setAttribute('class', 'productLink');
 
             const divBook = document.createElement('div');
@@ -42,8 +42,10 @@ window.onload = () => {
             const divAdd = document.createElement('div');
             divAdd.setAttribute('class', 'add');
             
-            const agregar = document.createElement("a");
+            const agregar = document.createElement("button");
             agregar.textContent = 'AGREGAR';
+            agregar.setAttribute('class', 'agregar_carrito');
+            agregar.setAttribute('data-id', book.id);
 
             const icon = document.createElement("i");
             icon.setAttribute("class", 'fa-regular fa-heart');
@@ -55,7 +57,7 @@ window.onload = () => {
             a.appendChild(divInfoBook);
             divInfoBook.appendChild(h3Name);
             divInfoBook.appendChild(h3Price);
-            a.appendChild(divAdd);
+            article.appendChild(divAdd);
             divAdd.appendChild(agregar);
             divAdd.appendChild(icon);
           

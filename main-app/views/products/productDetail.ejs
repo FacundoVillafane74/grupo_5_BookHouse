@@ -37,10 +37,13 @@
                                 </p>
                             </div>
                             <div class="fav-agregar">
+                                <button class="button2 agregar_carrito" data-id='<%= findProduct.id %>'>Agregar</button>
+                                <h4>$<%= findProduct.price %></h4>
                                 <div class="icon-co">
                                     <i class="fa-regular fa-heart"></i>
                                 </div>
-                                <a href="#"><button class="button2 agregar_carrito" data-id='<%= findProduct.id %>'">Agregar</button></a> <h4>$<%= findProduct.price %></h4>
+                            </div>
+                            <div class="buttons-admin">
                                 <% if (locals.userLogged && locals.userLogged.rol_id == 1) { %>
                                     <a href="/product/<%= findProduct.id %>/edit"><button class="button2">Editar</button></a>
                                     <form action="/product/<%= findProduct.id %>/delete?_method=DELETE" method="post">

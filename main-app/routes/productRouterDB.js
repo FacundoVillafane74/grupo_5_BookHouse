@@ -27,7 +27,7 @@ router.get('/:id/detail', productControllerDB.detail);
 
 // CARRITO DE COMPRAS
 
-router.get('/cart', productControllerDB.cart);
+router.get('/cart', auth, productControllerDB.cart);
 
 // HISTORIAL DE COMPRAS
 

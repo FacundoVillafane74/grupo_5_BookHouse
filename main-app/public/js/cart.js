@@ -29,7 +29,7 @@ function sumQuantity(index) {
 
 function resQuantity(index) {
   let carrito = JSON.parse(localStorage.getItem('carrito'));
-  carrito[index].quantity--
+  carrito[index].quantity == 1 ?  carrito[index].quantity = 1 : carrito[index].quantity--
   localStorage.setItem('carrito', JSON.stringify(carrito));
   location.reload();
 };
@@ -46,7 +46,7 @@ let fetchProducts = async (item, index) => {
       let product = data.product
       if(product) {
         cartRows.innerHTML += ` 
-        <button class="cerrar-2">
+        <button class="cerrar-2" onclick=removeItem(${index})>
                 <i class="fa-sharp fa-regular fa-circle-xmark fa-2x""></i>
         </button>
         <section class="caja">

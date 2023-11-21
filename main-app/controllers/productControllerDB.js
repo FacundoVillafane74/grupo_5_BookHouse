@@ -1,4 +1,4 @@
-const { Product, Order } = require('../database/models');
+const { Product, Order, OrderItem } = require('../database/models');
 const { validationResult } = require('express-validator');
 
 module.exports = {
@@ -25,8 +25,15 @@ module.exports = {
             let order = await Order.findByPk(req.params.id, {
                 include: Order.OrderItems,
             });
+
+            let orderError = {
+                index: 1,
+                name: order.name + '(no disponible)',
+                price: order.price,
+                quantity: order.quantity
+            }
             /* res.send(order.orderItems); */
-            return res.render("order", { order });
+            return res.render("order", { order, orderError });
         } catch (error) {
             res.send(error)
         }
@@ -153,6 +160,12 @@ module.exports = {
 
     destroy: async (req, res) => {
         try {
+            OrderItem.destroy({
+                where: {
+                    productId: req.params.id
+                }
+            });
+
             Product.destroy({
                 where: {
                     id: req.params.id
