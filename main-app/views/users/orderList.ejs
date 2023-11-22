@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/mdb.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/stylesIndex.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="big-body">
+        <%- include('../partials/bodyLeft.ejs') %>
+
+        <div class="body-rigth">
+            <%- include('../partials/header.ejs') %>
+
+                <main>
+                    <div class="container wow fadeIn animated">
+                        <h2 class="mt-5 mb-3 h2 text-center">
+                            Perfil de <%= locals.userLogged.name%> <%= locals.userLogged.last_name%>
+                        </h2>
+                        <div class="card mb-5">
+                            <div class="card-header">
+                                Mis Datos
+                            </div>
+                            <div class="card-body">
+                                <p><span class="font-weight-bold mr-2">Nombre: </span>
+                                    <%= locals.userLogged.name %> <%= locals.userLogged.last_name %>
+                                </p>
+                                <p><span class="font-weight-bold mr-2">Email: </span>
+                                    <%= locals.userLogged.email %>
+                                </p>
+                                <a href="/user/<%= locals.userLogged.id%>/profile" class="btn btn-info ml-0">Perfil</a>
+                            </div>
+                        </div>
+                        <div class="card mb-5">
+                            <div class="card-header">
+                                Mis Pedidos
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-responsive-md mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 50px;">
+                                                <strong>#</strong>
+                                            </th>
+                                            <th class="th-lg">
+                                                <strong>Fecha</strong>
+                                            </th>
+                                            <th class="th-lg">
+                                                <strong>Envío</strong>
+                                            </th>
+                                            <th class="th-lg">
+                                                <strong>Pago</strong>
+                                            </th>
+                                            <th>
+                                                <strong>Total</strong>
+                                            </th>
+                                            <th style="width: 50px;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% orders.forEach((order, index) => { %> 
+                                            <tr>
+                                                <th scope="row"><%= index + 1 %></th>
+                                                <td><%= new Intl.DateTimeFormat('es-ES', {year: 'numeric', month: 'numeric', 
+                                                day:'2-digit', hour: 'numeric', minute: 'numeric'}).format(order.createdAt) %></td>
+                                                <td><%= order.shippingMethod %></td>
+                                                <td><%= order.paymentMethod %></td>
+                                                <td>$<%= order.total %></td>
+                                                <td><a class="btn btn-warning btn-sm" href="<%= `/product/order/${order.id}` %>"><i class="fas fa-eye"></i></a></td>
+                                            </tr>
+                                        <% }) %>
+                                            
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <%- include('../partials/footer.ejs') %>
+        </div>
+
+    </div>
+    <%- include('../partials/scripts.ejs') %>
+</body>
+
+</html>

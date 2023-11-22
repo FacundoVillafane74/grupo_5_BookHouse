@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Proza Libre', sans-serif;
+}
+
+body {
+    text-align: center;
+}
+
+.card-user {
+    margin-top: 8%;
+}
+
+.avatar-user {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 12%
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form-buttons button:hover {
+    background-color: white;
+}
+
+.button-user {
+    width: 10%;
+    border: 2px solid black;
+    margin: 5px;
+    padding: 3px;
+    background-color: green;
+}
+
+footer{
+    margin-top: 24vh;
+}
+
+@media (min-width: 769px){
+
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20vh;
+        margin-left: 0px;
+        width: auto;
+    }
+}

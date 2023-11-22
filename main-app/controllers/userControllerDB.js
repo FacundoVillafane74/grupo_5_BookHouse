@@ -1,4 +1,4 @@
-const { User } = require('../database/models');
+const { User, Order } = require('../database/models');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 
@@ -115,8 +115,70 @@ module.exports = {
         }
     },
 
-    profile: (req, res) => {
-        res.render('profile');
+    profile: async (req, res) => {
+        try {
+            let userFind = await User.findByPk(req.params.id);
+
+            res.render('profile', {userFind});
+        } catch (error) {
+            res.send(error);
+        }
+    },
+
+    orders: async (req, res) => {
+        let orders = await Order.findAll({
+          where: {userId: req.session.user.id}
+        });
+        return res.render('orderList', {orders});
+      },
+
+    editUser: async (req, res) => {
+        try {
+            let userFind = await User.findByPk(req.params.id);
+
+            let errors = req.query;
+
+            res.render('userEdit', {userFind, errors});
+        } catch (error) {
+            res.send(error);
+        }
+
+    },
+
+    editUpdate: async (req, res) => {
+        try {
+            let errors = validationResult(req);
+
+            let userToUpdate = {
+                id: Number(req.params.id),
+                name: req.body.name,
+                last_name: req.body.last_name,
+                email: req.body.email
+            }
+
+            if(errors.isEmpty()) {
+                let userUpdated = {
+                    ...userToUpdate,
+                    image: req.file ? req.file.filename : req.body['old-image']
+                }
+                
+                await User.update(userUpdated, {
+                    where: {
+                        id: req.params.id
+                    }
+                });
+                
+                res.redirect('/user/' + req.params.id + '/profile');
+            } else {
+                let queryArray = errors.errors.map(error => '&' + error.path + '=' + error.msg);
+
+                let queryString = queryArray.join('');
+
+                res.redirect('/user/' + req.params.id + '/edit?' + queryString);
+            }
+        } catch (error) {
+            res.send(error);
+        }
     },
 
     logout: (req, res) => {

@@ -68,6 +68,11 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false
         });
 
+        User.hasMany(models.Order, {
+            as: "orders",
+            foreignKey: "userId",
+          });
+
     }
 
     return User;

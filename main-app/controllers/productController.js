@@ -3,7 +3,7 @@ const { validationResult } = require('express-validator');
 
 let productController = {
     detail: (req, res) => {
-        productId = Number(req.params.id);
+        let productId = Number(req.params.id);
 
         let findProduct = productsModel.findById(productId);
 

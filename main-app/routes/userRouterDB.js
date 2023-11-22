@@ -17,6 +17,7 @@ let upload = multer({storage});
 
 const {validationFormRegister} = require('../utils/validations');
 const {validationFormLogin} = require('../utils/validations');
+const {validationFormEditUser} = require('../utils/validations');
 
 // - /user
 
@@ -32,7 +33,16 @@ router.post('/register', [upload.single('image'), validationFormRegister], userC
 
 // VISTA DE LOS USUARIOS
 
-router.get('/profile', auth, userControllerDB.profile);
+router.get('/:id/profile', auth, userControllerDB.profile);
+
+// VISTA DE LAS ORDERS
+
+router.get('/orders', auth, userControllerDB.orders);
+
+// VISTA DE EDICIÓN DE USUARIOS
+
+router.get('/:id/edit', auth, userControllerDB.editUser);
+router.put('/:id/edit', [upload.single('image'), auth, validationFormEditUser], userControllerDB.editUpdate);
 
 // CERRADO DE SESIÓN DE LOS USUARIOS
 

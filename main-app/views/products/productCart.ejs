@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/stylesProductCart.css">
+    <link rel="stylesheet" href="/css/mdb.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" crossorigin="anonymous">
     <title>Carrito de Compras</title>
 </head>
@@ -19,8 +21,8 @@
         </button>
     </header>
     <main>
-        <article class="contenedor">
-            <button class="cerrar-2">
+        <article class="contenedor cartRows">
+            <!-- <button class="cerrar-2">
                 <i class="fa-sharp fa-regular fa-circle-xmark fa-2x""></i>
             </button>
             <section class="caja">
@@ -37,59 +39,61 @@
                     <button class="Digital">Digital</button></li></li>
                     <li class="precio">$9585.00</li>
                 </ul>
-            </section>
-            <button class="cerrar-2">
-                <i class="fa-sharp fa-regular fa-circle-xmark fa-2x""></i>
-            </button>
-            <section class="caja">
-                <div class="imagen"> <img src="/images/products/LaCupula.png" alt="Nombre del Libro" width="150vw"></div>
-                <ul class="texto">
-                    <li class="nombre">La Cúpula</li>
-                    <li class="autor">Stephen King</li>
-                    <li class="cantidad">
-                        <button class="botoncarrito">-</button>
-                        <input type="text" class="inputCantidad">
-                        <button class="botoncarrito">+</button>
-                        <li class="botonesFyD">
-                        <button class="Fisico">Fisico</button>
-                        <button class="Digital">Digital</button></li></li>
-                    <li class="precio">$7600.00</li>
-                </ul>
-            </section>
-            <button class="cerrar-2">
-                <i class="fa-sharp fa-regular fa-circle-xmark fa-2x""></i>
-            </button>
-            <section class="caja">
-                <div class="imagen"> <img src="/images/products/LaCasaInfernal.png" alt="Nombre del Libro" width="150vw"></div>
-                <ul class="texto">
-                    <li class="nombre">La Casa Infernal</li>
-                    <li class="autor">Richard Matheson</li>
-                    <li class="cantidad">
-                        <button class="botoncarrito">-</button>
-                        <input type="text" class="inputCantidad">
-                        <button class="botoncarrito">+</button>
-                        <li class="botonesFyD">
-                        <button class="Fisico">Fisico</button>
-                        <button class="Digital">Digital</button></li></li>
-                        <li class="precio">$7400.75</li>
-                    </ul>
-            </section>
+            </section> -->
         </article>
+
+        <form class="card-body" id="checkoutCart">
+            <div class="row">
+                <div class=" col-md-6 mb-4">
+                    <label for="country">Tipo Envio</label>
+                    <select class="custom-select d-block w-100" id="shippingMethod" name=" shippingMethod"
+                        required="">
+                        <option value="">Elegir...</option>
+                        <option value="Correo" class="option-color">Correo Argentino</option>
+                        <option value="Andreani" class="option-color">Andreani</option>
+                        <option value="Retirar" class="option-color">Retirar en local</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Elija un tipo de envio.
+                    </div>
+
+                </div>
+                <div class=" col-md-6 mb-4">
+                    <label for="country">Pago</label>
+                    <select class="custom-select d-block w-100" id="paymentMethod" name="paymentMethod"
+                        required="">
+                        <option value="">Elegir...</option>
+                        <option value="Efectivo" class="option-color">Efectivo</option>
+                        <option value="Mercado Pago" class="option-color">Mercado Pago</option>
+                        <option value="Visa" class="option-color">Visa</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Elija un tipo de envio.
+                    </div>
+
+                </div>
+            </div>
+            <div class="subtotal">
+                <h3 class="subtotalp">TOTAL</h3>
+                <h3 class="subtotalPrecio totalAmount">$ 0</h3>
+            </div>
+            <div class="linea"></div>
+            <section class="tarjetas">
+                <div><img src="/images/products/visa.jpg" alt="visa"width="100px"></div>
+                <div><img src="/images/products/master-card.jpg" alt="master-card"width="100px"></div>
+                <div><img src="/images/products/american-express.png" alt="american-express"width="100px"></div>
+            </section>
+            <div class="finalizarCompraDiv">
+                <button type="submit" class="finalizarCompra">FINALIZAR COMPRA</button>
+            </div>
+        </form>
     </main>
     <footer>
-        <div class="subtotal">
-            <h3 class="subtotalp">SUBTOTAL</h3>
-            <h3 class="subtotalPrecio">$24585.75</h3>
-        </div>
-        <div class="linea"></div>
-        <section class="tarjetas">
-            <div><img src="/images/products/visa.jpg" alt="visa"width="100px"></div>
-            <div><img src="/images/products/master-card.jpg" alt="master-card"width="100px"></div>
-            <div><img src="/images/products/american-express.png" alt="american-express"width="100px"></div>
-        </section>
-        <div class="botonfinal">
+        <!-- <div class="botonfinal">
             <button type="send" class="finalizarCompra">FINALIZAR COMPRA</button>
-        </div>
+        </div> -->
     </footer>
+    <%- include('../partials/scripts.ejs') %>
+    <script src="/js/cart.js"></script>
 </body>
 </html>

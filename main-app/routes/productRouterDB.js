@@ -27,7 +27,15 @@ router.get('/:id/detail', productControllerDB.detail);
 
 // CARRITO DE COMPRAS
 
-router.get('/cart', productControllerDB.cart);
+router.get('/cart', auth, productControllerDB.cart);
+
+// HISTORIAL DE COMPRAS
+
+router.get('/order/:id', auth, productControllerDB.order);
+
+// PRODUCTOS FAVORITOS
+
+router.get('/favorites', productControllerDB.favorites);
 
 // AGREGAR PRODUCTOS
 //admin no anda con al leer category

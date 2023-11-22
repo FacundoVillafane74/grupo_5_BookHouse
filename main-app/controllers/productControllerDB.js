@@ -1,4 +1,4 @@
-const { Product } = require('../database/models');
+const { Product, Order, OrderItem } = require('../database/models');
 const { validationResult } = require('express-validator');
 
 module.exports = {
@@ -15,6 +15,33 @@ module.exports = {
     cart: async (req, res) => {
         try {
             res.render('productCart');
+        } catch (error) {
+            res.send(error);
+        }
+    },
+
+    order: async (req, res) => {
+        try {
+            let order = await Order.findByPk(req.params.id, {
+                include: Order.OrderItems,
+            });
+
+            let orderError = {
+                index: 1,
+                name: order.name + '(no disponible)',
+                price: order.price,
+                quantity: order.quantity
+            }
+            /* res.send(order.orderItems); */
+            return res.render("order", { order, orderError });
+        } catch (error) {
+            res.send(error)
+        }
+      },
+
+    favorites: async (req, res) => {
+        try {
+            res.render('productFavorite');
         } catch (error) {
             res.send(error);
         }
@@ -49,7 +76,8 @@ module.exports = {
                 category_id: req.body.category_id,
                 author: req.body.author,
                 age: req.body.age,
-                price: req.body.price
+                price: req.body.price,
+                detail: ''
             };
 
             if (errors.isEmpty()) {
@@ -132,6 +160,12 @@ module.exports = {
 
     destroy: async (req, res) => {
         try {
+            OrderItem.destroy({
+                where: {
+                    productId: req.params.id
+                }
+            });
+
             Product.destroy({
                 where: {
                     id: req.params.id

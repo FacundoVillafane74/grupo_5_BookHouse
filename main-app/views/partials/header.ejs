@@ -13,7 +13,7 @@
         <% if(locals.userLogged) { %>
                 <div class="min-icon">
                     <i class="fa-solid fa-user"></i>
-                    <a href="/user/profile"><p><%= locals.userLogged.name %></p></a>
+                    <a href="/user/<%= locals.userLogged.id %>/profile"><p><%= locals.userLogged.name %></p></a>
                 </div>
 
                 <div class="min-icon">
@@ -29,12 +29,13 @@
 
             <div class="min-icon">
                 <i class="fa-solid fa-heart"></i>
-                <a href=""><p>Favoritos</p></a>
+                <a href="/product/favorites"><p>Favoritos</p></a>
             </div>
 
             <div class="min-icon">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <a href="/product/cart"><p>Carrito</p></a>
+                <span class="badge red z-depth-1 mr-1 cart-number badge">0</span>
             </div>
         </div>
     </nav>
