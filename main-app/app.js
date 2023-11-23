@@ -51,7 +51,10 @@ app.use('/', mainRouterDB);
 app.use('/product', productRouterDB);     
 app.use('/product/api', productAPIController);
 app.use('/user', userRouterDB); 
-app.use('/user/api', userAPIController);           
+app.use('/user/api', userAPIController);
+app.use((req, res, next) => {
+    res.status(404).render('error404');
+});   
 
 // LEVANTANDO SERVIDOR
 
